@@ -15,11 +15,13 @@
 .nav {
   font-size: 18px;
   background: #003380;
+  position: relative;
 }
 
 .nav_items li {
   padding: 10px 15px;
   list-style: none;
+  cursor: pointer;
 }
 
 .nav_items > li:hover {
@@ -31,9 +33,6 @@
   text-decoration: none;
 }
 
-.nav_items {
-  position: relative;
-}
 
 /* DropDown Menu */
 
@@ -49,11 +48,16 @@
 .dropdown {
   padding: 10px 20px;
   background: url("./images/Mobiles-Tablet-Menu-Banners-04-01-2021-01.png");
-  background-size: contain;
+  background-size:cover;
+  background-position: center;
   position: absolute;
-  left: 0px;
+  top:40px;
+  left: 50px;
   width: 100vw;
   max-width: 1200px;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #8f8e8e;
   display: flex;
 }
 
