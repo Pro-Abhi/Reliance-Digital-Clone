@@ -83,6 +83,7 @@
   text-decoration: underline;
 }
 
-.television_section{
+.television_section,
+.audio{
   background: #252F64;
 }
