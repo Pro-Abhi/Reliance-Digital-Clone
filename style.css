@@ -25,7 +25,7 @@
 }
 
 .nav_items > li:hover {
-  background-color: red;
+  background-color:#e42529;
 }
 
 .navbar li > a {
@@ -45,11 +45,12 @@
   display: block;
 }
 
+.row1, .row2, .row3{
+  margin-right: 20px;
+}
+
 .dropdown {
   padding: 10px 20px;
-  background: url("./images/Mobiles-Tablet-Menu-Banners-04-01-2021-01.png");
-  background-size:cover;
-  background-position: center;
   position: absolute;
   top:40px;
   left: 50px;
@@ -61,6 +62,12 @@
   display: flex;
 }
 
+.mobile_section{
+  background: url("./images/Mobiles-Tablet-Menu-Banners-04-01-2021-01.png");
+  background-size:cover;
+  background-position: center;
+}
+
 .dropdown .items {
   font-size: 18px;
   font-weight: 600;
@@ -69,10 +76,13 @@
 .dropdown .subitems {
   font-size: 14px;
   color: #8f8e8e;
-  margin-left: 10px;
   line-height: 8px;
 }
 
 .dropdown a:hover {
   text-decoration: underline;
+}
+
+.television_section{
+  background: #252F64;
 }
