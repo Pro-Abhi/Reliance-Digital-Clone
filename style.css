@@ -29,6 +29,9 @@
 html {
     -webkit-text-size-adjust: 100%;
 }
+body{
+    margin: 0;
+}
 h3 {
     display: block;
     font-size: 1.17em;
@@ -107,6 +110,8 @@ ul {
 }
 .footer_container{
     background-color: #003380;
+    /* width: 100%; */
+    
 }
 .footer__mediaLinks {
     list-style: none;
@@ -165,4 +170,37 @@ ul {
 .footer__socialMedia{
     display: flex;
     justify-content: space-around;
+}
+/* main/slider CSS */
+.instant__discount img{
+    width: 100%;
+}
+.slider-container{
+    position: relative;
+    width: 100%;
+}
+.slide img{
+    width: 100%;
+}
+.arrow{
+   cursor: pointer;
+   position: absolute; 
+   top: 46%;
+   color: var(--color-black);
+   font-size:x-large;
+   
+   /* background: none; */
+   /* border: 0; */
+   /* bottom: 50%; */
+   /* font-size: 0; */
+   /* z-index: 1; */
+}
+.next{
+    right: 5px;
+}
+.prev{
+    left: 5px;
+}
+.slide{
+    display: none;
 }
