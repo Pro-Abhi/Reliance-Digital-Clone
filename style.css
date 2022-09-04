@@ -11,7 +11,7 @@
   justify-content: space-around;
 }
 
-/* Navbar */
+/* Navbar Starts Here*/
 .nav {
   font-size: 18px;
   background: #003380;
@@ -107,3 +107,4 @@
 .access{
   background: #252F64;
 }
+/* Navbar Ends Here */
