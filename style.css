@@ -32,6 +32,11 @@
   color: #fff;
   text-decoration: none;
 }
+.nav_items i{
+  color:#fff;
+  margin-left: 3px;
+  font-size: 12px;
+}
 
 
 /* DropDown Menu */
@@ -67,6 +72,17 @@
   background-size:cover;
   background-position: center;
 }
+.computer_section{
+  background: url("./images/Computers-Menu-Banners.jpg");
+  /* object-fit:contain; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.personal_care{
+  background: url("./images/Personal-Care-Menu-Banners.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .dropdown .items {
   font-size: 18px;
@@ -86,9 +102,8 @@
 .television_section,
 .audio,
 .home_app,
-.computer_section,
 .camera_section,
 .kitchen_apps,
-.personal_care{
+.access{
   background: #252F64;
 }
