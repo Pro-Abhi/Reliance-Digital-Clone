@@ -84,6 +84,11 @@
 }
 
 .television_section,
-.audio{
+.audio,
+.home_app,
+.computer_section,
+.camera_section,
+.kitchen_apps,
+.personal_care{
   background: #252F64;
 }
