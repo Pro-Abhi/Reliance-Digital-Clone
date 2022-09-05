@@ -1,11 +1,12 @@
 // sticky header
+let body = document.querySelector('BODY')
 let header = document.querySelector('.header-linkinfo')
 let sticky_header = document.querySelector('.header')
 
 let observer = new IntersectionObserver((entries) => {
   let ent = entries[0]
   console.log(ent);
-  ent.isIntersecting === false ? sticky_header.classList.add('sticky') : sticky_header.classList.remove('sticky')
+  ent.isIntersecting === false ? body.classList.add('sticky') : body.classList.remove('sticky')
 }, {
   root: null,
   rootMargin: "",
@@ -53,7 +54,11 @@ submitBtn.addEventListener("click", () => {
           if (status == "Success") {
             PostOffice.forEach((e) => {
               // console.log(e);
-              foundMsg.innerText = `${e.District} ${e.Pincode}`;
+              let PinCode = `${e.District} ${e.Pincode}`;
+              foundMsg.innerText = PinCode
+
+              localStorage.setItem('location', PinCode)
+
             });
             popUp.classList.add('inactive')
           } 
@@ -72,3 +77,31 @@ inputScreen.addEventListener("focus", () => {
   errorMsg.innerHTML = "";
   inputScreen.classList.remove("red-border");
 });
+
+
+// slider js 
+const slides = document.getElementsByClassName("slide");
+// console.log(slides);
+let flag = 0;
+
+function controller(x){
+    flag = flag + x;
+    slidesShow(flag);
+}
+slidesShow(flag);
+
+function slidesShow(num){
+    if(num == slides.length){
+       flag = 0;
+       num = 0;
+    }
+    if(num<0){
+        flag = slides.length-1;
+        num = slides.length-1;
+    }
+    for(let y of slides){
+      console.log(y);
+        y.style.display = "none";
+    }
+    slides[num].style.display = "block";
+}

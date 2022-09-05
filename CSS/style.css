@@ -29,7 +29,6 @@ input {
 }
 /************************ global CSS end ************************/
 
-
 /************************ variables CSS start ************************/
 :root {
   --color-white: #fff;
@@ -84,12 +83,6 @@ input {
   position: relative;
   top: 0;
   z-index: 100;
-}
-.sticky{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 .header-maininfo {
   width: 100%;
@@ -170,7 +163,7 @@ input {
 }
 
 /* pop-up for pin-code input */
-.pop-up{
+.pop-up {
   min-width: 450px;
   position: absolute;
   top: 60px;
@@ -182,12 +175,12 @@ input {
   z-index: 100;
   background-color: #fff;
 }
-.pop-up .pop-up-info{
+.pop-up .pop-up-info {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
-.top-arrow{
+.top-arrow {
   width: 15px;
   height: 15px;
   background-color: transparent;
@@ -198,7 +191,7 @@ input {
   left: 45%;
   transform: translateY(-100%);
 }
-.pop-up-info .title{
+.pop-up-info .title {
   width: 100%;
   padding: 20px;
   background-color: #3399cc;
@@ -207,15 +200,15 @@ input {
   border-radius: 4px 4px 0 0;
   border-bottom: 1px solid #e5e5e5;
 }
-.pop-up-info .pinCode-input{
+.pop-up-info .pinCode-input {
   padding: 30px 20px 10px;
   background-color: #fff;
 }
-.pop-up-info .pinCode-input form .txt-input{
+.pop-up-info .pinCode-input form .txt-input {
   width: 100%;
   position: relative;
 }
-form .txt-input .input{
+form .txt-input .input {
   width: 100%;
   height: 35px;
   padding: 20px 10px;
@@ -225,20 +218,19 @@ form .txt-input .input{
   border-radius: 10px;
   line-height: 1.5;
 }
-.txt-input .input.red-border{
+.txt-input .input.red-border {
   border-color: red;
 }
-.txt-input label{
+.txt-input label {
   font-size: 1em;
   position: absolute;
   top: 0.6rem;
   left: 0.8rem;
   cursor: text;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .input:focus + label,
-.input:not(:placeholder-shown).input:not(:focus)+ label
-{
+.input:not(:placeholder-shown).input:not(:focus) + label {
   font-size: 0.9em;
   top: -0.7em;
   background: #fff;
@@ -246,7 +238,7 @@ form .txt-input .input{
   color: #adadad;
 }
 
-.pinCode-input form button{
+.pinCode-input form button {
   padding: 0 10px;
   border: none;
   background-color: transparent;
@@ -261,13 +253,13 @@ form .txt-input .input{
   right: 20px;
   height: 44px;
 }
-.pinCode-input .error-msg{
+.pinCode-input .error-msg {
   width: 100%;
   margin-top: 5px;
   color: #e42529;
   padding: 0 6px;
 }
-.pop-up-info .live-location{
+.pop-up-info .live-location {
   width: 100%;
   margin-bottom: 15px;
   padding: 0 20px;
@@ -277,7 +269,7 @@ form .txt-input .input{
   background-color: #fff;
 }
 
-.pop-up-info .close-btn{
+.pop-up-info .close-btn {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -287,14 +279,14 @@ form .txt-input .input{
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
-.pop-up-info .close-btn i{
+.pop-up-info .close-btn i {
   margin-right: 0;
   font-size: 1.2em;
   color: #fff;
 }
-.pop-up-info .close-btn:hover{
+.pop-up-info .close-btn:hover {
   background-color: #f0f0f0ce;
 }
 
@@ -306,7 +298,7 @@ form .txt-input .input{
   background: #003380;
   position: relative;
 }
-.nav .navbar{
+.nav .navbar {
   padding: 0 20px;
   align-items: center;
   justify-content: space-around;
@@ -317,26 +309,25 @@ form .txt-input .input{
   list-style: none;
   cursor: pointer;
 }
-.nav_items .heading{
+.nav_items .heading {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .nav_items > li:hover {
-  background-color:#e42529;
+  background-color: #e42529;
 }
 
 .navbar li > a {
   color: #fff;
   text-decoration: none;
 }
-.nav_items i{
-  color:#fff;
+.nav_items i {
+  color: #fff;
   margin-left: 3px;
   font-size: 12px;
 }
-
 
 /* DropDown Menu */
 
@@ -349,34 +340,36 @@ form .txt-input .input{
   display: block;
 }
 
-.row1, .row2, .row3{
+.row1,
+.row2,
+.row3 {
   margin-right: 20px;
 }
 
 .dropdown {
-  max-width: 1306px;
+  max-width: 1291px;
   width: 100vw;
   padding: 10px 20px;
   position: absolute;
-  top:39px;
-  left: 30px;
+  top: 39px;
+  left: 29px;
   border: 1px solid #8f8e8e;
   border-top: none;
   display: flex;
 }
 
-.mobile_section{
+.mobile_section {
   background: url("../Assets/navbar/Mobiles-Tablet-Menu-Banners.png") no-repeat;
   object-fit: cover;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
 }
-.computer_section{
+.computer_section {
   background: url("../Assets/navbar/Computers-Menu-Banners.jpg") no-repeat;
   object-fit: cover;
   background-size: cover;
 }
-.personal_care{
+.personal_care {
   background: url("../Assets/navbar/Personal-Care-Menu-Banners.jpg") no-repeat;
   object-fit: cover;
   background-size: cover;
@@ -403,9 +396,227 @@ form .txt-input .input{
 .home_app,
 .camera_section,
 .kitchen_apps,
-.access{
-  background: #252F64;
+.access {
+  background: #252f64;
 }
 /* Navbar Ends Here */
+
+/* sticy header */
+.sticky .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sticky .static-banner {
+  margin-top: 106px;
+}
 /************** header CSS end **************/
+
+/************** main CSS start **************/
+#main {
+  width: 100%;
+  padding-bottom: 50px;
+}
+/* slider CSS start */
+.instant__discount img {
+  width: 100%;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+.slide img {
+  width: 100%;
+  z-index: 100;
+}
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 82%;
+  color: var(--color-white);
+  font-size: x-large;
+}
+.next {
+  right: 5px;
+}
+.prev {
+  left: 5px;
+}
+.slide {
+  display: none;
+}
+/* slider CSS end */
+
+/* ads secion CSS start */
+.ads {
+  width: 100%;
+}
+.ads .title {
+  width: 100%;
+  font-size: 24px;
+  padding: 25px 27px 0;
+  text-transform: uppercase;
+}
+.ads .banners {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 3% 0 0 2%;
+}
+.ads .banners .md {
+  width: 25%;
+  padding-right: 2%;
+}
+.ads .banners .md img {
+  width: 100%;
+}
+/* ads secion CSS end */
+
+/* Reliance Brand Promise Section CSS start */
+.promise_details {
+  margin: 0 10px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.promise_items {
+  width: 25%;
+  text-align: center;
+  margin: 0 10px;
+  padding: 10px 0;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.promise_item_img img {
+  height: 40px;
+}
+
+.promise_title {
+  margin: 10px 0;
+  color: #003380;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promise_text {
+  color: #003380;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -4px 0 0 0;
+}
+.promise_subtext {
+  color: #666;
+  font-size: 10px;
+}
+/* Reliance Brand Promise Section CSS end */
+/************** main CSS end **************/
+
+/************** footer CSS start **************/
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  font-weight: bold;
+}
+
+.footer__listLinks ul li {
+  color: #fff;
+  line-height: 32px;
+}
+.footer__listLinks ul li a {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  overflow: hidden;
+}
+.footer {
+  width: 100%;
+  color: #333;
+  font-family: Roboto, "system-ui", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+.information {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__linksTitle > h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.followUs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 23px;
+  width: 60%;
+}
+.footer__mediaLinks {
+  list-style: none;
+  margin-left: -5px;
+  padding-left: 0;
+}
+.footer_container {
+  background-color: #003380;
+}
+.footer__mediaLinks {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.stores {
+  display: flex;
+  margin-top: 10px;
+}
+.google__play {
+  margin-right: 7px;
+}
+.stores__img__size {
+  height: 45px;
+  width: 130px;
+}
+
+.footer__socialMedia {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__socialMedia i{
+  font-size: 1.3em;
+}
+
+.footer__disclaimer {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  background-color: #0a244a;
+  color: var(--color-white);
+  padding: 25px;
+}
+.footer__disclaimer .title{
+  font-size: 15px;
+  display: inline-block;
+  border-bottom: 1px solid;
+  letter-spacing: 1px;
+}
+.footer__disclaimer .description{
+  padding: 10px;
+  border-bottom: 1px solid #adadad;
+  margin: 10px 0;
+}
+/************** footer CSS end **************/
 /************************ general CSS start ************************/
