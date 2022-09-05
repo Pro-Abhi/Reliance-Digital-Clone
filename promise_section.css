@@ -52,3 +52,43 @@
   font-size: 10px;
   line-height: 15px;
 }
+
+/* Main Page Product - Slider Group */
+
+.main_product_section{
+  border-top: 1px solid #ddd;
+  padding: 32px 2% 0;
+}
+
+.products_title{
+  padding: 0 10px;
+  border-right: 1px solid #333333;
+}
+
+
+.view_all a{
+  font-size: 14px;
+  color:#003380;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main_product_items{
+    color: #333;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: .7em;
+    margin-bottom: 20px;
+    padding: 0 10px 2px 0;
+    text-transform: uppercase;
+}
+
+.main_slider_group{
+  border: 2px solid red;
+  margin: 30px 10px;
+}
+
+.group_main_image{
+  height: 300px;
+  width: 300px;
+}
