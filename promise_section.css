@@ -101,7 +101,7 @@ a {
   padding: 5px 15px;
   height: 100%;
   width: 250px;
-  overflow: auto;
+  overflow: hidden;
 }
 .main_slider_image{
   padding: 20px 0;
@@ -141,4 +141,39 @@ a {
   font-weight: 500;
   padding: 1px 6px;
   text-transform: uppercase;
+}
+.slider_left_btn,
+.slider_right_btn{
+  margin: 15px;
+  position: relative;
+}
+
+.left_btn,
+.right_btn{
+    color:#333;
+    padding: 20px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px 0 #d4d4d4;
+    
+}
+
+.left_btn{
+  position: absolute;
+  top:50%;
+}
+.right_btn{
+  position: absolute;
+  top:50%;
+  right:0;
+}
+
+
+.main_slider_group_right{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
 }
