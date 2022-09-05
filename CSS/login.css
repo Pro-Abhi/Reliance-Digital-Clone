@@ -423,6 +423,9 @@ h3 {
   font-size: 15px;
   overflow: hidden;
 }
+.footer__listLinks ul li a:hover{
+  text-decoration: underline;
+}
 .footer {
   width: 100%;
   color: #333;
