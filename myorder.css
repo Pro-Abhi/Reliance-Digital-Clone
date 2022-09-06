@@ -1,0 +1,26 @@
+.user_account_details .btn{
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user_account_details .btn-active{
+    border-bottom: 4px solid blue;
+}
+
+#NO_Oder_found{
+    margin: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    line-height: 2;
+}
+
+.cta-btn{
+    padding: 5px 10px;
+    color:#fff;
+    background-color:#003380;
+}
