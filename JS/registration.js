@@ -8,6 +8,7 @@ let emailVerifyBtn = document.querySelector('.emailVerify')
 let verifyMsg = document.querySelector('.verify-msg')
 let verifyIcon = document.querySelector('.icon-1')
 let TnC = document.querySelector('.TnC')
+let proceedBtn = document.querySelector('.proceed')
 
 let regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
 
@@ -50,4 +51,25 @@ emailVerifyBtn.addEventListener('click', function() {
     this.classList.add('verified')
     TnC.classList.remove('inactive')
   }, 2000)
+})
+
+proceedBtn.disabled = true
+// check checkbox is chexked or not
+let checkbox = document.querySelector('#tnc')
+checkbox.addEventListener('click', () => {
+  if(checkbox.checked){
+    proceedBtn.style.opacity = '1'
+    proceedBtn.style.cursor = 'pointer'
+    proceedBtn.disabled = false
+  }
+  else{
+    proceedBtn.style.opacity = '0.6'
+    proceedBtn.style.cursor = 'not-allowed'
+  }
+})
+
+
+// onclick proceedBtn user goes on profile page
+proceedBtn.addEventListener('click', () => {
+  window.location.href = 'profile.html'
 })
