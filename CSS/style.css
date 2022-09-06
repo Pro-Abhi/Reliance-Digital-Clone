@@ -218,9 +218,7 @@ form .txt-input .input {
   border-radius: 10px;
   line-height: 1.5;
 }
-.txt-input .input.red-border {
-  border-color: red;
-}
+
 .txt-input label {
   font-size: 1em;
   position: absolute;
@@ -235,7 +233,20 @@ form .txt-input .input {
   top: -0.7em;
   background: #fff;
   padding: 0 5px;
-  color: #adadad;
+  color: #2d73ed;
+}
+.input:focus{
+  border: 2px solid #2d73ed;
+}
+.txt-input .input.alert{
+  border: 2px solid #d32f2f;
+}
+.txt-input label.alert{
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #d32f2f;
 }
 
 .pinCode-input form button {
@@ -259,6 +270,24 @@ form .txt-input .input {
   color: #e42529;
   padding: 0 6px;
 }
+.pinCode-input .loader{
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #666;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
+
 .pop-up-info .live-location {
   width: 100%;
   margin-bottom: 15px;

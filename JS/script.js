@@ -1,21 +1,3 @@
-// sticky header
-let body = document.querySelector('BODY')
-let header = document.querySelector('.header-linkinfo')
-let sticky_header = document.querySelector('.header')
-
-let observer = new IntersectionObserver((entries) => {
-  let ent = entries[0]
-  console.log(ent);
-  ent.isIntersecting === false ? body.classList.add('sticky') : body.classList.remove('sticky')
-}, {
-  root: null,
-  rootMargin: "",
-  threshold: 0,
-})
-
-observer.observe(header)
-
-
 // pin-code
 let userPinCode = document.querySelector(".user-pin-code");
 let popUp = document.querySelector(".pop-up");
@@ -30,7 +12,8 @@ userPinCode.addEventListener("click", () => {
   popUp.classList.remove("inactive");
   inputScreen.value = "";
   errorMsg.innerHTML = "";
-  inputScreen.classList.remove("red-border");
+  inputScreen.classList.remove("alert");
+  inputLabel.classList.remove('alert')
 });
 
 closeBtn.addEventListener("click", () => {
@@ -41,7 +24,8 @@ submitBtn.addEventListener("click", () => {
   if(inputScreen.value.length < 6) {
     popUp.classList.remove("inactive");
     errorMsg.innerHTML = `Please enter correct PIN Code`;
-    inputScreen.classList.add("red-border");
+    inputScreen.classList.add("alert");
+    inputLabel.classList.add('alert')
   }
   else{
     fetch(`https://api.postalpincode.in/pincode/${inputScreen.value}`)
@@ -65,21 +49,23 @@ submitBtn.addEventListener("click", () => {
           else if(status == "Error") {
             popUp.classList.remove("inactive");
             errorMsg.innerText = `Invalid Pincode`;
-            inputScreen.classList.add("red-border");
+            inputScreen.classList.add("alert");
+            inputLabel.classList.add('alert')
           }
         });
       });
+      errorMsg.innerHTML = `<div class="loader"></div>`
   }
 });
 
 inputScreen.addEventListener("focus", () => {
-  inputScreen.value = "";
   errorMsg.innerHTML = "";
-  inputScreen.classList.remove("red-border");
+  inputScreen.classList.remove("alert");
+  inputLabel.classList.remove('alert')
 });
 
 
-// slider js 
+// slider-1 js
 const slides = document.getElementsByClassName("slide");
 // console.log(slides);
 let flag = 0;
