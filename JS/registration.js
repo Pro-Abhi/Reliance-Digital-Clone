@@ -5,6 +5,42 @@ let email = document.querySelector('#email')
 let mobileNumber = document.querySelector('#number')
 
 
+// store user registration data into localStroage
+// onclick proceedBtn user goes on profile page
+function signUp(){
+  window.location.href = 'profile.html'
+
+  let FirstName = firstName.value
+  let LastName = lastName.value
+  let EmailID = email.value
+  let MobileNumber = mobileNumber.value
+
+  // set new array to store user registration info
+  let userRecords = []
+  // read data from localStorage using getItem
+  // if data present then read otherwise return empty array
+  userRecords = JSON.parse(localStorage.getItem('users'))?JSON.parse(localStorage.getItem('users')) : []
+
+  if(userRecords.some(v => {
+    return v.EmailID == EmailID
+  })){
+    alert('duplicate')
+  }
+  else{
+    // push data into array
+    userRecords.push({
+      'FirstName' : FirstName,
+      'LastName' : LastName,
+      'EmailID' : EmailID,
+      'MobileNumber' : MobileNumber
+    })
+    // store data into localStorage using setItem
+    localStorage.setItem('users', JSON.stringify(userRecords))
+  }
+
+}
+
+
 // email validation
 let label = document.querySelector('.email-label')
 let errorMsg = document.querySelector('.evm')
@@ -71,38 +107,3 @@ checkbox.addEventListener('click', () => {
     proceedBtn.style.cursor = 'not-allowed'
   }
 })
-
-
-// onclick proceedBtn user goes on profile page\
-function signUp(){
-  window.location.href = 'profile.html'
-
-  let FirstName = firstName.value
-  let LastName = lastName.value
-  let EmailID = email.value
-  let MobileNumber = mobileNumber.value
-
-  // set new array to store user registration info
-  let userRecords = []
-  // read data from localStorage using getItem
-  // if data present then read otherwise return empty array
-  userRecords = JSON.parse(localStorage.getItem('users'))?JSON.parse(localStorage.getItem('users')) : []
-
-  if(userRecords.some(v => {
-    return v.EmailID == EmailID
-  })){
-    alert('duplicate')
-  }
-  else{
-    // push data into array
-    userRecords.push({
-      'FirstName' : FirstName,
-      'LastName' : LastName,
-      'EmailID' : EmailID,
-      'MobileNumber' : MobileNumber
-    })
-    // store data into localStorage using setItem
-    localStorage.setItem('users', JSON.stringify(userRecords))
-  }
-
-}
