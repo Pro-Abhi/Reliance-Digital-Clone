@@ -157,6 +157,25 @@
   display: none;
 }
 
+.form .TnC{
+  width: 100%;
+  padding: 10px 0 0 0;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.TnC input{
+  width: 18px;
+  height: 18px;
+  margin-right: 2%;
+}
+.TnC label{
+  font-size: 15px;
+  font-weight: 600;
+}
+.TnC label a{
+  color: #003380;
+}
+
 .form .for-login{
   width: 100%;
   text-align: center;

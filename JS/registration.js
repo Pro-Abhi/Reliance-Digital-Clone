@@ -7,13 +7,18 @@ let errorMsg = document.querySelector('.evm')
 let emailVerifyBtn = document.querySelector('.emailVerify')
 let verifyMsg = document.querySelector('.verify-msg')
 let verifyIcon = document.querySelector('.icon-1')
+let TnC = document.querySelector('.TnC')
 
 let regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
 
+if(email.value.length == 0){
+  emailVerifyBtn.disabled = true
+}
 function check(){
   if(email.value.match(regExp)){
     emailVerifyBtn.style.opacity = '1'
     emailVerifyBtn.style.cursor = 'pointer'
+    emailVerifyBtn.disabled = false
     email.classList.remove('alert')
     label.classList.remove('alert')
     errorMsg.innerHTML = ``
@@ -21,7 +26,7 @@ function check(){
   else{
     emailVerifyBtn.style.opacity = '0.6'
     emailVerifyBtn.style.cursor = 'not-allowed'
-      errorMsg.innerHTML = 'Please enter valid email address'
+    errorMsg.innerHTML = 'Please enter valid email address'
     email.classList.add('alert')
     label.classList.add('alert')
     errorMsg.classList.add('alert')
@@ -43,5 +48,6 @@ emailVerifyBtn.addEventListener('click', function() {
   setTimeout(() => {
     this.innerHTML = `Email verified successfully`
     this.classList.add('verified')
+    TnC.classList.remove('inactive')
   }, 2000)
 })
