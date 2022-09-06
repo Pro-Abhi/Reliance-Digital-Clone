@@ -1,7 +1,11 @@
 // registration form validation and store data in localStorage
+let firstName = document.querySelector('#fname')
+let lastName = document.querySelector('#lname')
+let email = document.querySelector('#email')
+let mobileNumber = document.querySelector('#number')
+
 
 // email validation
-let email = document.querySelector('#email')
 let label = document.querySelector('.email-label')
 let errorMsg = document.querySelector('.evm')
 let emailVerifyBtn = document.querySelector('.emailVerify')
@@ -69,7 +73,36 @@ checkbox.addEventListener('click', () => {
 })
 
 
-// onclick proceedBtn user goes on profile page
-proceedBtn.addEventListener('click', () => {
+// onclick proceedBtn user goes on profile page\
+function signUp(){
   window.location.href = 'profile.html'
-})
+
+  let FirstName = firstName.value
+  let LastName = lastName.value
+  let EmailID = email.value
+  let MobileNumber = mobileNumber.value
+
+  // set new array to store user registration info
+  let userRecords = []
+  // read data from localStorage using getItem
+  // if data present then read otherwise return empty array
+  userRecords = JSON.parse(localStorage.getItem('users'))?JSON.parse(localStorage.getItem('users')) : []
+
+  if(userRecords.some(v => {
+    return v.EmailID == EmailID
+  })){
+    alert('duplicate')
+  }
+  else{
+    // push data into array
+    userRecords.push({
+      'FirstName' : FirstName,
+      'LastName' : LastName,
+      'EmailID' : EmailID,
+      'MobileNumber' : MobileNumber
+    })
+    // store data into localStorage using setItem
+    localStorage.setItem('users', JSON.stringify(userRecords))
+  }
+
+}
