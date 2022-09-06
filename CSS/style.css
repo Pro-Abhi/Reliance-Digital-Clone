@@ -447,35 +447,54 @@ form .txt-input .input {
   width: 100%;
   padding-bottom: 50px;
 }
-/* slider CSS start */
 .instant__discount img {
   width: 100%;
 }
-.slider-container {
+/* slider-1 CSS start */
+.slider-container{
   position: relative;
   width: 100%;
 }
-.slide img {
+.slide img{
   width: 100%;
-  z-index: 100;
 }
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 82%;
-  color: var(--color-white);
-  font-size: x-large;
+.arrow{
+ cursor: pointer;
+ position: absolute; 
+ top: 46%;
+ color: var(--color-white);
+ font-size:x-large;
 }
-.next {
+.next{
   right: 5px;
 }
-.prev {
+.prev{
   left: 5px;
 }
-.slide {
+.slide{
   display: none;
 }
-/* slider CSS end */
+.slider-container .slider__navigation{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-container .slider__navigation .slider__navigation__btn{
+  background:var(--color-black-2);
+  color: rgba(0,0,0,0);
+  width:  8px;
+  height: 8px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider-container .slider__navigation .slider__navigation__btn:hover{
+   background:var(--color-black)
+}
+/* slider-1 CSS end */
 
 /* ads secion CSS start */
 .ads {
@@ -500,6 +519,32 @@ form .txt-input .input {
   width: 100%;
 }
 /* ads secion CSS end */
+
+/* slider-2 CSS start */
+.vivo__galaxy{
+  position: relative;
+  width: 100%; 
+}
+.vivo__galaxy__slide img{
+  width: 100%;
+}
+.vivo__galaxy__arrow{
+  cursor: pointer;
+  position: absolute;
+  top: 46%;
+  color: var(--color-black);
+  font-size:x-large;
+}
+.vivo__galaxy__next{
+  right: 5px;
+}
+.vivo__galaxy__prev{
+  left: 5px;
+}
+.vivo__galaxy__slide{
+  display: none;
+}
+/* slider-2 CSS end */
 
 /* Reliance Brand Promise Section CSS start */
 .promise_details {
