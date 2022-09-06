@@ -706,24 +706,27 @@
         <div class="form pd">
           <form>
             <div class="txt-input firstName">
-              <input type="text" class="input" name="fname" id="fname" placeholder=" " required>
+              <input type="text" class="input" name="fname" id="fname" placeholder=" " autocomplete="off" required>
               <label for="fname">First Name*</label>
               <p class="error-msg fem"></p>
             </div>
             <div class="txt-input lastName">
-              <input type="text" class="input" name="lname" id="lname" placeholder=" " required>
+              <input type="text" class="input" name="lname" id="lname" placeholder=" " autocomplete="off" required>
               <label for="lname">Last Name*</label>
               <p class="error-msg lem"></p>
             </div>
             <div class="txt-input emailID">
-              <input type="email" class="input" name="email" id="email" placeholder=" " required>
+              <input type="email" class="input" name="email" id="email" placeholder=" " onkeyup="check()" autocomplete="off" required>
               <label for="email" class="email-label">Email Address*</label>
               <p class="evm sm-txt">Your address will be used to send order invoice, order updates etc.
               </p>
             </div>
-            <button type="button" class="emailVerify">Verify Email</button>
+            <button type="button" class="emailVerify">
+              <i class="fa-solid fa-circle-check icon-1"></i>
+              <span class="verify-msg">Verify Email</span>
+            </button>
             <div class="txt-input mobileNumber">
-              <input type="tel" class="input" name="number" id="number" placeholder=" " required>
+              <input type="tel" class="input" name="number" id="number" placeholder=" " autocomplete="off" required>
               <label for="number">Mobile Number*</label>
               <p class="error-msg nem sm-txt">Your mobile number will be used to avail benefits such as Jio Mart Cashback and ROne Loyality Points and receive quick notifications.</p>
             </div>

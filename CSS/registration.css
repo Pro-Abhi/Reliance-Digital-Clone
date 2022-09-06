@@ -367,19 +367,40 @@ input {
 }
 .form button{
   display: block;
-  padding: 8px 20px;
-  margin: 5px 0 25px 0;
+  padding: 6px 20px;
+  margin-bottom: 25px;
   cursor: pointer;
 }
 .form .emailVerify{
   background-color: #fff;
   border: 1px solid #e42529;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 0.9em;
   text-transform: uppercase;
   color: #d9534f;
-  /* opacity: 0.6; */
-  /* cursor: not-allowed; */
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-align: start;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+}
+.loader{
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #29ca8e;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
 }
 .txt-input .input.alert{
   border: 1px solid #d32f2f;
@@ -389,6 +410,9 @@ input {
   top: -0.7em;
   background: #fff;
   padding: 0 5px;
+  color: #d32f2f;
+}
+.evm.alert{
   color: #d32f2f;
 }
 
@@ -404,9 +428,24 @@ input {
   opacity: 0.6;
   cursor: not-allowed;
 }
-.form .proceed.unabled{
+.unabled{
   opacity: 1;
   cursor: pointer;
+}
+.emailVerify.verified{
+  background-color: #43a047;
+  border: 1px solid #43a047;
+  border-radius: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 1;
+  cursor: text;
+}
+.emailVerify .icon-1{
+  color: #43a047;
+  font-size: 1.2em;
+  display: none;
 }
 
 .form .for-login{
