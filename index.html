@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f951ff3bec.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="show()">
     <header>HEADER</header>
     <main>
         <div>
@@ -121,96 +121,105 @@
               <span class="vivo__galaxy__arrow vivo__galaxy__prev" onclick="controller2(-1)"><i class="fa-sharp fa-solid fa-chevron-left"></i></span>
               <span class="vivo__galaxy__arrow vivo__galaxy__next" onclick="controller2(1)"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>
             </section>
-
-            <section class="slider3">
-                <div>EXPLORE OUR RANGE OF PRODUCTS</div>
-                <div class="explore__products__slider">
-                    <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\iphone-pro-11-01.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets">
-                                <h3>Smartphones</h3>
-                            </div>
-                          </a>
-                      </div>
-                      
-                      <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\Laptop-180x180-15-01-2019.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets">
-                                <h3>Laptops</h3>
-                            </div>
-                          </a>
-                      </div>
+            <section   class="slider3" >
+                <div class="slider3__explore">EXPLORE OUR RANGE OF PRODUCTS</div>
+                <div  class="explore__products__slider">
+                    
+                    <!-- <div class=""> -->
+                        <div class="explore__products__slide__row">
+                            <div class="explore__products__slide " id="c1">
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\iphone-pro-11-01.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets">
+                                        <h3>Smartphones</h3>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+                              <div class="explore__products__slide" id="c2">
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\Laptop-180x180-15-01-2019.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets">
+                                        <h3>Laptops</h3>
+                                    </div>
+                                  </a>
+                              </div>
+            
+                              <div class="explore__products__slide" id="c3">
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\TV-180x180-15-01-2019.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets">
+                                        <h3>Televisions</h3>
+                                    </div>
+                                  </a>
+                              </div>
+            
+                              <div class="explore__products__slide" id="c4">
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\Watch-180x180-27-02-2020.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets">
+                                        <h3>Smart Wearables</h3>
+                                    </div>
+                                  </a>
+                              </div>
+            
+                              <div class="explore__products__slide" id="c5">
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\Washing-Machine-180x180-15-01-2019.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets" >
+                                        <h3>Washing Machines</h3>
+                                    </div>
+                                  </a>
+                              </div>
     
-                      <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\TV-180x180-15-01-2019.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets">
-                                <h3>Televisions</h3>
-                            </div>
-                          </a>
-                      </div>
+                              <div class="explore__products__slide" id="c6">
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\Speaker-Headset-180x180-15-01-2019.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets">
+                                        <h3>Speakers & Headsets</h3>
+                                    </div>
+                                  </a>
+                              </div>
     
-                      <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\Watch-180x180-27-02-2020.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets">
-                                <h3>Smart Wearables</h3>
-                            </div>
-                          </a>
-                      </div>
+                              <div class="explore__products__slide" id="c7"> 
+                                <a href="#">
+                                    <div>
+                                        <img src=".\img\slider3\Camera-180x180-15-01-2019.webp" alt="">
+                                    </div>
+                                    <div class="explore__products__slider__gaggets">
+                                        <h3>Cameras</h3>
+                                    </div>
+                                  </a>
+                              </div>
     
-                      <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\Washing-Machine-180x180-15-01-2019.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets" >
-                                <h3>Washing Machines</h3>
-                            </div>
-                          </a>
-                      </div>
+                        </div>
+        
+                      <!-- <div class="explore__products__slide row">
+                      </div> -->
+                    <!-- </div> -->
     
-                      <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\Speaker-Headset-180x180-15-01-2019.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets">
-                                <h3>Speakers & Headsets</h3>
-                            </div>
-                          </a>
-                      </div>
-    
-                      <div class="explore__products__slide">
-                        <a href="#">
-                            <div>
-                                <img src="\img\slider3\Camera-180x180-15-01-2019.webp" alt="">
-                            </div>
-                            <div class="explore__products__slider__gaggets">
-                                <h3>Cameras</h3>
-                            </div>
-                          </a>
-                      </div>
-    
-                  <span class="explore__products__arrow  explore__products__prev" onclick="controller3(-1)"><i class="fa-sharp fa-solid fa-chevron-left"></i></span>
-                  <span class="explore__products__arrow  explore__products__next" onclick="controller3(1)"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>
+                  <span class="explore__products__arrow  explore__products__prev" onclick="moveLeft()"><i class="fa-sharp fa-solid fa-chevron-left"></i></span>
+                  <span class="explore__products__arrow  explore__products__next" onclick="moveRight()"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>
                 </div>
-                <div>
+                <div class="slider3__viewAll">
                     <a href="#">
                         <div>View All</div>
                     </a>
                 </div>
             </section>
+  
         </div>
     </main>
     <footer class="footer">
