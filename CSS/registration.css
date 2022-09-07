@@ -94,6 +94,7 @@
   display: grid;
   place-content: center;
 }
+
 .loader{
   pointer-events: none;
   width: 30px;
@@ -121,8 +122,15 @@
   padding: 0 5px;
   color: #d32f2f;
 }
-.evm.alert{
-  color: #d32f2f;
+.txt-input label.filled{
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #1976d2;
+}
+.input.filled{
+  border: 1px solid #1976d2;
 }
 
 .form .proceed{
@@ -137,10 +145,7 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
-.unabled{
-  opacity: 1;
-  cursor: pointer;
-}
+
 .emailVerify.verified{
   background-color: #43a047;
   border: 1px solid #43a047;
@@ -186,5 +191,7 @@
   color: #d9534f;
   font-weight: 600;
 }
-
+.alert{
+  color: #d32f2f !important;
+}
 /************** main CSS end **************/
