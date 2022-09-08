@@ -1,0 +1,57 @@
+/* Global CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+.promise_section_container {
+  margin: 20px;
+}
+
+.promise_details {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.promise_items {
+  height: 100px;
+  width: 25%;
+  text-align: center;
+  margin: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.promise_item_img img {
+  height: 40px;
+}
+
+.promise_title {
+  margin: 10px 0;
+  color: #003380;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promise_text {
+  color: #003380;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 14px;
+}
+.promise_subtext {
+  color: #666;
+  font-size: 10px;
+  line-height: 15px;
+}
