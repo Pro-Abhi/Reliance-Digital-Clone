@@ -1,0 +1,119 @@
+
+/* Main Container */
+
+.user_info_container{
+    display: flex;
+    margin:auto;
+    height: 80vh;
+    width: 90vw;
+}
+
+.user_deatils{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 15px;
+    flex:0.5;
+    border:1px solid #eee;
+}
+
+.user_name{
+    font-weight: 700;
+}
+
+.user_email{
+    font-weight: 400;
+    color:#333;
+}
+.user_account_menu{
+    margin:20px 0;
+}
+.user_account_menu h3{
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.user_account_menu ul{
+    padding-left: 10px;
+}
+.user_account_menu ul li{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    list-style: none;
+    color:#333;
+    cursor: pointer;
+}
+.user_account_menu ul li a{
+    color:#333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user_account_menu ul li:hover a{
+    color:#003380;
+    font-size: 16px;
+}
+
+.logout_btn{
+    padding: 10px;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Right Side Container */
+
+.user_account_details{
+    flex:2;
+    
+}
+
+.my_account{
+   
+    background-color: rgb(240, 248, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 46px;
+    padding: 0px 15px 0px 25px;
+}
+
+.user_account_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    padding: 10px 10px 50px 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 1.5%;
+    width: 30%;
+}
+
+.user img{
+    max-height: none;
+    width: 82px;
+    height: 79px;
+}
+
+.small_text{
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+}
+.imp_text{
+    color: #003380;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}

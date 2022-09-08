@@ -389,20 +389,18 @@ form .txt-input .input {
 
 .mobile_section {
   background: url("../Assets/navbar/Mobiles-Tablet-Menu-Banners.png") no-repeat;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .computer_section {
   background: url("../Assets/navbar/Computers-Menu-Banners.jpg") no-repeat;
-  object-fit: cover;
-  background-size: cover;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .personal_care {
   background: url("../Assets/navbar/Personal-Care-Menu-Banners.jpg") no-repeat;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 
 .dropdown .items {
@@ -445,7 +443,6 @@ form .txt-input .input {
 /************** main CSS start **************/
 #main {
   width: 100%;
-  padding-bottom: 50px;
 }
 .instant__discount img {
   width: 100%;
@@ -596,7 +593,7 @@ form .txt-input .input {
 }
 /* Reliance Brand Promise Section CSS end */
 
-
+/* product-slider section CSS start */
 /* Slider Css  */
 .main_product_section {
   padding: 32px 27px 0 27px;
@@ -758,8 +755,7 @@ form .txt-input .input {
 .next {
   right: 0px;
 }
-
-/* clothing-product slider CSS end */
+/* product-slider section CSS end */
 
 /* slider3 css */
 .slider3{
