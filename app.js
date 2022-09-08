@@ -9,7 +9,7 @@ const slides3 = document.getElementsByClassName("explore__products__slide");
 let flag = 0;
 let currentSlide = 1;
 slider__btns.forEach(element => {
-    // console.log(element);
+
   });
 
 
