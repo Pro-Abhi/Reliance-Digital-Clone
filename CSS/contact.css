@@ -1,0 +1,120 @@
+/************** main CSS start **************/
+/* main section */
+#main{
+  width: 100%;
+}
+.contact_container {
+  max-width: 1250px;
+  margin: 30px auto 10px;
+}
+
+.contact_container .contact_banner {
+  background: url("../Assets/contact/contact-banner.jpg") no-repeat;
+  background-position: center top;
+  height: 350px;
+  max-height: 350px;
+  position: relative;
+}
+.contact_message {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.contact_message .contact_heading {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.contact_message .contact_subheding {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.contact_medium {
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact_section {
+  flex-direction: column;
+  border: 1px solid #d9d9d9;
+  height: 300px;
+  width: 25vw;
+  text-align: center;
+}
+.contact_section .txt{
+  padding: 5px 25px;
+}
+.contact_section .l-pd{
+  padding: 10px 0;
+}
+
+.contact_section p {
+  font-size: 20px;
+  color: #585858;
+}
+
+.contact_section a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #003380;
+  padding: 3px 0;
+}
+.contact_section .contact_time{
+  font-size: 15px;
+}
+
+.contact_section .contact_button {
+  background: #204a86;
+  padding: 8px 0;
+}
+.contact_section .contact_button img {
+  height: auto;
+  max-width: 100%;
+  /* will-change: transform; */
+}
+.contact_section .txt .colorTxt{
+  color: #003380;
+  margin: 10px 0;
+}
+.contact_section .txt .apps{
+  justify-content: space-between;
+}
+
+.contact_text_container {
+  width: 85vw;
+  margin: auto;
+  text-align: justify;
+  color: #707070;
+  padding: 20px 20px 0;
+  line-height: 1.5;
+  font-size: 17px;
+}
+
+.contact_text_container .contact_text_heading {
+  font-size: 35px;
+  color: #204a86;
+  font-weight: 400;
+}
+.contact_text_container ul {
+  margin: 20px;
+  list-style: circle;
+}
+
+.contact_text_container .title {
+  color: #707070;
+  font-weight: 700;
+}
+.contact_text_container .level2 {
+  margin-bottom: 15px;
+}
+.contact_text_container a {
+  text-decoration: none;
+  font-weight: 400;
+}
+/************** main CSS end **************/

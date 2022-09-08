@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+.first-part{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  font-size: 14px;
+}
+/* left-side */
+.left-side{
+  width: 100%;
+}
+.left-side .main-img{
+  width: 60%;
+  margin: 0 auto;
+}
+img{
+  width: 100%;
+}
+
+/* right-side */
+.right-side{
+  width: 100%;
+  margin-left: 20px;
+}
+/* right-side --> top */
+.top{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.top .p-id{
+  margin: 14px 0;
+  color: #666;
+}
+.top .thumbnail{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.top .reviews{
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.bottom{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+}
+.bottom .additional-info{
+  width: 100%;
+  border-right: 1px solid #ccc;
+}
+
+.bt-r-ul{
+  margin-left: 18px;
+  list-style: disc;
+}
+ul li{
+  padding: 3px 3px 3px 0;
+}
+.non-disc{
+  list-style: none;
+}
+.btn{
+  cursor: pointer;
+  color: #003380;
+  list-style: none;
+  font-size: 13px;
+}
+.btn:hover{
+  text-decoration: underline;
+}
+
+.show-hide{
+  display: none;
+}
+
+.title{
+  font-size: 17px;
+  font-weight: 600;
+  margin: 17px 0 6px 0;
+  color: #333;
+}
+
+.user-related{
+  padding: 0 15px;
+}
+.price-section{
+  margin: 14px 0;
+}
+
+.second-part{
+  width: 100%;
+}
+.second-part .tp-b{
+  border-top: 1px solid #ccc;
+}
