@@ -23,7 +23,6 @@ searchBtn.addEventListener('click', () => {
       get_stores.map(ele => {
         let latitude = ele.geoPoint.latitude
         let longitude = ele.geoPoint.longitude
-        console.log(latitude, longitude);
       })
     })
     .catch(err => console.error(err));
