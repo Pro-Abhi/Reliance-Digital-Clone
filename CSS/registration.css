@@ -1,0 +1,197 @@
+/************** main CSS start **************/
+#main{
+  width: 100%;
+}
+#main .user-register{
+  width: 100%;
+  padding: 30px;
+}
+#main .user-register .form-section{
+  width: 40%;
+  margin: 10px auto;
+  /* border: 2px solid; */
+  box-shadow: 2px 2px 5px #ccc, -2px -2px 5px #ccc;
+  border-radius: 10px;
+}
+.form-section .title{
+  width: 100%;
+  background-color: #f9fafd;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-bottom: 1px solid #dddddd;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.form-section .form{
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 20px 40px;
+}
+.form .txt-input{
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: #fff;
+  position: relative;
+}
+.form .txt-input .input{
+  width: 100%;
+  height: 35px;
+  padding: 25px 10px;
+  font-size: 1.2em;
+  background: none;
+  border: 1px solid #d8e2ef;
+  border-radius: 5px;
+  line-height: 1.5;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.txt-input .input:focus{
+  border-color: #1976d2;
+  background-color: #fff;
+}
+.txt-input label{
+  font-size: 1em;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.8rem;
+  cursor: text;
+  transition: all .3s ease-in;
+}
+
+/* input label sticky top level */
+.input:focus + label,
+.input:not(:placeholder-shown).input:not(:focus)+ label
+{
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #1976d2;
+}
+.form .sm-txt{
+  font-size: 13px;
+  color: #666;
+  padding: 0 10px;
+}
+.form button{
+  display: block;
+  padding: 6px 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.form .emailVerify{
+  background-color: #fff;
+  border: 1px solid #e42529;
+  border-radius: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #d9534f;
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-align: start;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+}
+
+.loader{
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #29ca8e;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
+.txt-input .input.alert{
+  border: 1px solid #d32f2f;
+}
+.txt-input label.alert{
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #d32f2f;
+}
+.txt-input label.filled{
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #1976d2;
+}
+.input.filled{
+  border: 1px solid #1976d2;
+}
+
+.form .proceed{
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1em;
+  border: 1px solid #e42529;
+  background-color: #d9534f;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emailVerify.verified{
+  background-color: #43a047;
+  border: 1px solid #43a047;
+  border-radius: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 1;
+  cursor: text;
+}
+.emailVerify .icon-1{
+  color: #43a047;
+  font-size: 1.2em;
+  display: none;
+}
+
+.form .TnC{
+  width: 100%;
+  padding: 10px 0 0 0;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.TnC input{
+  width: 18px;
+  height: 18px;
+  margin-right: 2%;
+}
+.TnC label{
+  font-size: 15px;
+  font-weight: 600;
+}
+.TnC label a{
+  color: #003380;
+}
+
+.form .for-login{
+  width: 100%;
+  text-align: center;
+}
+.form .for-login .login-txt{
+  font-size: 1.3em;
+  text-transform: uppercase;
+  color: #d9534f;
+  font-weight: 600;
+}
+.alert{
+  color: #d32f2f !important;
+}
+/************** main CSS end **************/
