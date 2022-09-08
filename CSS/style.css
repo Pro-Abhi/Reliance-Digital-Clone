@@ -465,10 +465,10 @@ form .txt-input .input {
  color: var(--color-white);
  font-size:x-large;
 }
-.next{
+.next-sm{
   right: 5px;
 }
-.prev{
+.prev-sm{
   left: 5px;
 }
 .slide{
@@ -524,6 +524,11 @@ form .txt-input .input {
 .vivo__galaxy{
   position: relative;
   width: 100%; 
+}
+.vivo__galaxy__slide{
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 .vivo__galaxy__slide img{
   width: 100%;
@@ -591,75 +596,15 @@ form .txt-input .input {
 }
 /* Reliance Brand Promise Section CSS end */
 
-/* clothing-product slider CSS start */
-.clothing-section{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-}
-.clothing-section .left-side-banner{
-  width: 100%;
-  margin: 20px;
-}
-img{
-  width: 100%;
-}
-
-.product-slider {
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
-}
-.product-container {
-  padding: 0 10vw;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-.product-card{
-  flex: 0 0 auto;
-  width: 250px;
-  height: 450px;
-  margin-right: 40px;
-  border: 1px solid;
-}
-
-.prev-btn,
-.next-btn {
-  border: none;
-  width: 10vw;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 8;
-}
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
-}
-
 
 /* Slider Css  */
 .main_product_section {
-  margin: 20px;
-}
-
-.view_all {
-  background-color: rgba(0, 0, 0, 0);
-  color: #003380;
-  cursor: pointer;
-  text-decoration: none;
+  padding: 32px 27px 0 27px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 32px;
 }
 
 /* Before Slider */
-
 .products_title {
   color: #333;
   display: inline-block;
@@ -671,113 +616,126 @@ img{
   text-transform: uppercase;
   border-right: 1px solid rgb(51, 51, 51);
 }
+.view_all {
+  background-color: rgba(0, 0, 0, 0);
+  color: #003380;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.view_all a:hover{
+  color: #e42529;
+}
 
 .main_slider_group {
-  margin: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+}
+.reverse{
+  flex-direction: row-reverse;
 }
 
 .group_main_image {
-  height: 300px;
-  width: 300px;
+  width: 350px;
+  padding: 0 15px;
+}
+.group_main_image img{
+  width: 100%;
 }
 
 .main_slider_group_right {
-  width: 70%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* After Slider */
-
-a {
-  text-decoration: none;
-}
-
-
-.watches_container {
-  margin: 20px;
+.products_container {
   position: relative;
+  overflow: hidden;
 }
 
-.watches_slider {
-  padding: 0 50px;
+.slider {
+  margin: 0 40px;
   display: flex;
-  gap: 25px;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-.watches_slider::-webkit-scrollbar {
+.slider::-webkit-scrollbar {
   display: none;
 }
 
-.watch_item {
+.item {
   flex: 0 0 auto;
-  width: 200px;
-  height: 350px;
-  margin-right: 10px;
+  width: 250px;
+  margin: 0 20px;
+  cursor: pointer;
 }
 
-.watch_item:hover .product_title{
-  color:red;
+.item .product_image{
+  width: 100%;
+  object-fit: cover;
 }
-
-
-.product_image img {
-  max-width: 100%;
-  max-height: none;
+.item .product_image img{
+  width: 100%;
   display: block;
-  width: fit-content;
-  height: 180px;
-  border-radius: 5px;
-  transition: all 0.5s;
+  /* transition: .5s linear; */
 }
-
-.product_image img:hover {
-  transform: scale(0.8);
+.item .product_image img:hover{
+  transform: scale(1.05);
 }
 
 .product_title {
   color: #003380;
-  font-weight: 800;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 18px;
   overflow: hidden;
+  text-transform: capitalize;
+  margin: 15px 20px 5px 0;
+}
+.item:hover .product_title{
+  color:#e42529;
 }
 
-.stars {
-  padding-right: 2px;
+.review-section .stars {
   color: rgb(255, 164, 28);
+  font-size: 14px;
+}
+.review-section .review-count{
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.product_price,
-.product_original_price {
-  padding: 3px;
+.price-section, .price-section > div{
+  width: 100%;
+  font-size: 15px;
   color: #666;
 }
-
-.product_price strong{
-  color:#000;
-}
-
-.product_original_price {
+.price-section .strike{
   text-decoration: line-through;
 }
-
-#btn {
-  color: rgb(49, 129, 46);
-  background: rgb(239, 252, 245);
-  border: 1px solid rgb(49, 129, 46);
-  border-radius: 16px;
-  font-size: 10px;
-  font-weight: 500;
-  padding: 1px 6px;
-  text-transform: uppercase;
-
+.price-section .big{
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
 }
 
-.pre-btn,
-.nxt-btn {
+.offer-available-tag {
+  color: #31812e;
+  background: #effcf5;
+  border: 1px solid #31812e;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  margin: 4px 0;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.prev,
+.next {
   margin: auto;
   border: none;
   padding: 24px 8px;
@@ -793,12 +751,12 @@ a {
   z-index: 2;
 }
 
-.pre-btn {
-  left: -40px;
+.prev {
+  left: 0px;
 }
 
-.nxt-btn {
-  right: -40px;
+.next {
+  right: 0px;
 }
 
 /* clothing-product slider CSS end */
@@ -810,6 +768,7 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #f7f7f7f7;
 }
 .explore__products__slider{
   /* background-color: #003380; */
@@ -863,17 +822,25 @@ explore__products__slider__gaggets :hover{
 }
 .slider3__viewAll{
   text-align: center;
-  /* width: 140px; */
   cursor: pointer;
   background-color: #003380;
   border: 1px solid #2e6da4;
   border-radius: 24px;
-  color: #fff;
   display: inline-block;
   font-size: 20px;
   font-weight: 200;
   margin-bottom: 16px;
   padding: 8px 24px;
+}
+.slider3__viewAll a{
+  color: #fff;
+}
+.slider3__viewAll:hover{
+  background-color: transparent;
+  color: #003380;
+}
+.slider3__viewAll a:hover{
+  color: #003380;
 }
 .slider3__explore{
   color: #333;
@@ -881,7 +848,6 @@ explore__products__slider__gaggets :hover{
   font-weight: 700;
   padding: 16px 0 32px;
   text-transform: uppercase;
-  font-family: Roboto,"system-ui",sans-serif;
 }
 /************** main CSS end **************/
 

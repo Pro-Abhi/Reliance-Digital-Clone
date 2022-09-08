@@ -128,16 +128,19 @@ function slideShow2(num2){
 }
 
 
-// Product Slider Starts
-let main = document.querySelector(".watches_slider");
+// Watches-products Slider Starts
+let watchSlider = document.querySelector(".watches_slider");
 
-let url = "https://api.escuelajs.co/api/v1/categories/2/products";
-fetch(url)
+fetch("https://api.escuelajs.co/api/v1/categories/2/products")
   .then((res) => res.json())
   .then((data) => {
-    for (let i = 0; i < 15; i++) {
-      console.log(data);
-      let result = `<div class="watch_item">
+    for (let i = 0; i < 20; i++) {
+      let offerPrice = data[i].price
+      let mrpPrice = offerPrice + 1500
+      let discount = Math.round((offerPrice*100)/mrpPrice)
+      let saving = mrpPrice - offerPrice
+      // console.log(offerPrice, mrpPrice, discount, saving);
+      let result = `<div class="item watch_item">
                         <a href="#">
                             <div class="product_image">
                                 <img src="${data[i].images[1]}" alt="${
@@ -145,23 +148,40 @@ fetch(url)
                                 }">
                             </div>
                             <div class="product_title">${data[i].title}</div>
-                            <div class="stars">&bigstar;&starf;&starf;&starf;&star;</div>
-                            <div class="product_price">Offer Price <strong>Rs.${
-                              data[i].price
-                            }</strong></div>
-                            <div class="product_original_price">M.R.P :Rs.${
-                              data[i].price + 1000
-                            }</div>
-                            <button id = "btn">Offer Available</button>
+                            <div class="review-section">
+                              <span class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                              </span>
+                              <span class="review-count">(10 reviews)</span>
+                            </div>
+                            <div class="price-section">
+                              <div class="offer">
+                                <span class="name">Offer Price: </span>
+                                <span class="price big">₹${offerPrice}</span>
+                              </div>
+                              <div class="mrp">
+                                <span class="name">M.R.P: </span>
+                                <span class="price strike">₹${mrpPrice}</span>
+                              </div>
+                              <div class="saving-detail">
+                                <span class="name">You Save: </span>
+                                <span class="percent">${discount}%</span><span class="num">(₹${saving})</span>
+                              </div>
+                            </div>
+                            <div class="offer-available-tag">Offer available</div>
                         </a>
                     </div>`;
-      main.innerHTML += result;
+      watchSlider.innerHTML += result;
     }
   });
 
 // Slider Part
-
 const main1 = [...document.querySelectorAll(".watches_slider")];
+console.log(main1);
 const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
 const preBtn = [...document.querySelectorAll(".pre-btn")];
 
@@ -177,3 +197,255 @@ main1.forEach((item, i) => {
     item.scrollLeft -= containerWidth;
   });
 });
+
+
+// Clothes-products Slider
+let clothSlider = document.querySelector(".clothes_slider");
+
+fetch("https://api.escuelajs.co/api/v1/categories/1/products")
+  .then((res) => res.json())
+  .then((data) => {
+    for (let i = 0; i < 20; i++) {
+      let offerPrice = data[i].price
+      let mrpPrice = offerPrice + 1500
+      let discount = Math.round((offerPrice*100)/mrpPrice)
+      let saving = mrpPrice - offerPrice
+      // console.log(offerPrice, mrpPrice, discount, saving);
+      let result = `<div class="item cloth_item">
+                        <a href="#">
+                            <div class="product_image">
+                                <img src="${data[i].images[1]}" alt="${
+                                    data[i].title
+                                }">
+                            </div>
+                            <div class="product_title">${data[i].title}</div>
+                            <div class="review-section">
+                              <span class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                              </span>
+                              <span class="review-count">(10 reviews)</span>
+                            </div>
+                            <div class="price-section">
+                              <div class="offer">
+                                <span class="name">Offer Price: </span>
+                                <span class="price big">₹${offerPrice}</span>
+                              </div>
+                              <div class="mrp">
+                                <span class="name">M.R.P: </span>
+                                <span class="price strike">₹${mrpPrice}</span>
+                              </div>
+                              <div class="saving-detail">
+                                <span class="name">You Save: </span>
+                                <span class="percent">${discount}%</span><span class="num">(₹${saving})</span>
+                              </div>
+                            </div>
+                            <div class="offer-available-tag">Offer available</div>
+                        </a>
+                    </div>`;
+      clothSlider.innerHTML += result;
+    }
+  });
+
+// Slider Part
+const slider = [...document.querySelectorAll(".clothes_slider")];
+console.log(main1);
+const nextBtn = [...document.querySelectorAll(".next-btn")];
+const prevBtn = [...document.querySelectorAll(".prev-btn")];
+
+slider.forEach((item, i) => {
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+
+  nextBtn[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth;
+  });
+
+  prevBtn[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth;
+  });
+});
+
+
+// furniture-product slider
+let shoesSlider = document.querySelector(".shoes_slider");
+
+fetch("https://api.escuelajs.co/api/v1/categories/4/products")
+  .then((res) => res.json())
+  .then((data) => {
+    for (let i = 0; i < 20; i++) {
+      let offerPrice = data[i].price
+      let mrpPrice = offerPrice + 1500
+      let discount = Math.round((offerPrice*100)/mrpPrice)
+      let saving = mrpPrice - offerPrice
+      // console.log(offerPrice, mrpPrice, discount, saving);
+      let result = `<div class="item furniture_item">
+                        <a href="#">
+                            <div class="product_image">
+                                <img src="${data[i].images[1]}" alt="${
+                                    data[i].title
+                                }">
+                            </div>
+                            <div class="product_title">${data[i].title}</div>
+                            <div class="review-section">
+                              <span class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                              </span>
+                              <span class="review-count">(10 reviews)</span>
+                            </div>
+                            <div class="price-section">
+                              <div class="offer">
+                                <span class="name">Offer Price: </span>
+                                <span class="price big">₹${offerPrice}</span>
+                              </div>
+                              <div class="mrp">
+                                <span class="name">M.R.P: </span>
+                                <span class="price strike">₹${mrpPrice}</span>
+                              </div>
+                              <div class="saving-detail">
+                                <span class="name">You Save: </span>
+                                <span class="percent">${discount}%</span><span class="num">(₹${saving})</span>
+                              </div>
+                            </div>
+                            <div class="offer-available-tag">Offer available</div>
+                        </a>
+                    </div>`;
+                    shoesSlider.innerHTML += result;
+    }
+  });
+
+// Slider Part
+const slider3 = [...document.querySelectorAll(".shoes_slider")];
+console.log(main1);
+const nextBtn3 = [...document.querySelectorAll(".next-btn3")];
+const prevBtn3 = [...document.querySelectorAll(".prev-btn3")];
+
+slider3.forEach((item, i) => {
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+  console.log(containerDimensions, containerWidth);
+
+  nextBtn3[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth;
+  });
+
+  prevBtn3[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth;
+  });
+});
+
+
+
+// shoes-product slider
+let furnitureSlider = document.querySelector(".furniture_slider");
+
+fetch("https://api.escuelajs.co/api/v1/categories/3/products")
+  .then((res) => res.json())
+  .then((data) => {
+    for (let i = 0; i < 20; i++) {
+      let offerPrice = data[i].price
+      let mrpPrice = offerPrice + 1500
+      let discount = Math.round((offerPrice*100)/mrpPrice)
+      let saving = mrpPrice - offerPrice
+      // console.log(offerPrice, mrpPrice, discount, saving);
+      let result = `<div class="item furniture_item">
+                        <a href="#">
+                            <div class="product_image">
+                                <img src="${data[i].images[1]}" alt="${
+                                    data[i].title
+                                }">
+                            </div>
+                            <div class="product_title">${data[i].title}</div>
+                            <div class="review-section">
+                              <span class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                              </span>
+                              <span class="review-count">(10 reviews)</span>
+                            </div>
+                            <div class="price-section">
+                              <div class="offer">
+                                <span class="name">Offer Price: </span>
+                                <span class="price big">₹${offerPrice}</span>
+                              </div>
+                              <div class="mrp">
+                                <span class="name">M.R.P: </span>
+                                <span class="price strike">₹${mrpPrice}</span>
+                              </div>
+                              <div class="saving-detail">
+                                <span class="name">You Save: </span>
+                                <span class="percent">${discount}%</span><span class="num">(₹${saving})</span>
+                              </div>
+                            </div>
+                            <div class="offer-available-tag">Offer available</div>
+                        </a>
+                    </div>`;
+      furnitureSlider.innerHTML += result;
+    }
+  });
+
+// Slider Part
+const slider2 = [...document.querySelectorAll(".furniture_slider")];
+console.log(main1);
+const nextBtn2 = [...document.querySelectorAll(".next-btn2")];
+const prevBtn2 = [...document.querySelectorAll(".prev-btn2")];
+
+slider2.forEach((item, i) => {
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+  console.log(containerDimensions, containerWidth);
+
+  nextBtn2[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth;
+  });
+
+  prevBtn2[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth;
+  });
+});
+
+
+
+
+
+// bottom-slider
+var left=1;
+var right=5;
+
+function show(){
+
+for(i=left;i<=right;i++){
+   document.getElementById("c"+i).style.display="inline-block"
+}
+}
+function moveLeft(){
+if(left<=3 && right<=7){
+    document.getElementById("c"+left).style.display="none";
+    left+=1;
+    right+=1;
+    for(i=left;i<=right;i++){
+        document.getElementById("c"+i).style.display="inline-block"
+    }
+}else return;
+}
+
+function moveRight(){
+if(left>=2 && right>=6){
+    document.getElementById("c"+right).style.display="none";
+    left-=1;
+    right-=1;
+    for(i=left;i<=right;i++){
+        document.getElementById("c"+i).style.display="inline-block"
+    }
+}else return;
+}

@@ -242,11 +242,11 @@ input {
 }
 .computer_section {
   background: url("../Assets/navbar/Computers-Menu-Banners.jpg") no-repeat;
-  object-fit: cover;
-  background-size: cover;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .personal_care {
-  background: url("../Assets/navbar/Personal-Care-Menu-Banners.jpg") no-repeat;
+  background: url("../Assets/navbar/Computers-Menu-Banners.jpg") no-repeat;
   object-fit: cover;
   background-size: cover;
   background-position: center;
