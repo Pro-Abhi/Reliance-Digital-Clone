@@ -23,12 +23,68 @@ a{
   width: 100%;
 }
 .left-side .main-img{
-  width: 60%;
+  height: 40%;
   margin: 0 auto;
+  text-align: center;
 }
 img{
+  height: 100%;
+}
+
+.img-slider {
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider_container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.p-img {
+  flex: 0 0 auto;
+  width: 100px;
+  cursor: pointer;
+  margin: 0 15px;
+}
+.p-img img{
   width: 100%;
 }
+
+.prev,
+.next {
+  margin: auto;
+  border: none;
+  padding: 24px 8px;
+  position: absolute;
+  top: 15%;
+  background: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 1px 5px 0 #d4d4d4;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
+
 
 /* right-side */
 .right-side{

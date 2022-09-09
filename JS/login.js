@@ -14,7 +14,7 @@ function login(){
     numberInput.classList.add('alert')
   }
   else{
-    let userData = []
+    let userRecords = []
     userRecords = JSON.parse(localStorage.getItem('userData'))?JSON.parse(localStorage.getItem('userData')) : []
   
     if(userRecords.some((v) => {return v.mobileNumber == mobileNumber})){

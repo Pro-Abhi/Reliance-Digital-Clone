@@ -418,13 +418,12 @@ slider4.forEach((item, i) => {
 
 // get userName after login
 let UserName = document.getElementById("user_Name");
-if (localStorage.getItem("userName") != "") {
+if (localStorage.getItem("userName") != null) {
   UserName.innerHTML = localStorage.getItem("userName");
-} else if(localStorage.getItem("userName") == ""){
-  UserName.innerHTML = localStorage.getItem("userData")
 }
-let userData = localStorage.getItem("userData")
-console.log((userData));
+// let userData = localStorage.getItem("userData")
+// // userData.filter(v => console.log(v))
+// console.log(userData, Array.isArray(userData));
 
 
 function logincheck() {
@@ -434,3 +433,4 @@ function logincheck() {
     window.location.href = "login.html";
   }
 }
+
