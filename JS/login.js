@@ -7,14 +7,25 @@ let proceedBtn = document.querySelector('.proceed')
 
 function login(){
   let mobileNumber = numberInput.value
-  
-  let userData = []
-  userRecords = JSON.parse(localStorage.getItem('userData'))?JSON.parse(localStorage.getItem('userData')) : []
 
-  if(userRecords.some((v) => {return v.mobileNumber == mobileNumber})){
-    window.location.href = 'index.html'
+  if(mobileNumber == ''){
+    errorMsg.innerHTML = `Number cannot be empty`
+    label.classList.add('alert')
+    numberInput.classList.add('alert')
   }
   else{
-    window.location.href = 'registration.html'
+    let userData = []
+    userRecords = JSON.parse(localStorage.getItem('userData'))?JSON.parse(localStorage.getItem('userData')) : []
+  
+    if(userRecords.some((v) => {return v.mobileNumber == mobileNumber})){
+
+      let currentUser = userRecords.filter((v) => {return v.mobileNumber == mobileNumber})[0]
+      localStorage.setItem('userName', currentUser.firstName)
+      window.location.href = 'index.html'
+    }
+    else{
+      localStorage.setItem('userMobile', mobileNumber)
+      window.location.href = 'registration.html'
+    }
   }
 }

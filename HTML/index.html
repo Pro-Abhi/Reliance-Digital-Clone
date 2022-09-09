@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
   </head>
-  <body onload="show()">
+  <body>
     <header id="header">
       <ul class="header-linkinfo flex">
         <li class="linkinfo-item">
@@ -93,9 +93,9 @@
               </a>
             </li>
             <li class="header-maininfo-item">
-              <a href="../HTML/login.html">
+              <a onclick="logincheck()" id="log">
                 <i class="fa-solid fa-circle-user"></i>
-                <span id="login-name">Login</span>
+                <span id="user_Name">Login</span>
               </a>
             </li>
           </ul>
@@ -774,10 +774,7 @@
         <div class="slide">
           <a href="#">
             <div>
-              <img
-                src="../Assets/slider/slider8/Intel-gamers-Day-CLP-D.webp"
-                alt=""
-              />
+              <img src="../Assets/slider/slider8/realme_tv_banner.jpg" alt="" />
             </div>
           </a>
         </div>
@@ -824,15 +821,15 @@
 
       <!-- ads section start -->
       <section>
-        <div class="ads">
+        <div class="ads section1">
           <div class="title">
-            <span class="txt">Kitchen Festival</span>
+            <span class="txt">Digital Accessories Fest</span>
           </div>
           <div class="banners flex">
             <div class="md b1">
               <a href="">
                 <img
-                  src="../Assets/home_ads/kitchen/Breakfast-Essentials-Small-Banner-1.webp"
+                  src="../Assets/home_ads/digital_fest/Monitors-Accessories-Fest-Banner.jpg"
                   alt=""
                 />
               </a>
@@ -840,7 +837,7 @@
             <div class="md b1">
               <a href="">
                 <img
-                  src="../Assets/home_ads/kitchen/Mixer-Grinders-and-Juicers-Small-Banner-2.webp"
+                  src="../Assets/home_ads/digital_fest/Keyboard-Mouse-More-Accessories-Fest-Banner.jpg"
                   alt=""
                 />
               </a>
@@ -848,7 +845,7 @@
             <div class="md b1">
               <a href="">
                 <img
-                  src="../Assets/home_ads/kitchen/Cooking-Essentials-Small-Banner-3.webp"
+                  src="../Assets/home_ads/digital_fest/Storage-Devices-Accessories-Fest-Banner.jpg"
                   alt=""
                 />
               </a>
@@ -856,14 +853,14 @@
             <div class="md b1">
               <a href="">
                 <img
-                  src="../Assets/home_ads/kitchen/Water-Purifier-Small-Banner-4.webp"
+                  src="../Assets/home_ads/digital_fest/Reconnect-Cable-Accessories-Fest-Banner.jpg"
                   alt=""
                 />
               </a>
             </div>
           </div>
         </div>
-        <div class="ads">
+        <div class="ads section2">
           <div class="title">
             <span class="txt">Offer you cannot miss</span>
           </div>
@@ -1072,16 +1069,14 @@
       <!-- clothes slider section start -->
       <section class="main_product_section">
         <div class="main_product_items">
-          <span class="products_title">
-            Fashion unite
-          </span>
+          <span class="products_title"> Fashion unite </span>
           <span class="view_all"><a href="#">View All</a></span>
           <div class="main_slider_group flex reverse">
             <div class="main_slider_group_left">
               <a href="#"
                 ><img
                   class="group_main_image"
-                  src="../Assets/slider/product-slider/cloths-banner.webp"
+                  src="../Assets/slider/product-slider/cloths-banner.jpg"
               /></a>
             </div>
 
@@ -1108,9 +1103,7 @@
       <!-- furniture-products slider section start -->
       <section class="main_product_section">
         <div class="main_product_items">
-          <span class="products_title">
-            For your home
-          </span>
+          <span class="products_title"> For your home </span>
           <span class="view_all"><a href="#">View All</a></span>
           <div class="main_slider_group flex">
             <div class="main_slider_group_left">
@@ -1144,16 +1137,15 @@
       <!-- shoes slider section start -->
       <section class="main_product_section">
         <div class="main_product_items">
-          <span class="products_title">
-            For your feet
-          </span>
+          <span class="products_title"> For your feet </span>
           <span class="view_all"><a href="#">View All</a></span>
           <div class="main_slider_group flex reverse">
             <div class="main_slider_group_left">
               <a href="#">
                 <img
                   class="group_main_image"
-                  src="../Assets/slider/product-slider/shoes-banner.webp"/>
+                  src="../Assets/slider/product-slider/shoes-banner.webp"
+                />
               </a>
             </div>
 
@@ -1178,10 +1170,9 @@
       <!-- shoes slider section end -->
 
       <!-- bottom slider section start -->
-      <section class="slider3">
+      <!--<section class="slider3">
         <div class="slider3__explore">EXPLORE OUR RANGE OF PRODUCTS</div>
         <div class="explore__products__slider">
-          <!-- <div class=""> -->
           <div class="explore__products__slide__row">
             <div class="explore__products__slide" id="c1">
               <a href="#">
@@ -1294,8 +1285,94 @@
             <div>View All</div>
           </a>
         </div>
-      </section>
+      </section>-->
       <!-- bottom-slider section end -->
+
+      <!-- bottom slider section start -->
+      <section class="product-category-slider">
+        <div class="title">Explore our range of products</div>
+        <div class="main_slider_group_right">
+          <div id="slider_container">
+            <div class="products_container">
+              <button class="pre-btn4 prev">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <button class="nxt-btn4 next">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+              <div class="products-category slider">
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/iphone-pro-11-01.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="category-name">SmartPhones</div>
+                </div>
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/Laptop-180x180-15-01-2019.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="category-name">Laptops</div>
+                </div>
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/TV-180x180-15-01-2019.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="category-name">Televisions</div>
+                </div>
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/Watch-180x180-27-02-2020.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="category-name">Smart Wearables</div>
+                </div>
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/Washing-Machine-180x180-15-01-2019.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="category-name">Washing Machines</div>
+                </div>
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/Speaker-Headset-180x180-15-01-2019.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="product-name">Speakers & Headsets</div>
+                </div>
+                <div class="product">
+                  <div class="product_image">
+                    <img
+                      src="../Assets/slider/slider-3/Camera-180x180-15-01-2019.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="category-name">Cameras</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn">
+          <button class="viewAll">View All</button>
+        </div>
+      </section>
+      <!-- bottom slider section end -->
     </main>
 
     <!-- footer section start -->

@@ -1,0 +1,44 @@
+/* slider-1 CSS start */
+.slider-container{
+  position: relative;
+  width: 100%;
+}
+.slide img{
+  width: 100%;
+}
+.arrow{
+ cursor: pointer;
+ position: absolute; 
+ top: 46%;
+ color: #333;
+ font-size:x-large;
+}
+.next-sm{
+  right: 5px;
+}
+.prev-sm{
+  left: 5px;
+}
+.slide{
+  display: none;
+}
+.slider-container .slider__navigation{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-container .slider__navigation .slider__navigation__btn{
+  background:var(--color-black-2);
+  color: rgba(0,0,0,0);
+  width:  8px;
+  height: 8px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider-container .slider__navigation .slider__navigation__btn:hover{
+   background:var(--color-black)
+}

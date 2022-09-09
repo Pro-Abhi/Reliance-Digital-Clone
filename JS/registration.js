@@ -133,6 +133,10 @@ emailVerifyBtn.addEventListener('click', function(){
 })
 
 
+// mobile-verify
+
+
+
 // checkbox is checked or not
 checkBox.addEventListener('click', () => {
   if((checkBox.checked)){
@@ -144,7 +148,7 @@ checkBox.addEventListener('click', () => {
 
 function signUp(){
   if((firstName.value == '')||(lastName.value == '')){
-    alert(`input fields cannot be empty`)
+    // 
   }
   else{
 
@@ -170,13 +174,10 @@ function signUp(){
         'emailID' : EmailID,
         'mobileNumber' : MobileNumber
       })
+      
     
       localStorage.setItem('userData', JSON.stringify(userRecords))
-      window.location.href = 'profile.html'
+      window.location.href = 'index.html'
     }
-
   }
-
-
-  
 }
