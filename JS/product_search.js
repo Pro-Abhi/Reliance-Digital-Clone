@@ -1,19 +1,28 @@
 let p_container = document.querySelector(".search_products");
 let filterInput = document.getElementById("search-input");
+let x = document.getElementById('sort');
 
-filterInput.addEventListener('click',()=>{
 
-    fetch('https://api.escuelajs.co/api/v1/products')
-    .then(res => res.json())
-    .then(json =>{
+//load the page
+    function searchFunc() {
+        window.location.href = "index.html";
         
-        for (let value of json){
-            addElement(p_container, value)
-        }
-        
-    });
+    }
 
-})
+    filterInput.addEventListener('click',()=>{
+
+        fetch('https://api.escuelajs.co/api/v1/products')
+        .then(res => res.json())
+        .then(json =>{
+            
+            // getdata(json) 
+
+            for (let value of json){
+                addElement(value)
+            }           
+            
+        });   
+    })
 
 
 // add event listener
@@ -35,7 +44,7 @@ function filterProducts(){
     }
 }
 
-function addElement(p_container, value){
+function addElement(value){
 
     let { images, title,price } = value;
 
@@ -60,6 +69,26 @@ function addElement(p_container, value){
         p_container.innerHTML += result;
 }
 
-function searchFunc() {
-    window.location.href = "index.html";
-}
+
+x.addEventListener("click",()=>{
+    // e.target.id == "priceAse";
+    fetch('https://api.escuelajs.co/api/v1/products')
+        .then(res => res.json())
+        .then((data)=>{
+            data.sort((a,b)=>{
+                return a.price - b.price
+            })
+            
+            data.forEach(element => {
+                // p_container.innerHTML= null;
+
+                console.log(element.price)
+                // addElement(value)
+                
+               
+            }); 
+
+        })
+})
+
+
