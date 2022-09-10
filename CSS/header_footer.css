@@ -215,20 +215,18 @@ input {
 
 .mobile_section {
   background: url("../Assets/navbar/Mobiles-Tablet-Menu-Banners.png") no-repeat;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .computer_section {
   background: url("../Assets/navbar/Computers-Menu-Banners.jpg") no-repeat;
-  object-fit: cover;
-  background-size: cover;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 .personal_care {
   background: url("../Assets/navbar/Personal-Care-Menu-Banners.jpg") no-repeat;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 
 .dropdown .items {
