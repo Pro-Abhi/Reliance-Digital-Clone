@@ -30,28 +30,7 @@ input {
 /************************ global CSS end ************************/
 
 /************************ variables CSS start ************************/
-:root {
-  --color-white: #fff;
-  --color-gray-1: #ddd;
-  --color-gray-2: #ccc;
-  --color-gray-3: #eee;
-  --color-gray-4: #f5f5f5;
-  --color-gray-5: #e0e0e1;
-  --color-gray-6: #e5e5e5;
-  --color-gray-7: #dcdcdc;
-  --color-red: #e42529;
-  --color-light-red: #d9534f;
-  --color-error-red: #d32f2f;
-  --color-med-red: #d43f3a;
-  --color-link-blue-dark: #2d73ed;
-  --color-link-blue: #1774ef;
-  --color-info-blue: #1976d2;
-  --color-green: #43a047;
-  --color-warning-yellow: #ffa000;
-  --color-black: #000;
-  --color-black-1: #333;
-  --color-black-2: #666;
-}
+
 /************************ variables CSS end ************************/
 
 /************************ general CSS start ************************/
