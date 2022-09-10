@@ -707,17 +707,17 @@
         <div class="form pd">
           <form>
             <div class="txt-input firstName">
-              <input type="text" class="input" name="fname" id="fname" placeholder=" " autocomplete="off">
+              <input type="text" class="input" name="fname" id="fname" placeholder=" " autocomplete="off" onkeyup="firstNameValidate()">
               <label for="fname" class="firstName-label">First Name*</label>
               <p class="f-error"></p>
             </div>
             <div class="txt-input lastName">
-              <input type="text" class="input" name="lname" id="lname" placeholder=" " autocomplete="off">
+              <input type="text" class="input" name="lname" id="lname" placeholder=" " autocomplete="off" onkeyup="lastNameValidate()">
               <label for="lname" class="lastName-label">Last Name*</label>
               <p class="l-error"></p>
             </div>
             <div class="txt-input emailID">
-              <input type="email" class="input" name="email" id="email" placeholder=" " autocomplete="off">
+              <input type="email" class="input" name="email" id="email" placeholder=" " autocomplete="off" onkeyup="emailValidate()">
               <label for="email" class="email-label">Email Address*</label>
               <p class="e-error sm-txt">Your address will be used to send order invoice, order updates etc.
               </p>
@@ -727,15 +727,15 @@
               <span class="verify-msg">Verify Email</span>
             </button>
             <div class="txt-input mobileNumber">
-              <input type="tel" class="input filled" name="number" id="number" placeholder=" " autocomplete="off">
+              <input type="tel" class="input filled" name="number" id="number" placeholder=" " autocomplete="off" contenteditable="false">
               <label for="number" class="number-label filled">Mobile Number*</label>
               <p class="m-error sm-txt">Your mobile number will be used to avail benefits such as Jio Mart Cashback and ROne Loyality Points and receive quick notifications.</p>
             </div>
             <div class="TnC flex inactive">
-              <input type="checkbox" name="tc" id="tnc">
+              <input type="checkbox" name="tc" id="tncbox">
               <label for="tc">I agree to the <a href="">TnC</a> & <a href="">Privacy Policy</a></label>
             </div>
-            <button type="button" class="proceed">Proceed</button>
+            <button type="button" class="proceed" onclick="signUp()">Proceed</button>
 
             <div class="for-login">
               <p class="sm-txt">Already Registered? 
