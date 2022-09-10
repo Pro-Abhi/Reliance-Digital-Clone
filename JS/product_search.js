@@ -18,7 +18,9 @@ let x = document.getElementById('sort');
             // getdata(json) 
 
             for (let value of json){
+                // console.log(value)
                 addElement(value)
+
             }           
             
         });   
@@ -45,6 +47,7 @@ function filterProducts(){
 }
 
 function addElement(value){
+    // console.log("its working");
 
     let { images, title,price } = value;
 
@@ -79,11 +82,13 @@ x.addEventListener("click",()=>{
                 return a.price - b.price
             })
             
+            console.log(data)
+            
             data.forEach(element => {
                 // p_container.innerHTML= null;
 
                 console.log(element.price)
-                // addElement(value)
+                addElement(value)
                 
                
             }); 
