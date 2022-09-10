@@ -95,23 +95,24 @@
   place-content: center;
 }
 
-.loader{
-  pointer-events: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #29ca8e;
-  animation: an1 1s ease infinite;
+.form .proceed{
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1em;
+  border: 1px solid #e42529;
+  background-color: #d9534f;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
-@keyframes an1{
-  0%{
-    transform: rotate(0turn);
-  }
-  100%{
-    transform: rotate(1turn);
-  }
+
+.form .emailVerify.unabled, .proceed.unabled{
+  opacity: 1;
+  cursor: pointer;
 }
+
 .txt-input .input.alert{
   border: 1px solid #d32f2f;
 }
@@ -129,23 +130,25 @@
   padding: 0 5px;
   color: #1976d2;
 }
-.input.filled{
-  border: 1px solid #1976d2;
-}
 
-.form .proceed{
-  display: block;
-  width: 100%;
-  text-transform: uppercase;
-  font-size: 1em;
-  border: 1px solid #e42529;
-  background-color: #d9534f;
-  color: #fff;
-  font-weight: 600;
-  opacity: 0.6;
-  cursor: not-allowed;
-}
 
+.loader{
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #29ca8e;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
 .emailVerify.verified{
   background-color: #43a047;
   border: 1px solid #43a047;
@@ -193,5 +196,6 @@
 }
 .alert{
   color: #d32f2f !important;
+  font-size: 13px;
 }
 /************** main CSS end **************/

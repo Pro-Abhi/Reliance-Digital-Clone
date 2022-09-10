@@ -694,10 +694,38 @@
 
   <main id="main">
     <div class="mg"></div>
+    <section id="productDetails"></section>
     <div class="first-part">
       <div class="left-side">
         <div class="main-img">
-          <img src="https://www.reliancedigital.in/medias/Noise-Colorfit-Icon-Plus-Smart-Watch-492850516-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMjM0NDV8aW1hZ2UvanBlZ3xpbWFnZXMvaDM2L2gxMy85ODc3NjM3NTYyMzk4LmpwZ3wzYmVjZmU0MzFiZDFmOTZkOWExMWExMTVlZmNhMGE5MDgxMDMxOTJhZWMyMDBjMzRiNjZkM2E4ZWE4YTBjZmIy" alt="">
+          <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch.jpeg" alt="">
+        </div>
+        <div class="img-slider">
+          <div class="slider-container">
+            <button class="prev-btn prev">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="next-btn next">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+            <div class="slider">
+              <div class="p-img">
+                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide.jpeg" alt="">
+              </div>
+              <div class="p-img">
+                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide-2.jpeg" alt="">
+              </div>
+              <div class="p-img">
+                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide-3.jpeg" alt="">
+              </div>
+              <div class="p-img">
+                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide.jpeg" alt="">
+              </div>
+              <div class="p-img">
+                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide3.jpeg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="right-side">
@@ -707,14 +735,16 @@
             Noise Colorfit Icon Plus Smart Watch, Jet Black
           </div>
           <div class="reviews">
-            <span class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </span>
-            (1 Reviews)
+            <a href="#customer-review">
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+              (1 Reviews)
+            </a>
           </div>
         </div>
         <div class="bottom">
@@ -763,7 +793,9 @@
                   <li>IP67 Waterproof</li>
                 </div>
                 <li class="sm">
-                  <span class="btn toggle-btn" onclick="toggle()">See more >></span>
+                  <span class="btn toggle-btn" onclick="toggle()">
+                    <span class="btn-txt">See more >></span>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -780,10 +812,6 @@
           <div class="user-related">
             <div class="price-section">
               <ul class="non-disc">
-                <li class="deal">
-                  <span class="price-name">Deal Price: </span>
-                  <span class="price deal-price">₹2,999.00</span>
-                </li>
                 <li class="offer">
                   <span class="price-name">Offer Price : </span>
                   <span class="price offer-price">₹3,499.00</span>
@@ -798,37 +826,47 @@
                   <span class="percetn-count">50%</span>
                   <span class="price-count">(₹3,000)</span>
                 </li>
-                <li>
-                  <strong>EMIs(credit card) from ₹143.99/month | </strong> View plans
+                <li class="emi">
+                  <span>EMIs(credit card) from ₹143.99/month | </span> 
+                  <span class="emi-plans">View plans</span>
                 </li>
                 <li>
-                  <span class="shipping">Free shipping!</span>
+                  <span class="shipping">FREE Shipping!</span>
                 </li>
               </ul>
             </div>
             <div class="shipping-section">
               <form>
-                <input type="text" name="" id="">
-                <label for="">PIN Code</label>
+                <div class="txt-input">
+                  <input type="text" class="input" id="pin-code" maxlength="6" autocomplete="off" placeholder=" " required/>
+                  <label for="pin-code" class="form-label">PIN Code</label>
+                  <p class="error-msg inactive">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Delivery to this PIN code is unavailable, Please try another PIN code
+                  </p>
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
               </form>
-              <div class="shipping-details">
-                <div class="ship-date-section">
-                  <i class="fa-solid fa-van-shuttle"></i>
-                  <span>Standard Delivery: </span>
-                  <span>10 Sep - 11 Sep</span>
+              <div class="shipping-info">
+                <div class="shipping-details">
+                  <div class="ship-date-section">
+                    <i class="fa-solid fa-van-shuttle"></i>
+                    <span>Standard Delivery: </span>
+                    <span class="date">12 Sep(Mon) - 13 Sep(Tue)</span>
+                  </div>
+                  <div class="cod-section">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    COD not available
+                  </div>
+                  <div class="delivery-instruction">
+                    *Delivery assurance is subject to our delivery locations staying open as per govt. regulations
+                  </div>
                 </div>
-                <div class="cod-section">
-                  <i class="fa-solid fa-circle-exclamation"></i>
-                  COD not available
-                </div>
-                <div class="instruct">
-                  *Delivery assurance is subject to our delivery locations staying open as per govt. regulations
+                <div class="buttons">
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="buy_now">Buy Now</button>
                 </div>
               </div>
-            </div>
-            <div class="buttons">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="Buy_now">Buy Now</button>
             </div>
           </div>
         </div>
@@ -836,6 +874,114 @@
     </div>
     <div class="second-part">
       <div class="tp-b"></div>
+      <div class="topics">
+        <div class="description">
+          <a href="#product-description">Description</a>
+        </div>
+        <div class="reviews">
+          <a href="#customer-review">Customer Reviews</a>
+        </div>
+      </div>
+      <div id="product-description">
+        <p class="dsc">
+          The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive
+        </p>
+        <div class="col-2">
+          <div class="img">
+            <img src="../Assets/product_details/david-svihovec-HM-Y497t5CU-unsplash.jpg" alt="">
+          </div>
+          <p class="img-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum minus soluta a, consequuntur quisquam et vero impedit facere est magnam alias commodi sit iure! Exercitationem pariatur labore quae eos quisquam, ipsam, corrupti asperiores minima qui perspiciatis similique quos maiores deleniti aspernatur officia reiciendis eius? Debitis quas vitae optio ipsum distinctio! Expedita, magnam enim non necessitatibus a esse repellat ut nam facere rem rerum! Est atque recusandae, enim minima nihil earum obcaecati eos, doloremque incidunt quaerat ea inventore nulla harum, itaque quod? Cupiditate dolorum dolorem optio illo autem libero, est eum eius consequuntur illum! Quod nulla est porro ex quo pariatur.
+          </p>
+        </div>
+        <div class="col-2">
+          <div class="img">
+            <img src="../Assets/product_details/taylor-beach-B-epmN7V-IQ-unsplash.jpg" alt="">
+          </div>
+          <p class="img-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, excepturi! Quisquam sed explicabo non, nisi, dolorem id eum eos, aperiam atque expedita quaerat repellendus eligendi at saepe quia totam odio quos nulla. Quo provident officia sint id voluptatum fugit animi. Labore accusamus quod delectus tenetur perferendis reprehenderit deleniti quasi aut tempore, optio iure, quisquam quibusdam suscipit doloremque est officiis unde?
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div id="customer-review">
+        <div class="title">
+          <span class="section-name">Customer Reviews</span> &nbsp;&nbsp;
+          <span class="product-name">(Noise Colorfit Icon Plus Smart Watch, Jet Black)</span>
+        </div>
+        <div class="review-card">
+          <div class="review-star">
+            <span class="stars-count">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span class="total-count">4.3/5</span>
+            </span>
+            <span class="review-count">(10 review)</span>
+          </div>
+            <div class="star-number">
+              <span class="txt">5 star</span>
+              <span class="main-bar">
+                <span class="color big"></span>
+              </span>
+              <span class="txt">69.0%</span>
+            </div>
+            <div class="star-number">
+              <span class="txt">4 star</span>
+              <span class="main-bar">
+                <span class="color small"></span>
+              </span>
+              <span class="txt">27%</span>
+            </div>
+            <div class="star-number">
+              <span class="txt">3 star</span>
+              <span class="main-bar">
+                <span class="color none"></span>
+              </span>
+              <span class="txt">0%</span>
+            </div>
+            <div class="star-number">
+              <span class="txt">2 star</span>
+              <span class="main-bar">
+                <span class="color none"></span>
+              </span>
+              <span class="txt">0%</span>
+            </div>
+            <div class="star-number">
+              <span class="txt">1 star</span>
+              <span class="main-bar">
+                <span class="color very-small"></span>
+              </span>
+              <span class="txt">2%</span>
+            </div>
+        </div>
+        <div class="review-text-section">
+          <div class="user-name">Radharaman Sharma &nbsp;&nbsp;
+            <span class="date">-- (9/3/22)</span>
+          </div>
+          <div class="review-count">
+            <i class="fa-solid fa-star"></i>
+            4.7/5
+          </div>
+          <div class="user-location">location - Ahmedabad</div>
+          <div class="review-txt">Good Product</div>
+        </div>
+        <div class="review-text-section">
+          <div class="user-name">Pulkit Bhola &nbsp;&nbsp;
+            <span class="date">-- (21/1/22)</span>
+          </div>
+          <div class="review-count">
+            <i class="fa-solid fa-star"></i>
+            4.8/5
+          </div>
+          <div class="user-location">location - Jaipur</div>
+          <div class="review-txt">Best product value for money design look awesome</div>
+        </div>
+
+        <button>See all review</button>
+      </div>
     </div>
   </main>
 
