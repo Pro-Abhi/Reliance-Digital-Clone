@@ -177,3 +177,12 @@ main1.forEach((item, i) => {
     item.scrollLeft -= containerWidth;
   });
 });
+
+
+function searchFunc(){
+  if(document.querySelector('#search-input').value != ''){
+    window.location.href = "product_search.html";
+  }else{
+    alert('alert')
+  }
+}
