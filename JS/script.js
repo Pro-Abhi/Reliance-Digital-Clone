@@ -137,7 +137,6 @@ fetch("https://api.escuelajs.co/api/v1/categories/2/products")
       let mrpPrice = offerPrice + 1500;
       let discount = Math.round((offerPrice * 100) / mrpPrice);
       let saving = mrpPrice - offerPrice;
-      // console.log(offerPrice, mrpPrice, discount, saving);
       let result = `<div class="item watch_item">
                         <a href="#">
                             <div class="product_image">
@@ -405,7 +404,6 @@ slider4.forEach((item, i) => {
   console.log(item);
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
-  console.log(containerDimensions, containerWidth);
 
   nextBtn4[i].addEventListener("click", () => {
     item.scrollLeft += containerWidth;
