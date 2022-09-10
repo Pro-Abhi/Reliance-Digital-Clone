@@ -779,30 +779,30 @@ form .txt-input .input {
   margin: 0 auto;
   padding-bottom: 16px;
 }
-.product-category-slider .slider .product{
+.product-category-slider .slider .item{
   flex: 0 0 auto;
-  width: 250px;
+  width: 210px;
   cursor: pointer;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.product-category-slider .slider .product .product_image{
+.product-category-slider .slider .item .product_image{
   width: 180px;
   height: 180px;
   margin: 0 auto 20px;
 }
-.product-category-slider .slider .product .product_image img{
+.product-category-slider .slider .item .product_image img{
   width: 100%;
   display: block;
 }
-.product-category-slider .slider .product .category-name{
+.product-category-slider .slider .item .category-name{
   margin: 20px 0 20px;
   font-size: 20px;
   color: #333;
 }
-.product-category-slider .slider .product .category-name:hover{
+.product-category-slider .slider .item .category-name:hover{
   color: #003380;
 }
 .product-category-slider .btn{
@@ -826,7 +826,6 @@ form .txt-input .input {
   color: #003380;
   border: 1px solid #003380;
 }
-
 /************** main CSS end **************/
 
 /************** footer CSS start **************/

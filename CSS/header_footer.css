@@ -384,6 +384,7 @@ h3 {
   display: inline-block;
   border-bottom: 1px solid;
   letter-spacing: 1px;
+  color: #fff;
 }
 .footer__disclaimer .description{
   padding: 10px;

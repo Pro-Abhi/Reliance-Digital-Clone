@@ -112,7 +112,7 @@
                 <div class="dropdown mobile_section">
                   <div class="row1">
                     <ul>
-                      <li class="items"><a href="#">SmartPhones</a></li>
+                      <li class="items"><a href="../HTML/products.html">SmartPhones</a></li>
                     </ul>
                     <ul>
                       <li class="items">
@@ -1050,15 +1050,18 @@
             <div class="main_slider_group_right">
               <div id="slider_container">
                 <div class="products_container">
-                  <button class="pre-btn prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="nxt-btn next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-
                   <!-- Single Item in Slider -->
                   <div class="slider watches_slider"></div>
+                  
+                  <div class="btn-area">
+                    <button class="pre-btn prev" onclick="prev(this)">
+                      <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="nxt-btn next" onclick="next(this)">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1084,15 +1087,18 @@
             <div class="main_slider_group_right">
               <div id="slider_container">
                 <div class="products_container">
-                  <button class="prev-btn prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="next-btn next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-
                   <!-- Single Item in Slider -->
                   <div class="slider clothes_slider"></div>
+                  
+                  <div class="btn-area">
+                    <button class="pre-btn prev" onclick="prev(this)">
+                      <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="nxt-btn next" onclick="next(this)">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1118,15 +1124,18 @@
             <div class="main_slider_group_right">
               <div id="slider_container">
                 <div class="products_container">
-                  <button class="prev-btn2 prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="next-btn2 next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-
                   <!-- Single Item in Slider -->
-                  <div class="slider furniture_slider"></div>
+                  <div class="slider furniture_slider" id="slider-part"></div>
+                  
+                  <div class="btn-area">
+                    <button class="pre-btn prev" onclick="prev(this)">
+                      <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="nxt-btn next" onclick="next(this)">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1153,15 +1162,18 @@
             <div class="main_slider_group_right">
               <div id="slider_container">
                 <div class="products_container">
-                  <button class="prev-btn3 prev">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="next-btn3 next">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-
                   <!-- Single Item in Slider -->
                   <div class="slider shoes_slider"></div>
+                  
+                  <div class="btn-area">
+                    <button class="pre-btn prev" onclick="prev(this)">
+                      <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="nxt-btn next" onclick="next(this)">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1176,14 +1188,8 @@
         <div class="main_slider_group_right">
           <div id="slider_container">
             <div class="products_container">
-              <button class="pre-btn4 prev">
-                <i class="fa-solid fa-angle-left"></i>
-              </button>
-              <button class="nxt-btn4 next">
-                <i class="fa-solid fa-angle-right"></i>
-              </button>
               <div class="products-category slider">
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/iphone-pro-11-01.webp"
@@ -1192,7 +1198,7 @@
                   </div>
                   <div class="category-name">SmartPhones</div>
                 </div>
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/Laptop-180x180-15-01-2019.webp"
@@ -1201,7 +1207,7 @@
                   </div>
                   <div class="category-name">Laptops</div>
                 </div>
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/TV-180x180-15-01-2019.webp"
@@ -1210,7 +1216,7 @@
                   </div>
                   <div class="category-name">Televisions</div>
                 </div>
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/Watch-180x180-27-02-2020.webp"
@@ -1219,7 +1225,7 @@
                   </div>
                   <div class="category-name">Smart Wearables</div>
                 </div>
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/Washing-Machine-180x180-15-01-2019.webp"
@@ -1228,7 +1234,7 @@
                   </div>
                   <div class="category-name">Washing Machines</div>
                 </div>
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/Speaker-Headset-180x180-15-01-2019.webp"
@@ -1237,7 +1243,7 @@
                   </div>
                   <div class="product-name">Speakers & Headsets</div>
                 </div>
-                <div class="product">
+                <div class="item">
                   <div class="product_image">
                     <img
                       src="../Assets/slider/slider-3/Camera-180x180-15-01-2019.webp"
@@ -1246,6 +1252,14 @@
                   </div>
                   <div class="category-name">Cameras</div>
                 </div>
+              </div>
+              <div class="btn-area">
+                <button class="prev" onclick="prev(this)">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="next" onclick="next(this)">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
               </div>
             </div>
           </div>

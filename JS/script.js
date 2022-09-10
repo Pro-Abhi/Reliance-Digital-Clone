@@ -140,7 +140,7 @@ fetch("https://api.escuelajs.co/api/v1/categories/2/products")
       let result = `<div class="item watch_item">
                         <a href="#">
                             <div class="product_image">
-                                <img src="${data[i].images[1]}" alt="${data[i].title}">
+                                <img src="${data[i].images[0]}" alt="${data[i].title}">
                             </div>
                             <div class="product_title">${data[i].title}</div>
                             <div class="review-section">
@@ -174,23 +174,19 @@ fetch("https://api.escuelajs.co/api/v1/categories/2/products")
     }
   });
 
-// Slider Part
-const main1 = [...document.querySelectorAll(".watches_slider")];
-const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-const preBtn = [...document.querySelectorAll(".pre-btn")];
+// slider - code
+function next(x){
+  let ele = x.parentElement.parentElement.children[0]
+  let item = ele.getElementsByClassName('item')
+  ele.append(item[0])
+}
 
-main1.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
+function prev(x){
+  let ele = x.parentElement.parentElement.children[0]
+  let item = ele.getElementsByClassName('item')
+  ele.prepend(item[item.length - 1])
+}
 
-  nxtBtn[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
-
-  preBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-});
 
 // Clothes-products Slider
 let clothSlider = document.querySelector(".clothes_slider");
@@ -241,24 +237,6 @@ fetch("https://api.escuelajs.co/api/v1/categories/1/products")
     }
   });
 
-// Slider Part
-const slider = [...document.querySelectorAll(".clothes_slider")];
-const nextBtn = [...document.querySelectorAll(".next-btn")];
-const prevBtn = [...document.querySelectorAll(".prev-btn")];
-
-slider.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-
-  nextBtn[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
-
-  prevBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-});
-
 // furniture-product slider
 let furnitureSlider = document.querySelector(".furniture_slider");
 
@@ -308,24 +286,6 @@ fetch("https://api.escuelajs.co/api/v1/categories/3/products")
     }
   });
 
-// Slider Part
-const slider2 = [...document.querySelectorAll(".furniture_slider")];
-const nextBtn2 = [...document.querySelectorAll(".next-btn2")];
-const prevBtn2 = [...document.querySelectorAll(".prev-btn2")];
-
-slider2.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-  console.log(containerDimensions, containerWidth);
-
-  nextBtn2[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
-
-  prevBtn2[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-});
 
 // shoes-product slider
 let shoesSlider = document.querySelector(".shoes_slider");
@@ -375,57 +335,29 @@ fetch("https://api.escuelajs.co/api/v1/categories/4/products")
     }
   });
 
-// Slider Part
-const slider3 = [...document.querySelectorAll(".shoes_slider")];
-const nextBtn3 = [...document.querySelectorAll(".next-btn3")];
-const prevBtn3 = [...document.querySelectorAll(".prev-btn3")];
 
-slider3.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-  console.log(containerDimensions, containerWidth);
-
-  nextBtn3[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
-
-  prevBtn3[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-});
-
-// bottom-product-slider
-const slider4 = [...document.querySelectorAll(".products-category")];
-console.log(slider4);
-const nextBtn4 = [...document.querySelectorAll(".nxt-btn4")];
-const prevBtn4 = [...document.querySelectorAll(".pre-btn4")];
-
-slider4.forEach((item, i) => {
-  console.log(item);
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-
-  nextBtn4[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
-
-  prevBtn4[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-});
 
 // get userName after login
-let UserName = document.getElementById("user_Name");
+let nameData;
+let user = JSON.parse(localStorage.getItem('userData'))
+  for(let i of user){
+    nameData = i.firstName
+  }
+console.log(nameData);
+
+
+let userName = document.getElementById("user_Name");
 if (localStorage.getItem("userName") != null) {
-  UserName.innerHTML = localStorage.getItem("userName");
+  userName.innerHTML = localStorage.getItem("userName");
 }
-// let userData = localStorage.getItem("userData")
-// // userData.filter(v => console.log(v))
-// console.log(userData, Array.isArray(userData));
+else if(localStorage.getItem('userName') == null){
+  userName.innerHTML = nameData
+}
+
 
 
 function logincheck() {
-  if (localStorage.getItem("userName") != null) {
+  if ((localStorage.getItem("userName") != null) || (nameData != null)) {
     window.location.href = "profile.html";
   } else {
     window.location.href = "login.html";
