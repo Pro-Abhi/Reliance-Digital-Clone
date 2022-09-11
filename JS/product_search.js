@@ -2,6 +2,7 @@ let productContainer = document.querySelector(".search");
 let filterInput = document.getElementById("search-input");
 let sortItems = document.getElementById('sort');
 
+// console.log(productContainer,filterInput,sortItems);
 
 //load the page
     function searchFunc() {
@@ -50,25 +51,39 @@ function addElement(value){
 
     let { images, title,price } = value;
 
-    let result = `<div class="watch_item each_item">
-                        <a href="#">
-                            <div class="product_image">
-                                <img src="${images}" alt="${
-                                    title
-                                }">
-                            </div>
-                            <div class="product_title title">${title}</div>
-                            <div class="stars">&bigstar;&starf;&starf;&starf;&star;</div>
-                            <div class="product_price">Offer Price <strong>Rs.${
-                              price
-                            }</strong></div>
-                            <div class="product_original_price">M.R.P :Rs.${
-                              price + 524
-                            }</div>
-                            <button id = "btn">Offer Available</button>
-                        </a>
-                    </div>`;  
-        p_container.innerHTML += result;
+    let result = `<div class="item watch_item">
+    <a href="#">
+        <div class="product_image">
+            <img src="${images}" alt="${title}">
+        </div>
+        <div class="product_title title">${title}</div>
+        <div class="review-section">
+          <span class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </span>
+          <span class="review-count">(10 reviews)</span>
+        </div>
+        <div class="price-section">
+          <div class="offer">
+            <span class="name">Offer Price: </span>
+            <span class="price big">₹${price}</span>
+          </div>
+          <div class="mrp">
+            <span class="name">M.R.P: </span>
+            <span class="price strike">₹${price+600}</span>
+          </div>
+          <div class="saving-detail">
+            <span class="name">You Save: </span>
+          </div>
+        </div>
+        <div class="offer-available-tag">Offer available</div>
+    </a>
+</div>`;
+productContainer.innerHTML += result;
 }
 
 
