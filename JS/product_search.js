@@ -5,7 +5,7 @@ let sortItems = document.getElementById('sort');
 
 //load the page
     function searchFunc() {
-        window.location.href = "index.html";
+        window.location.href = "product_search.html";
         
     }
 
