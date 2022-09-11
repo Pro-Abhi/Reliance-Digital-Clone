@@ -47,6 +47,7 @@
 
 .right_container{
     width: 75vw;
+    border:1px solid red;
 }
 
 .search_result_title{
@@ -83,4 +84,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.item{
+    margin:10px;
+    border:1px solid green;
+}
+
+.product_image img{
+    width: 200px;
+    height: 200px;
 }
