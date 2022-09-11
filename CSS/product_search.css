@@ -103,7 +103,8 @@
 }
 
 .search_products .offer-btn{
-    padding: 3px 5px;
+    padding: 2px 5px;
+    width: fit-content;
     border:1px solid green;
     color:green;
     border-radius: 5px;
