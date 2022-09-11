@@ -50,9 +50,8 @@ function filterProducts(){
 function addElement(value){
 
     let { images, title,price } = value;
-
+    let mainContainer = document.querySelector(".search_products")
     let result = `<div class="item each_item">
-                    <a href="#">
                         <div class="product_image">
                             <img src="${images}" alt="${title}">
                         </div>
@@ -78,10 +77,9 @@ function addElement(value){
                         </div>
 
                         </div>
-                        <div class="offer-available-tag">Offer available</div>
-                    </a>
+                        <div class="offer-btn">Offer available</div>
                 </div>`;
-            productContainer.innerHTML += result;
+            mainContainer.innerHTML += result;
 }
 
 

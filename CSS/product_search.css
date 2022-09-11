@@ -47,7 +47,6 @@
 
 .right_container{
     width: 75vw;
-    border:1px solid red;
 }
 
 .search_result_title{
@@ -86,12 +85,27 @@
     align-items: center;
 }
 
-.item{
+.search_products .item{
+    padding: 10px;
     margin:10px;
-    border:1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    border:1px solid #9b9b9b;
+}
+
+.search_products .item:hover{
+    box-shadow: 0 0 2px black;
 }
 
 .product_image img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+}
+
+.search_products .offer-btn{
+    padding: 3px 5px;
+    border:1px solid green;
+    color:green;
+    border-radius: 5px;
+    font-size: 12px;
 }
