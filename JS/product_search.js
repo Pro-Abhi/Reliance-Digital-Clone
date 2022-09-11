@@ -95,7 +95,7 @@ sortItems.addEventListener("click",()=>{
             console.log(data)
             
             data.forEach(element => {
-                mainContainer.innerHTML= null;
+                // mainContainer.innerHTML= null;
 
                 console.log(element.price)
                 addElement(data)
