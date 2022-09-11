@@ -17,8 +17,6 @@ let mainContainer = document.querySelector(".search_products")
         fetch('https://api.escuelajs.co/api/v1/products')
         .then(res => res.json())
         .then(json =>{
-            
-            // getdata(json) 
 
             for (let value of json){
                 // console.log(value)
