@@ -1,6 +1,8 @@
-let productContainer = document.querySelector(".search");
+let SearchBtn = document.querySelector(".search");
 let filterInput = document.getElementById("search-input");
 let sortItems = document.getElementById('sort');
+let mainContainer = document.querySelector(".search_products")
+
 
 // console.log(productContainer,filterInput,sortItems);
 
@@ -33,7 +35,7 @@ filterInput.addEventListener('keyup', filterProducts);
 
 function filterProducts(){
     let filterValue = filterInput.value.toUpperCase();
-    let item = productContainer.querySelectorAll('.each_item')
+    let item = mainContainer.querySelectorAll('.each_item')
 
     for (let i = 0; i < item.length; i++){
         let span = item[i].querySelector('.title');
@@ -50,7 +52,6 @@ function filterProducts(){
 function addElement(value){
 
     let { images, title,price } = value;
-    let mainContainer = document.querySelector(".search_products")
     let result = `<div class="item each_item">
                         <div class="product_image">
                             <img src="${images}" alt="${title}">
@@ -94,7 +95,7 @@ sortItems.addEventListener("click",()=>{
             console.log(data)
             
             data.forEach(element => {
-                productContainer.innerHTML= null;
+                mainContainer.innerHTML= null;
 
                 console.log(element.price)
                 addElement(value)
