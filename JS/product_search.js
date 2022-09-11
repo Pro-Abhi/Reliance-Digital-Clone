@@ -98,7 +98,7 @@ sortItems.addEventListener("click",()=>{
                 mainContainer.innerHTML= null;
 
                 console.log(element.price)
-                addElement(value)
+                addElement(data)
                 
                
             }); 
