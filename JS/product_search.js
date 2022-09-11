@@ -1,6 +1,6 @@
-let p_container = document.querySelector(".search_products");
+let productContainer = document.querySelector(".search");
 let filterInput = document.getElementById("search-input");
-let x = document.getElementById('sort');
+let sortItems = document.getElementById('sort');
 
 
 //load the page
@@ -32,7 +32,7 @@ filterInput.addEventListener('keyup', filterProducts);
 
 function filterProducts(){
     let filterValue = filterInput.value.toUpperCase();
-    let item = p_container.querySelectorAll('.each_item')
+    let item = productContainer.querySelectorAll('.each_item')
 
     for (let i = 0; i < item.length; i++){
         let span = item[i].querySelector('.title');
@@ -47,7 +47,6 @@ function filterProducts(){
 }
 
 function addElement(value){
-    // console.log("its working");
 
     let { images, title,price } = value;
 
@@ -73,8 +72,7 @@ function addElement(value){
 }
 
 
-x.addEventListener("click",()=>{
-    // e.target.id == "priceAse";
+sortItems.addEventListener("click",()=>{
     fetch('https://api.escuelajs.co/api/v1/products')
         .then(res => res.json())
         .then((data)=>{
@@ -85,7 +83,7 @@ x.addEventListener("click",()=>{
             console.log(data)
             
             data.forEach(element => {
-                // p_container.innerHTML= null;
+                productContainer.innerHTML= null;
 
                 console.log(element.price)
                 addElement(value)
