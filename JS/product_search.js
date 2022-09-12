@@ -38,7 +38,7 @@ let mainContainer = document.querySelector(".search_products");
 
             for (let value of json){
                 addElement(value)
-            }           
+            }         
             
         });   
     })
@@ -128,8 +128,6 @@ sortItemsByDec.addEventListener("click",()=>{
             })
    
             data.forEach(element => {
-
-                // console.log(element.price)
                 addElement(element)   
             }); 
 
