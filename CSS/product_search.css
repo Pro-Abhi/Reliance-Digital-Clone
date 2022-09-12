@@ -38,11 +38,23 @@
     line-height: 2;
    
 }
+
+.filter_brand,
+.filter_category{
+    height: 200px;
+    overflow: hidden;
+}
+.f_active{
+    height:auto;
+}
+
 .filter_availability{
     border-bottom: 1px solid #ccc; 
 }
-.filter_category{
-    border-bottom: 1px solid #ccc; 
+.cta-btn{
+    padding: 5px;
+    display: block;
+    border-bottom: 1px solid #ccc;
 }
 
 .right_container{
@@ -69,15 +81,18 @@
 }
 
 .right_container .result_sort{
-  border:1px solid #9b9b9b;
   padding: 10px;
 }
 
-.result_sort select{
-  border:none;
-  outline:none;
-  font-size: 16px;
+.result_sort .dec,.asc{
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius: 2px;
+    background-color: transparent;
+    font-weight: 800;
+    cursor:pointer;
 }
+ 
 .search_products{
     display: flex;
     flex-wrap: wrap;

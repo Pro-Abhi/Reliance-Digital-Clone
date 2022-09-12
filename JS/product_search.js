@@ -1,10 +1,28 @@
-let SearchBtn = document.querySelector(".search");
+let ctaBtn = Array.from(document.querySelectorAll(".cta-btn"));
+let cat = document.querySelector(".filter_category");
+
+ctaBtn.forEach(element => {
+    element.addEventListener('click',()=>{
+        cat.classList.toggle("f_active");
+
+        if(element.innerHTML== "See more"){
+            element.innerHTML = "see less";
+        }
+        else{
+            element.innerHTML = "See more"
+        }
+    })
+});
+
+
+// Product Search Part
+
+let SearchBtn = document.querySelector(".viewAll");
 let filterInput = document.getElementById("search-input");
-let sortItems = document.getElementById('sort');
-let mainContainer = document.querySelector(".search_products")
+let sortItemsByAsc = document.querySelector(".asc");
+let sortItemsByDec = document.querySelector(".dec");
+let mainContainer = document.querySelector(".search_products");
 
-
-// console.log(productContainer,filterInput,sortItems);
 
 //load the page
     function searchFunc() {
@@ -16,17 +34,14 @@ let mainContainer = document.querySelector(".search_products")
 
         fetch('https://api.escuelajs.co/api/v1/products')
         .then(res => res.json())
-        .then(json =>{
+        .then(json =>{ 
 
             for (let value of json){
-                // console.log(value)
                 addElement(value)
-
             }           
             
         });   
     })
-
 
 // add event listener
 filterInput.addEventListener('keyup', filterProducts);
@@ -82,26 +97,42 @@ function addElement(value){
 }
 
 
-sortItems.addEventListener("click",()=>{
+sortItemsByAsc.addEventListener("click",()=>{
+    
+    mainContainer.innerHTML= "";
     fetch('https://api.escuelajs.co/api/v1/products')
         .then(res => res.json())
         .then((data)=>{
             data.sort((a,b)=>{
                 return a.price - b.price
             })
-            
-            console.log(data)
-            
+   
             data.forEach(element => {
-                // mainContainer.innerHTML= null;
 
-                console.log(element.price)
-                addElement(data)
-                
-               
+                // console.log(element.price)
+                addElement(element)   
             }); 
 
         })
+    
 })
 
+sortItemsByDec.addEventListener("click",()=>{
+    
+    mainContainer.innerHTML= "";
+    fetch('https://api.escuelajs.co/api/v1/products')
+        .then(res => res.json())
+        .then((data)=>{
+            data.sort((a,b)=>{
+                return b.price - a.price
+            })
+   
+            data.forEach(element => {
 
+                // console.log(element.price)
+                addElement(element)   
+            }); 
+
+        })
+    
+})
