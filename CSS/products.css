@@ -103,13 +103,13 @@
   position: relative;
   overflow: hidden;
 }
-.item {
+/* .item {
   margin: 0 45px;
   display: flex;
   justify-content: space-between;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
+} */
 .slider .p-img {
   flex: 0 0 auto;
   width: 200px;
@@ -275,7 +275,7 @@
 }
 
 .item .product_image{
-  width: 100%;
+  width: 75%;
   object-fit: cover;
 }
 .item .product_image img{
@@ -288,6 +288,7 @@
 }
 
 .product_title {
+  height: 100px;
   color: #003380;
   font-weight: 400;
   font-size: 18px;

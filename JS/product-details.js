@@ -1,28 +1,47 @@
+let productID = sessionStorage.getItem("productId");
+
 // create element
-let productDetailsContainer = document.querySelector('#productDetails') 
+let productDetailsContainer = document.querySelector("#productDetails");
 
-fetch(`https://api.escuelajs.co/api/v1/products`)
-.then(res => res.json())
-.then(data => {
-  let Data = [...data]
-  for(let i of Data){
-    console.log(i);
-      let offerPrice = i.price;
-      let mrpPrice = offerPrice + 1500;
-      let discount = Math.round((offerPrice * 100) / mrpPrice);
-      let saving = mrpPrice - offerPrice;
+let products = JSON.parse(localStorage.getItem("products"));
 
+products.forEach((v) => {
+  console.log(v);
+  if (v.id == productID) {
     let productDetails = `<div class="first-part">
     <div class="left-side">
       <div class="main-img">
-        <img src="${i.category.image}" alt="">
+        <img src="${v.imglink}" alt="">
       </div>
+      <div class="img-slider">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="p-img item">
+                    <img src="${v.img1}" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="${v.img2}" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="${v.img3}" alt="">
+                  </div>
+                </div>
+                <div class="btn-area">
+                  <button class="prev-btn prev" onclick="prev(this)">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="next-btn next" onclick="next(this)">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
     </div>
     <div class="right-side">
       <div class="top">
-        <div class="p-id">Article ID: ${i.id}</div>
+        <div class="p-id">Article ID: ${v.id}</div>
         <div class="thumbnail">
-          ${i.title}
+          ${v.name}
         </div>
         <div class="reviews">
           <a href="#customer-review">
@@ -33,7 +52,7 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </span>
-            (1 Reviews)
+            (${v.Reviews} Reviews)
           </a>
         </div>
       </div>
@@ -51,38 +70,22 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
             <div class="title">Save more with EMI/Cashbacks &nbsp; 
               <a href="">Read T&C</a>
             </div>
-            <ul class="bt-r-ul">
+            <ul class="mg-l">
               <li>EMIs (Credit Cards) from ₹143.99/month | <a href="">View all standard credit cards EMI options</a></li>
               <li>
                 <strong>Warranty : </strong> 1 year manufacturar warranty
               </li>
             </ul>
           </div>
-          <div class="additional-services">
-            <div class="title">Additional Services & Warranties 
-              <span class="btn toggle-btn" onclick="onOff()">View All</span>
-            </div>
-            <ul class="bt-r-ul show-hide">
-              <li>
-                <strong>₹599</strong> for 1 Year: resQ Care Plan (RCP) Extended Warranty for Wearables
-              </li>
-              <li>
-                <strong>₹749</strong> for 1 Year: resQ Care Plan (RCP) Accidental and Liquid Damage Protection for Wearables
-              </li>
-            </ul>
-          </div>
           <div class="features">
             <div class="title">Key Features</div>
-            <ul class="bt-r-ul">
-              <li>4. 29 cm (1.69 inch) HD Display</li>
-              <li>Multi Sports Modes</li>
-              <li>Bluetooth Calling</li>
-              <li>Voice Assistant</li>
-              <div class="show-hide on-off">
-                <li>Heart Rate Monitor</li>
-                <li>IP67 Waterproof</li>
-              </div>
-              <li class="sm">
+            <ul class="mg-l">
+              <li>${v.keyFeatures[0].one}</li>
+              <li>${v.keyFeatures[0].two}</li>
+              <li>${v.keyFeatures[0].three}</li>
+              <li>${v.keyFeatures[0].four}</li>
+              <li class='hide inactive'>${v.keyFeatures[0].five}</li>
+              <li class="sm non-disc">
                 <span class="btn toggle-btn" onclick="toggle()">
                   <span class="btn-txt">See more >></span>
                 </span>
@@ -91,7 +94,7 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
           </div>
           <div class="return-policy">
             <div class="title">Retuen Policy</div>
-            <ul class="bt-r-ul">
+            <ul class="mg-l">
               <li>Items are eligible for return within 7 days of delivery. 
                 <a href="">Read T&C</a>
               </li>
@@ -104,17 +107,17 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
             <ul class="non-disc">
               <li class="offer">
                 <span class="price-name">Offer Price : </span>
-                <span class="price offer-price">₹${offerPrice}</span>
+                <span class="price offer-price">${v.dealpricex}</span>
               </li>
               <li class="mrp">
                 <span class="price-name">MRP: </span>
-                <span class="price mrp-price">₹${mrpPrice}</span>
+                <span class="price mrp-price">${v.MRPx}</span>
                 <span class="tax-txt">(Inclusive all taxes)</span>
               </li>
               <li class="saving">
                 You Save : 
-                <span class="percetn-count">${discount}%</span>
-                <span class="price-count">(₹${saving})</span>
+                <span class="percetn-count">${v.discountx}</span>
+                <span class="price-count">(${v.savepricex})</span>
               </li>
               <li class="emi">
                 <span>EMIs(credit card) from ₹143.99/month | </span> 
@@ -134,10 +137,12 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
                   <i class="fa-solid fa-triangle-exclamation"></i>
                   Delivery to this PIN code is unavailable, Please try another PIN code
                 </p>
-                <i class="fa-solid fa-location-dot"></i>
+                <div class=location-icon>
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
               </div>
             </form>
-            <div class="shipping-info">
+            <div class="shipping-info inactive">
               <div class="shipping-details">
                 <div class="ship-date-section">
                   <i class="fa-solid fa-van-shuttle"></i>
@@ -168,23 +173,28 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
       <div class="description">
         <a href="#product-description">Description</a>
       </div>
+      <div class="specification">
+        <a href="#product-description">Specification</a>
+      </div>
       <div class="reviews">
         <a href="#customer-review">Customer Reviews</a>
       </div>
     </div>
     <div id="product-description">
+      <h2>Description : </h2>
       <p class="dsc">
-        ${i.description}
+        ${v.description[0].seven}
       </p>
-      <div class="col-2">
-        <div class='sub-dsc'>Specification : </div>
-        <p class="img-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum minus soluta a, consequuntur quisquam et vero impedit facere est magnam alias commodi sit iure! Exercitationem pariatur labore quae eos quisquam, ipsam, corrupti asperiores minima qui perspiciatis similique quos maiores deleniti aspernatur officia reiciendis eius? Debitis quas vitae optio ipsum distinctio! Expedita, magnam enim non necessitatibus a esse repellat ut nam facere rem rerum! Est atque recusandae, enim minima nihil earum obcaecati eos, doloremque incidunt quaerat ea inventore nulla harum, itaque quod? Cupiditate dolorum dolorem optio illo autem libero, est eum eius consequuntur illum! Quod nulla est porro ex quo pariatur.
-        </p>
-      </div>
-      <div class="col-2">
-      <div class='sub-dsc'>More Info : </div>
-        <p class="img-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, excepturi! Quisquam sed explicabo non, nisi, dolorem id eum eos, aperiam atque expedita quaerat repellendus eligendi at saepe quia totam odio quos nulla. Quo provident officia sint id voluptatum fugit animi. Labore accusamus quod delectus tenetur perferendis reprehenderit deleniti quasi aut tempore, optio iure, quisquam quibusdam suscipit doloremque est officiis unde?
-        </p>
+      <div class="list">
+        <h3 class='sub-dsc'>Specification : </h3>
+        <ul>
+          <li>${v.description[0].one}</li>
+          <li>${v.description[0].two}</li>
+          <li>${v.description[0].three}</li>
+          <li>${v.description[0].four}</li>
+          <li>${v.description[0].five}</li>
+          <li>${v.description[0].six}</li>
+        </ul>
       </div>
     </div>
 
@@ -193,7 +203,7 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
     <div id="customer-review">
       <div class="title">
         <span class="section-name">Customer Reviews</span> &nbsp;&nbsp;
-        <span class="product-name">(${i.title})</span>
+        <span class="product-name">(${v.name})</span>
       </div>
       <div class="review-card">
         <div class="review-star">
@@ -268,50 +278,70 @@ fetch(`https://api.escuelajs.co/api/v1/products`)
 
       <button>See all review</button>
     </div>
-  </div>`
+  </div>`;
 
-  productDetailsContainer.innerHTML = productDetails
+    productDetailsContainer.innerHTML = productDetails;
+  }
+});
+
+
+  // slider - code
+  function next(e){
+    let ele = e.parentElement.parentElement.children[0]
+    let item = ele.getElementsByClassName('item')
+    ele.append(item[0])
+  }
+  
+  function prev(e){
+    let ele = e.parentElement.parentElement.children[0]
+    let item = ele.getElementsByClassName('item')
+    ele.prepend(item[item.length - 1])
+  }
+
+
+let item = document.querySelector('.hide')
+function toggle(){
+  if(item.classList.contains('inactive')){
+    item.classList.remove('inactive')
+    document.querySelector('.btn-txt').innerText = 'See less >>'
+  }
+  else{
+    item.classList.add('inactive')
+    document.querySelector('.btn-txt').innerText = 'See more >>'
+  }
+}
+
+
+// pincode for shipping
+let input = document.querySelector('#pin-code')
+let shippingInfo = document.querySelector('.shipping-info')
+let errorMsg = document.querySelector('.error-msg')
+input.addEventListener('keyup', () => {
+  if((input.value.length != 0) && (input.value.length == 6)){
+    fetch(`https://api.postalpincode.in/pincode/${input.value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((ele) => {
+          let status = ele.Status;
+          if (status == "Success"){
+            document.querySelector('.location-icon').innerHTML = `<div class='loader'></div>`
+            errorMsg.classList.add('inactive')
+              setTimeout(() => {
+                shippingInfo.classList.remove('inactive')
+                document.querySelector('.location-icon').innerHTML = `<i class="fa-solid fa-location-dot"></i>`
+              }, 1100)
+          }
+          else if(status == "Error"){
+            errorMsg.classList.remove('inactive')
+            shippingInfo.classList.add('inactive')
+          }
+        })
+    })
+  }
+  else{
+    shippingInfo.classList.add('inactive')
   }
 })
-
-
-
-// toggle btn
-let toggleBtn = document.querySelector('.toggle-btn')
-let x = document.querySelector('.show-hide');
-let y = document.querySelector('.on-off')
-
-function onOff(){
-  if(x.style.display == 'block'){
-    x.style.display = 'none'
-    toggleBtn.innerHTML = 'View more'
-  }
-  else{
-    x.style.display = 'block'
-    toggleBtn.innerHTML = 'View less'
-  }
-}
-
-function toggle(){
-  if(y.style.display == 'block'){
-    y.style.display = 'none'
-    document.querySelector('.btn-txt').innerHTML = 'See more >>'
-  }
-  else{
-    y.style.display = 'block'
-    document.querySelector('.btn-txt').innerHTML = 'See less >>'
-  }
-}
-
-
-
-// pin-code
-// let inputScreen = document.querySelector("#pin-code");
-// let errorMsg = document.querySelector(".error-msg");
-// let inputLabel = document.querySelector(".txt-input label");
-
-
-
 
 
 

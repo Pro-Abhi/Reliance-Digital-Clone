@@ -79,7 +79,7 @@ function lastNameValidate(){
     proceedBtn.disabled = true
   }
   else if(firstName.value == lastName.value){
-    lastNameError.innerHTML = `first_name and last_name cannot be same`
+    lastNameError.innerHTML = `First name and Last name cannot be same`
     lastName.classList.add('alert')
     lastNameLabel.classList.add('alert')
     lastNameError.classList.add('alert')
@@ -134,6 +134,7 @@ emailVerifyBtn.addEventListener('click', function(){
 
 
 // mobile-verify
+
 
 
 

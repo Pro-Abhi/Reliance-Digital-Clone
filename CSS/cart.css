@@ -1,0 +1,177 @@
+/* cart, login, PIN-Code */
+.header-maininfo .header-maininfo-list {
+  min-width: 200px;
+}
+.header-maininfo .header-maininfo-list .header-maininfo-item {
+  padding: 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.header-maininfo .header-maininfo-list .header-maininfo-item:not(:first-child) {
+  border-left: 1px solid #dadada;
+}
+.header-maininfo .header-maininfo-list .header-maininfo-item a {
+  color: #fff;
+}
+.header-maininfo .header-maininfo-list .header-maininfo-item a i {
+  font-size: 18px;
+}
+
+/* pop-up for pin-code input */
+.pop-up {
+  min-width: 450px;
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #3399cc;
+  cursor: default;
+  z-index: 100;
+  background-color: #fff;
+}
+.pop-up .pop-up-info {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.top-arrow {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 15px solid transparent;
+  border-bottom-color: #3399cc;
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transform: translateY(-100%);
+}
+.pop-up-info .title {
+  width: 100%;
+  padding: 20px;
+  background-color: #3399cc;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.pop-up-info .pinCode-input {
+  padding: 30px 20px 10px;
+  background-color: #fff;
+}
+.pop-up-info .pinCode-input form .txt-input {
+  width: 100%;
+  position: relative;
+}
+form .txt-input .input {
+  width: 100%;
+  height: 35px;
+  padding: 20px 10px;
+  font-size: 1.2em;
+  background: none;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.txt-input label {
+  font-size: 1em;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  cursor: text;
+  transition: all 0.5s ease-in;
+}
+.input:focus + label,
+.input:not(:placeholder-shown).input:not(:focus) + label {
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #2d73ed;
+}
+.input:focus{
+  border: 2px solid #2d73ed;
+}
+.txt-input .input.alert{
+  border: 2px solid #d32f2f;
+}
+.txt-input label.alert{
+  font-size: 0.9em;
+  top: -0.7em;
+  background: #fff;
+  padding: 0 5px;
+  color: #d32f2f;
+}
+
+.pinCode-input form button {
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+  border-left: 3px solid #3399cc;
+  border-radius: 0 5px 5px 0;
+  text-transform: uppercase;
+  color: #1774ef;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  height: 44px;
+}
+.pinCode-input .error-msg {
+  width: 100%;
+  margin-top: 5px;
+  color: #e42529;
+  padding: 0 6px;
+}
+.pinCode-input .loader{
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #666;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
+
+.pop-up-info .live-location {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  font-size: 1.1em;
+  color: #1774ef;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.pop-up-info .close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.pop-up-info .close-btn i {
+  margin-right: 0;
+  font-size: 1.2em;
+  color: #fff;
+}
+.pop-up-info .close-btn:hover {
+  background-color: #f0f0f0ce;
+}

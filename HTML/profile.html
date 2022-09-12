@@ -78,9 +78,9 @@
                 </a>
               </li>
               <li class="header-maininfo-item">
-                <a href="../HTML/login.html">
+                <a onclick="logincheck()" id="log">
                   <i class="fa-solid fa-circle-user"></i>
-                  Login
+                  <span id="user_Name">Login</span>
                 </a>
               </li>
             </ul>
@@ -693,121 +693,93 @@
           </nav>
           <!-- Navbar Ends Here -->
         </div>
-      </header>
+    </header>
+
     <!-- Main Container -->
     <main id="main">
         <div class="mg"></div>
-        <div class="user_info_container">
-            <div class="user_deatils">
-                <div class="user_info">
-                    <h3 class="user_name">Puran</h3>
-                    <p class="user_email">clpuran95@gmail.com</p>
-                </div>
-    
-                <!-- My_Account Menu -->
-                <div class="user_account_menu">
-                    <h3><a href="user_profile_page.html"><i class="fa-solid fa-user" style="margin-right:10px;"></i>My Account</a></h3>
-                    <ul>
-                        <li><a href="#">My Profile</a></li>
-                        <li><a href="myorder.html">My Order</a></li>
-                        <li><a href="#">My Address</a></li>
-                        <li><a href="#">My Wishlist</a></li>
-                        <li><a href="#">Rone Loyalty Points</a></li>
-                        <li><a href="#">My Credit</a></li>
-                    </ul>
-                </div>
-                <!-- Logout Button -->
-                <div class="logout_btn"><i class="fa-solid fa-right-from-bracket" style="margin-right:10px;"></i> Logout</div>
+        <div class="main-section">
+          <section class="left-side-section">
+            <div class="user-details">
+              <div class="name bold">Abhishek</div>
+              <div class="email">abhi@gmail.com</div>
             </div>
-            <div class="user_account_details">
-                <div class="my_account">My Account</div>
-                <div class="user_account_container">
-                    <!-- Single Item Starts-->
-                    <div class="user flex">
-                        <a href="#">
-                            <div>
-                                <h3 class="imp_text">Puran's Profile</h3>
-                                <p class="small_text">clpuran95@gmail.com</p>
-                           </div>
-                        </a>
-                        <a href="#">
-                            <img src="https://www.reliancedigital.in/build/client/images/my-account/my_profile.jpg" alt="">
-                        </a>
-                     </div>
-                     <!-- Single Items Ends -->
-    
-                     <!-- Single Item Starts-->
-                    <div class="user flex">
-                        <a href="#">
-                            <div>
-                                <h3 class="imp_text">My Order</h3>
-                                <p class="small_text">My Order Track your order and history</p>
-                           </div>
-                        </a>
-                        <a href="#">
-                            <img src="https://www.reliancedigital.in/build/client/images/my-account/my-orders.jpg" alt="">
-                        </a>
-                     </div>
-                     <!-- Single Items Ends -->
-    
-                     <!-- Single Item Starts-->
-                    <div class="user flex">
-                        <a href="#">
-                            <div>
-                                <h3 class="imp_text">My Address</h3>
-                                <p class="small_text">Add, Edit your address</p>
-                           </div>
-                        </a>
-                        <a href="#">
-                            <img src="https://www.reliancedigital.in/build/client/images/my-account/my-address.jpg" alt="">
-                        </a>
-                     </div>
-                     <!-- Single Items Ends -->
-    
-                     <!-- Single Item Starts-->
-                    <div class="user flex">
-                        <a href="#">
-                            <div>
-                                <h3 class="imp_text">My Wishlist</h3>
-                                <p class="small_text">Create, Edit your custom Wishlist</p>
-                           </div>
-                        </a>
-                        <a href="#">
-                            <img src="https://www.reliancedigital.in/build/client/images/my-account/my-wishlist.jpg" alt="">
-                        </a>
-                     </div>
-                     <!-- Single Items Ends -->
-    
-                     <!-- Single Item Starts-->
-                    <div class="user flex">
-                        <a href="#">
-                            <div>
-                                <h3 class="imp_text">ROne Loyalty Points</h3>
-                                <p class="small_text">Review your loyalty points</p>
-                           </div>
-                        </a>
-                        <a href="#">
-                            <img src="https://www.reliancedigital.in/build/client/images/my-account/rone-points.jpeg" alt="">
-                        </a>
-                     </div>
-                     <!-- Single Items Ends -->
-    
-                     <!-- Single Item Starts-->
-                    <div class="user flex">
-                        <a href="#">
-                            <div>
-                                <h3 class="imp_text">My Credit</h3>
-                                <p class="small_text">Review your store credit</p>
-                           </div>
-                        </a>
-                        <a href="#">
-                            <img src="https://www.reliancedigital.in/build/client/images/my-account/my-credit.jpg" alt="">
-                        </a>
-                     </div>
-                     <!-- Single Items Ends -->
-                </div>
-    
+            <div class="account-details">
+              <a class="my-account">
+                <i class="fa-solid fa-user"></i>
+                <span class="txt bold">My Account</span>
+              </a>
+              <a class="txt">My profile</a>
+              <a class="txt">My orders</a>
+              <a class="txt">My address</a>
+              <a class="txt">My whishlist</a>
+              <a class="txt">ROne Loyalty points</a>
+              <a class="txt">My credit</a>
+              <div class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="txt bold">Logout</span>
+              </div>
             </div>
+          </section>
+          <section class="right-side-section">
+            <div class="top-heading">My Account</div>
+            <div class="account-box">
+              <div class="user-box">
+                <div class="left-side">
+                  <div class="title">Abhishek Profile</div>
+                  <div class="sub">abhi@gmail.com</div>
+                </div>
+                <div class="right-side">
+                  <img src="https://www.reliancedigital.in/build/client/images/my-account/my_profile.jpg" alt="">
+                </div>
+              </div>
+              <div class="user-box">
+                <div class="left-side">
+                  <div class="title">MY Order</div>
+                  <div class="sub">Track your orders and history</div>
+                </div>
+                <div class="right-side">
+                  <img src="https://www.reliancedigital.in/build/client/images/my-account/my-orders.jpg" alt="">
+                </div>
+              </div>
+              <div class="user-box">
+                <div class="left-side">
+                  <div class="title">My Address</div>
+                  <div class="sub">Add, edit your address</div>
+                </div>
+                <div class="right-side">
+                  <img src="https://www.reliancedigital.in/build/client/images/my-account/my-address.jpg" alt="">
+                </div>
+              </div>
+              <div class="user-box">
+                <div class="left-side">
+                  <div class="title">My Wishlist</div>
+                  <div class="sub">Create, edit your custom wishlist</div>
+                </div>
+                <div class="right-side">
+                  <img src="https://www.reliancedigital.in/build/client/images/my-account/my-wishlist.jpg" alt="">
+                </div>
+              </div>
+              <div class="user-box">
+                <div class="left-side">
+                  <div class="title">ROne Loyalty Points</div>
+                  <div class="sub">Review your loyalty points</div>
+                </div>
+                <div class="right-side">
+                  <img src="https://www.reliancedigital.in/build/client/images/my-account/rone-points.jpeg" alt="">
+                </div>
+              </div>
+              <div class="user-box">
+                <div class="left-side">
+                  <div class="title">My Credit</div>
+                  <div class="sub">Review your credit score</div>
+                </div>
+                <div class="right-side">
+                  <img src="https://www.reliancedigital.in/build/client/images/my-account/my-credit.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
     </main>
 
@@ -946,6 +918,7 @@
 
     <!-- JavaScript file -->
   <script src="../JS/profile.js"></script>
+  <script src="../JS/common.js"></script>
   <!-- sticky-header JS file -->
   <script src="../JS/sticky_header.js"></script>
 </body>

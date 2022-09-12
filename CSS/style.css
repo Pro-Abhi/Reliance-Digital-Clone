@@ -661,6 +661,7 @@ form .txt-input .input {
   justify-content: space-between;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: .5s;
 }
 
 .slider::-webkit-scrollbar {
@@ -675,8 +676,9 @@ form .txt-input .input {
 }
 
 .item .product_image{
-  width: 100%;
+  width: 80%;
   object-fit: cover;
+  margin: 0 auto;
 }
 .item .product_image img{
   width: 100%;
@@ -688,9 +690,10 @@ form .txt-input .input {
 }
 
 .product_title {
+  height: 90px;
   color: #003380;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   overflow: hidden;
   text-transform: capitalize;
   margin: 15px 20px 5px 0;
