@@ -6,7 +6,7 @@ ctaBtn.forEach(element => {
         cat.classList.toggle("f_active");
 
         if(element.innerHTML== "See more"){
-            element.innerHTML = "see less";
+            element.innerHTML = "See less";
         }
         else{
             element.innerHTML = "See more"
