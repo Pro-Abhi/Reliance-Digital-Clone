@@ -87,6 +87,7 @@
 .result_sort .dec,.asc{
     padding: 10px;
     border:1px solid #ccc;
+    outline:none;
     border-radius: 2px;
     background-color: transparent;
     font-weight: 800;
