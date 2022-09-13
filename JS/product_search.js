@@ -14,11 +14,12 @@ let mainContainer = document.querySelector(".search_products");
     SearchBtn.addEventListener('click',()=>{
         console.log(filterInput.value);
         main.innerHTML="";
+        addPage();
         fetch('https://api.escuelajs.co/api/v1/products')
         .then(response => response.json())
         .then(data =>{
-            for(let value of data){
-                addPage();
+            for(let value of data){             
+                // console.log(value);
                 addElement(value);
             }
         })
@@ -149,6 +150,8 @@ let mainContainer = document.querySelector(".search_products");
             main.innerHTML = result;
 
 }
+
+console.log(mainContainer);
 
 function addElement(value){
     let {images, title , price } = value;
