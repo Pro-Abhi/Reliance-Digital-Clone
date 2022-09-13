@@ -319,6 +319,29 @@ form .txt-input .input {
   background-color: #f0f0f0ce;
 }
 
+.header-maininfo-item .account-options{
+  position: absolute;
+  right: 10px;
+  z-index: 1000;
+  margin-top: 24px;
+  color: #333;
+  background-color: #fff;
+  width: 180px;
+  box-shadow: 2px 2px 10px #666, -2px -2px 10px #666;
+  display: none;
+}
+.account-options li{
+  padding: 16px 15px;
+  border-bottom: 1px dashed #333;
+}
+.account-options .top-arrow{
+  border-bottom-color: #fff;
+  left: 60%;
+}
+.header-maininfo-item.login.in:hover .account-options{
+  display: block;
+}
+
 /* Navbar Starts Here*/
 .nav {
   width: 100%;

@@ -27,6 +27,12 @@ emailVerifyBtn.disabled = true
 proceedBtn.disabled = true
 
 
+let firstNameVal = firstName.value.trim()
+let lastNameVal = lastName.value.trim()
+let emailIDVal = emailID.value.trim()
+let mobileNumberVal = mobileNumber.value.trim()
+
+
 // first-name validation
 function firstNameValidate(){
   let regExp = /^[A-Za-z. ]{3,20}$/
@@ -134,7 +140,10 @@ emailVerifyBtn.addEventListener('click', function(){
 
 
 // mobile-verify
-
+mobileNumber.disabled = true
+if(localStorage.getItem('userMobile') != null){
+  mobileNumber.value = localStorage.getItem('userMobile')
+}
 
 
 
@@ -143,6 +152,10 @@ checkBox.addEventListener('click', () => {
   if((checkBox.checked)){
     proceedBtn.disabled = false
     proceedBtn.classList.add('unabled')
+  }
+  else{
+    proceedBtn.disabled = true
+    proceedBtn.classList.remove('unabled')
   }
 })
 

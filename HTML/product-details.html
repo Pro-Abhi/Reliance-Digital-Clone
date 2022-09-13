@@ -68,11 +68,12 @@
           </form>
         </div>
         <ul class="header-maininfo-list flex">
-          <li class="header-maininfo-item">
-            <a href="">
+          <li class="header-maininfo-item cart">
+            <a href="../HTML/cart.html">
               <i class="fa-solid fa-cart-flatbed"></i>
               Cart
             </a>
+            <span class="counter"></span>
           </li>
           <li class="header-maininfo-item">
             <a onclick="logincheck()" id="log">
@@ -837,8 +838,8 @@
                   </div>
                 </div>
                 <div class="buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="buy_now">Buy Now</button>
+                  <button class="add-to-cart" id='add-to-cart'>Add to Cart</button>
+                  <button class="buy_now" id='buy-now'>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -953,6 +954,7 @@
         <button>See all review</button>
       </div>
     </div> -->
+
   </main>
 
   <!-- footer section start -->

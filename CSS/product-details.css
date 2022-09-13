@@ -4,6 +4,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+#main{
+  width: 100%;
+}
 
 
 .first-part{
@@ -213,21 +216,25 @@ ul li{
   text-align: center;
 }
 .user-related .buttons .add-to-cart, .buy_now{
-  padding: 15px 12px;
+  padding: 11px 12px;
   font-size: 16px;
   background-color: #e42529;
   border: none;
   text-transform: uppercase;
   font-weight: 600;
-  line-height: 1.5;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
   width: 45%;
+  /* height: 40px; */
 }
 .user-related .buttons .add-to-cart:hover{
   background-color: #003380;
 }
+.user-related .buttons .add-to-cart img{
+  width: 15px;
+}
+
 
 .user-related .buttons .buy_now{
   background-color: #fc6027;
@@ -237,14 +244,14 @@ ul li{
 .shipping-section{
   margin-top: 30px;
 }
-form .txt-input{
+.shipping-section .txt-input{
   width: 100%;
   padding-bottom: 6px;
   background-color: #fff;
   position: relative;
   margin-left: 4px;
 }
-form .txt-input .input{
+.shipping-section form .txt-input .input{
   width: 70%;
   height: 35px;
   padding: 8px 16px;
@@ -503,6 +510,7 @@ form .txt-input .input{
   color: #d9534f;
   font-weight: 600;
 }
+
 
 
 

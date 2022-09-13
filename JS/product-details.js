@@ -5,8 +5,35 @@ let productDetailsContainer = document.querySelector("#productDetails");
 
 let products = JSON.parse(localStorage.getItem("products"));
 
+
+// to get product delivery date
+let todayDate = new Date()
+let dateSplit = todayDate.toDateString()
+dateSplit = dateSplit.split(' ')
+let day = dateSplit[0]
+let month = dateSplit[1]
+let date = dateSplit[2]
+
+let deliveryDate = new Date(todayDate)
+deliveryDate.setDate(todayDate.getDate() + 3)
+deliveryDate = deliveryDate.toDateString()
+deliveryDate = deliveryDate.split(' ')
+let deliveryDay = deliveryDate[0]
+let deliveryMonth = deliveryDate[1]
+let deliveryDateStart = deliveryDate[2]
+
+
+let nextDate = new Date(todayDate)
+nextDate.setDate(todayDate.getDate() + 6)
+nextDate = nextDate.toDateString()
+nextDate = nextDate.split(' ')
+let finalDeliveryDay = nextDate[0]
+let finalDeliveryMonth = nextDate[1]
+let finalDeliveryDate = nextDate[2]
+
+
 products.forEach((v) => {
-  console.log(v);
+  // console.log(v);
   if (v.id == productID) {
     let productDetails = `<div class="first-part">
     <div class="left-side">
@@ -147,7 +174,7 @@ products.forEach((v) => {
                 <div class="ship-date-section">
                   <i class="fa-solid fa-van-shuttle"></i>
                   <span>Standard Delivery: </span>
-                  <span class="date">12 Sep(Mon) - 13 Sep(Tue)</span>
+                  <span class="date">${deliveryDateStart} ${deliveryMonth} (${deliveryDay}) - ${finalDeliveryDate} ${finalDeliveryMonth} (${finalDeliveryDay})</span>
                 </div>
                 <div class="cod-section">
                   <i class="fa-solid fa-circle-exclamation"></i>
@@ -158,8 +185,8 @@ products.forEach((v) => {
                 </div>
               </div>
               <div class="buttons">
-                <button class="add-to-cart">Add to Cart</button>
-                <button class="buy_now">Buy Now</button>
+                <button class="add-to-cart" id='add-to-cart' onclick='addToCart(${v.id})'>Add to Cart</button>
+                <button class="buy_now" id='buy-now'>Buy Now</button>
               </div>
             </div>
           </div>
@@ -312,13 +339,23 @@ function toggle(){
 }
 
 
+
 // pincode for shipping
-let input = document.querySelector('#pin-code')
+let pinCode = document.querySelector('#pin-code')
 let shippingInfo = document.querySelector('.shipping-info')
 let errorMsg = document.querySelector('.error-msg')
-input.addEventListener('keyup', () => {
-  if((input.value.length != 0) && (input.value.length == 6)){
-    fetch(`https://api.postalpincode.in/pincode/${input.value}`)
+
+
+if(localStorage.getItem('pinCode') != null){
+  pinCode.value = localStorage.getItem('pinCode')
+}
+if(pinCode.value != ''){
+  shippingInfo.classList.remove('inactive')
+}
+
+pinCode.addEventListener('keyup', () => {
+  if((pinCode.value != '') && (pinCode.value.length == 6)){
+    fetch(`https://api.postalpincode.in/pincode/${pinCode.value}`)
       .then((res) => res.json())
       .then((data) => {
         data.forEach((ele) => {
@@ -342,6 +379,26 @@ input.addEventListener('keyup', () => {
     shippingInfo.classList.add('inactive')
   }
 })
+
+
+
+
+let addToCartBtn = document.querySelector('#add-to-cart')
+
+function addToCart(e){
+  let basket = JSON.parse((localStorage.getItem('cartArray')))
+
+  basket.push({
+    id: e,
+    quantity: 1
+  })
+  localStorage.setItem('cartArray', JSON.stringify(basket))
+
+  // setTimeout(() => {
+  //   addToCartBtn.innerHTML = `<img src='../Assets/loading.gif'> Add to Cart`
+  // }, 1000)
+}
+
 
 
 

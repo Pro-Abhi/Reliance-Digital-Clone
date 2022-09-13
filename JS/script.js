@@ -4061,6 +4061,7 @@ submitBtn.addEventListener("click", () => {
               foundMsg.innerText = PinCode;
 
               localStorage.setItem("location", PinCode);
+              localStorage.setItem("pinCode", `${e.Pincode}`);
             });
             popUp.classList.add("inactive");
           } else if (status == "Error") {
@@ -4153,7 +4154,6 @@ let watches = category.watches;
 let laptops = category.laptop;
 let appliances = category.appliances;
 let soundBars = category.soundbar;
-console.log(television, watches, laptops, appliances, soundBars);
 
 // Watches-products Slider Starts
 let watchContainer = document.querySelector(".watches_slider");
@@ -4340,4 +4340,14 @@ function showDetails(e) {
 productContainer.forEach((v) => {
   v.addEventListener("click", showDetails);
 });
+
+
+
+let cart = []
+if(!localStorage.getItem('cartArray')){
+  cart = JSON.stringify(cart) 
+  localStorage.setItem('cartArray', cart)
+  console.log(localStorage.getItem('cartArray'));
+}
+
 

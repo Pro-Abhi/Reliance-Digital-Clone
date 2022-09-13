@@ -1,3 +1,92 @@
+let cartItem = JSON.parse(localStorage.getItem('cartArray'))
+// console.log(cartItem, typeof(cartItem));
+
+let product = JSON.parse(localStorage.getItem('products'))
+// console.log(product, typeof(product));
+let cartProducts = document.querySelector('#cart-products')
+
+// to get product delivery date
+let todayDate = new Date()
+let dateSplit = todayDate.toDateString()
+dateSplit = dateSplit.split(' ')
+let day = dateSplit[0]
+let month = dateSplit[1]
+let date = dateSplit[2]
+
+let deliveryDate = new Date(todayDate)
+deliveryDate.setDate(todayDate.getDate() + 3)
+deliveryDate = deliveryDate.toDateString()
+deliveryDate = deliveryDate.split(' ')
+let deliveryDay = deliveryDate[0]
+let deliveryMonth = deliveryDate[1]
+let deliveryDateStart = deliveryDate[2]
+
+
+let nextDate = new Date(todayDate)
+nextDate.setDate(todayDate.getDate() + 6)
+nextDate = nextDate.toDateString()
+nextDate = nextDate.split(' ')
+let finalDeliveryDay = nextDate[0]
+let finalDeliveryMonth = nextDate[1]
+let finalDeliveryDate = nextDate[2]
+
+
+function showCart(){
+  cartItem.forEach(v => {
+    console.log(v);
+    product.forEach(x => {
+      // console.log(x);
+      if(v.id == x.id){
+        cartProducts.innerHTML += `
+        <div class="cart-box">
+        <div class="item-details">
+          <div class="img-section">
+            <img src="${x.imglink}" alt="">
+            <div class="item-counter">
+              <i class="fa-solid fa-minus minus" onclick="decrement()"></i>
+              <span class="digits">${v.quantity}</span>
+              <i class="fa-solid fa-plus plus" onclick="increment()"></i>
+            </div>
+          </div>
+          <div class="product-details-section">
+            <div class="product-details">
+              <div class="product-title">${x.name}</div>
+              <div class="product-id">Product ID: ${x.id}</div>
+            </div>
+            <div class="shipping-details">
+              <div class="offer-price">${x.dealpricex}</div>
+              <div class="mrp-price">M.R.P.: <span class="mrp strike">${x.savepricex}</span>
+                <span class="sm-txt">Inclusive of all taxes</span>
+              </div>
+              <div class="savings">
+                You save: <span class="discount">${x.discountx}</span>
+                <span class="saving-price">(${x.savepricex})</span>
+              </div>
+              <div class="free-ship">Free Shipping</div>
+              <div class="delivery-status">
+                <i class="fa-solid fa-van-shuttle"></i> Standard Delivery: 
+                <span class="date">${deliveryDateStart} ${deliveryMonth} (${deliveryDay}) - ${finalDeliveryDate} ${finalDeliveryMonth} (${finalDeliveryDay})</span>
+              </div>
+              <div class="guideline">
+                *Delivery assurance is subject to our delivery locations staying open as per govt. regulations
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btns">
+          <div class="remove-btn">Remove</div>
+          <div class="wishlist-btn">Move to Wishlist</div>
+        </div>
+      </div>
+        `
+      }
+    })
+  })
+}
+showCart()
+
+
+// get location
 // for pin-code search
 let userPinCode = document.querySelector(".user-pin-code");
 let popUp = document.querySelector(".pop-up");
