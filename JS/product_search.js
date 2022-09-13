@@ -147,6 +147,7 @@ let mainContainer = document.querySelector(".search_products");
       </div>
     </section>`;
             main.innerHTML = result;
+
 }
 
 function addElement(value){
