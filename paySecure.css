@@ -1,0 +1,120 @@
+#paySecurely{
+    width: 1200px;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.specialOffers{
+    border: 1px solid #ddd;
+    margin: 0 auto 20px;
+    padding: 8px;
+    text-align: center;
+}
+.s_images{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#paymentOption{
+    display: flex;
+}
+
+#paySecurely>h3{
+    font-weight: bold;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 15px;
+}
+
+#selectPaymentOption>div{
+    border: 1px solid #dcdcdc;
+    padding :20px 10px 20px 40px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#selectPaymentOption>div:hover{
+    cursor: pointer;
+}
+
+#selectPaymentOption>div:hover label{
+    color:#003380;
+    font-weight: bold;
+}
+
+#selectPaymentOption>div>input{
+    margin-right:5px;
+}
+#paymentField{
+    margin-left:10px;
+}
+
+#paymentOptionHeading{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #003380;
+    border-bottom: 1px solid #DCDCDC;
+    font-weight: bold;
+    font-size: 20px;
+}
+#paymentOptionHeading .emi{
+    color:#333;
+    font-size: 15px;
+}
+
+.chooseBank{
+    display: flex;
+    flex-direction: column;
+}
+
+.chooseBank label{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 16px;
+}
+
+.chooseBank select{
+    width: 40%;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #333;
+    display: inline-block;
+    font-family: Open Sans,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 42px;
+    margin: 0 0 10px;
+    outline: none;
+    padding-left: 10px;
+}
+
+#paymentMsg>p{
+  color: #666;
+  font-size: 14px;
+}
+
+#checkbox_terms{
+    display: flex;
+}
+
+
+#payAmountBtn{
+    width: 200px;
+    background-color: #D32F2F;
+    border: 1px solid #E42529;
+    color: white;
+    font-size: 14px;
+    padding: 10px 30px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0 12px;
+    letter-spacing: .3px;
+}
+    
