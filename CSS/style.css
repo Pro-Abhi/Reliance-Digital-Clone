@@ -7,6 +7,9 @@
 body {
   font-family: Roboto, system-ui, -apple-system;
 }
+#main{
+  height: 100%;
+}
 .flex {
   display: flex;
 }

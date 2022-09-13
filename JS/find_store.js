@@ -19,7 +19,7 @@ searchBtn.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
       let get_stores = data.data.storesBySearchTerm.stores
-      console.log(get_stores);
+      // console.log(get_stores);
       get_stores.map(ele => {
         let latitude = ele.geoPoint.latitude
         let longitude = ele.geoPoint.longitude

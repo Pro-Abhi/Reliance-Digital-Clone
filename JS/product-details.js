@@ -4,19 +4,19 @@ let nxtBtn = [...document.querySelectorAll('.next-btn')]
 let preBtn = [...document.querySelectorAll('.prev-btn')]
 
 slider.forEach((item, i) => {
-  console.log(item);
+  // console.log(item);
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
-  console.log(containerDimensions, containerWidth);
+  // console.log(containerDimensions, containerWidth);
 
   nxtBtn[i].addEventListener("click", () => {
     item.scrollLeft += containerWidth;
-    console.log('hii');
+    // console.log('hii');
   });
 
   preBtn[i].addEventListener("click", () => {
     item.scrollLeft -= containerWidth;
-    console.log('hello');
+    // console.log('hello');
   });
 });
 

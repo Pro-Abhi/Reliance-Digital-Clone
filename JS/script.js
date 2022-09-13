@@ -316,7 +316,7 @@ const prevBtn2 = [...document.querySelectorAll(".prev-btn2")];
 slider2.forEach((item, i) => {
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
-  console.log(containerDimensions, containerWidth);
+  // console.log(containerDimensions, containerWidth);
 
   nextBtn2[i].addEventListener("click", () => {
     item.scrollLeft += containerWidth;
@@ -383,7 +383,7 @@ const prevBtn3 = [...document.querySelectorAll(".prev-btn3")];
 slider3.forEach((item, i) => {
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
-  console.log(containerDimensions, containerWidth);
+  // console.log(containerDimensions, containerWidth);
 
   nextBtn3[i].addEventListener("click", () => {
     item.scrollLeft += containerWidth;
@@ -396,12 +396,12 @@ slider3.forEach((item, i) => {
 
 // bottom-product-slider
 const slider4 = [...document.querySelectorAll(".products-category")];
-console.log(slider4);
+// console.log(slider4);
 const nextBtn4 = [...document.querySelectorAll(".nxt-btn4")];
 const prevBtn4 = [...document.querySelectorAll(".pre-btn4")];
 
 slider4.forEach((item, i) => {
-  console.log(item);
+  // console.log(item);
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
 
