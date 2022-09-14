@@ -161,75 +161,7 @@ fetch('https://api.escuelajs.co/api/v1/categories/3/products').then((data)=>{
     console.log("Some Error")
 })
 
-// 
-// const prodSlider = document.querySelectorAll(".SmartPhContainer");
-// const prodSect3__nextBtn =document.querySelector(".prodSect3__next");
-// const prodSect3__prevtBtn =document.querySelector(".prodSect3__prev");
 
-// prodSlider.forEach(function(slide,index){
-//     // console.log(index);
-   
-//     slide.style.left =`${index * 30}%`;
-// });
-// let counteR = 0;
-
-
-// prodSect3__nextBtn.addEventListener("click",function(){
-//  counteR++;
-//  carousel2();
-
-// });
-// prodSect3__prevtBtn.addEventListener("click",function(){
-//     counteR--;
-//     carousel2();
-  
-//    });
-// // setInterval(carousel2(),1000);
-
-// // carousel();
-//    function carousel2(){
-//     // working with prodSlider
-    
-//     if(counteR === prodSlider.length){
-//         counteR = 0;
-//     }
-//     if(counteR < 0){
-//         counter = prodSlider.length - 1;
-//     }
-//     prodSlider.forEach(function(slide){
-//       slide.style.transform = `translateX(-${counter * 30}%)`;
-//     });
-    
-// }
-
-// let thumbnails = document.getElementsByClassName("thumbnail");
-// let prodSlider = document.getElementById("smartPhSlider");
-// let buttonleft =document.getElementsByClassName("prodSect3__prev");
-// let buttonRight =document.getElementsByClassName("prodSect3__next");
-// buttonleft.addEventListener("click",() =>{
-//    prodSlider.scrollLeft -= 125;
-// });
-
-// buttonRight.addEventListener("click",() =>{
-//     prodSlider.scrollLeft += 125;
-// });
-
-// const prodContainers = [...document.querySelectorAll('.SmartPhContainer')];
-// const nxtButton = [...document.querySelectorAll('.prodSect3__next')];
-// const prevButton = [...document.querySelectorAll('.prodSect3__prev')];
-// prodContainers.forEach((item,i) =>{
-//     // console.log(item,i)
-//     let containerDimension = item.getBoundingClientRect();
-//     let containerWidth = containerDimension.width;
-
-//     nxtButton[i].addEventListener('click', () => {
-//         item.scrollLeft += containerWidth;
-//     })
-
-//     prevButton[i].addEventListener('click', () => {
-//         item.scrollLeft -= containerWidth;
-//     })
-// })
 
 
 let A = document.getElementById("smartPhSlider");
@@ -237,7 +169,7 @@ let A = document.getElementById("smartPhSlider");
 let B = A.getElementsByClassName("thumbnail");
 // console.log(A,B)
 
-// b = [2,3,4,5,6,1]
+
 
 function next(){
     A.append(B[0])

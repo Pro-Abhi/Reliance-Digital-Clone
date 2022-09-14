@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .section-center {
+      width: 90vw;
+      margin: 1rem auto;
+      max-width: 1170px;
+     border: 2px solid red;    
+    }
+    .question {
+      background: #fff;;
+      border-radius: 0.1rem;
+      /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      /* padding: 1rem; */
+      margin-bottom: 2rem;
+      background-color:#eee;
+  }
+  .outerBox{
+      width: 100%;
+      /* height: 4rem; */
+      padding: 16px 20px;
+      /* border: 2px solid black; */
+  }
+  
+     
+    .question-title {
+      display: flex;
+      justify-content: space-between;
+      
+      align-items: center;
+      text-transform: capitalize;
+      padding-bottom: 1rem;
+      
+    }
+    
+    .question-btn {
+      font-size: 1rem;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer;
+      color: #333;
+  
+      transition:  all 0.3s linear;
+    }
+  
+    /* **** */
+    .question-btn:hover {
+      transform: rotate(180deg);
+    }
+    .question-text {
+      padding: 1rem 0 1.5rem 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .question-text p {
+      margin-bottom: 0;
+    }
+    /* hide text */
+    .question-text {
+      display: none;
+      
+    }
+    .show-text .question-text {
+      display: block;
+    }
+    /* .minus-icon {
+      display: none;
+    }
+    .show-text .minus-icon {
+      display: inline;
+    } */
+    .show-text .plus-icon {
+      display: none;
+    }
+  
+  
+    /* -------------------------------------------- */
+  
+    /* css for dm Tab */
+    .dmContent {
+      display: none;
+    }
+    .dmTabBtn.dmActive {
+      /* background: var(--clr-white); */
+    }
+    .dmContent.dmActive {
+      display: block;
+    }
+  
+    /* css for Delivery Method First page */
+    .no-address{
+      margin: 20px auto;
+      padding: 30px 20px;
+      width: 60%;
+  
+      border: 1px solid rgb(221, 221, 221);
+      text-align: center;
+  
+      font-size: 100%;
+    }
+    .no-address .fa{
+      color: rgb(255, 213, 90);
+      vertical-align: middle;
+      margin-right: 10px;
+      font-size: 2em;
+      text-align: center;
+    }
+    .no-address span{
+      font-size: 14px;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .Button__Style__add{
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0px 12px;
+      outline: none;
+      cursor: pointer;
+      font-family: inherit;
+      line-height: 34px;
+      
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 13px;
+      border-radius: 3px;
+      float: none;
+      background: transparent;
+      color: rgb(0, 51, 128);
+      border: 1px solid rgb(0, 51, 128)
+    }

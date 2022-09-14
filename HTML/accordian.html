@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <link rel="stylesheet" href="../CSS/accordian.css">
+    <script src="https://kit.fontawesome.com/f951ff3bec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <section class="questions">
+        
+        <!-- questions -->
+        <div class="section-center">
+          <!-- single question -->
+          <article class="question outerBox">
+            <!-- question title -->
+            <div class="question-title">
+              <p class="margBot">DELIVERY METHOD</p>
+              <button type="button" class="question-btn margBot">
+                <span class="plus-icon">
+                    <i class="fa fa-angle-up fa-2x animation-rotate"></i>
+                </span>
+             </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text deliveryMethod">
+             <section>
+               <div class="abtCenter sectCenter">
+                <article class="dmAbout">
+                  <!-- btn container -->
+                   <div class="dmBtnContainer">
+                    <button class="dmTabBtn dmActive" data-id="SHIPPING-ADDRESS">SHIPPING-ADDRESS </button>
+                    <button class="dmTabBtn" data-id="PICK-AT-STORE">PICK-AT-STORE</button>
+                   </div>
+                   <article class="dmAbtContent">
+                    <div class="dmContent dmActive " id="SHIPPING-ADDRESS">
+                      <!-- ADDRESS DETAILS -->
+                      
+                      <div class="no-address">
+                        <i class="fa fa-2x fa-exclamation-triangle"></i>
+                        <span class="no-add-span">There are no saved addresses.</span>
+                      </div>
+                      <div class="ad-new-add">
+                        <button class="Button__Style__add" id="" theme="tertiary" type="button">
+                          <span class="">ADD NEW SHIPPING ADDRESS</span>
+                        </button>
+                      </div>
+                    </div>
+  
+                    <div class="dmContent " id="PICK-AT-STORE">
+                      SEARCH STORE
+                    </div>
+            
+                  </article>
+                </article>
+                
+               </div>
+             </section>
+            </div>
+          </article>
+          <!-- end of single question -->
+          <!-- single question -->
+          <article class="question outerBox">
+           
+          </article>
+          
+          <article class="question outerBox">
+            
+          </article>
+        </div>
+         
+      </section>
+    <script src="../JS/accordian.js"></script>
+</body>
+</html>

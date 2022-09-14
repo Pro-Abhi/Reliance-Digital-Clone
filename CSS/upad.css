@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.upadcontainer{
+    /* background-color: aqua; */
+    /* height: 100%; */
+    margin: 2% 22%;
+    background-color: white;
+    border: 1px solid blue;
+    
+}
+.upadnavbar{
+    height:3rem ;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upadnavbar .update{
+    margin: 0 20px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.upadnavbar .cross{
+    font-size: 19px;
+    font-weight:bolder;
+    cursor: pointer;
+}
+.upadcontent{
+    /* height: 100vh; */
+    /* background-color:rgb(245, 244, 246); */
+    
+}
+
+fieldset{
+    /* width:40%;  */
+    border: 1px solid rgb(96, 143, 204);
+    background-color: transparent;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    /* line-height: 26px; */
+    outline: none;
+     border-radius: 3px;
+    color:rgb(96, 143, 204) ;
+    font-size: 14px;
+    /* height: 36px; */
+    padding: 5px 16px; 
+    /* position: relative; */
+    
+}
+.upadPincode{
+    width:40%;
+    margin: 20px 20px; 
+}
+input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* font-size: 16px; */
+    /* padding: 1% ; */
+    }
+    .enterName{
+        display: flex;
+        margin: 20px 20px;
+    }
+    .firstName{
+        margin-right: 8rem;
+        width:42%;
+    }
+    .lastName{
+        width:42%;
+    }
+    .houseNo{
+        margin: 20px 20px; 
+    }
+    .colony{
+        margin: 20px 20px;
+    }
+    .landmark{
+        margin: 20px 20px;
+    }
+    .cityState{
+        display: flex;
+        margin: 20px 20px;
+    }
+    .city{
+        margin-right: 8rem;
+        width:42%;
+    }
+    .state{
+        width:42%;
+    }
+
+    .contactNo{
+        display: flex;
+        margin: 20px 20px;
+    }
+    .mobileNo{
+        margin-right: 8rem;
+        width:42%;
+    }
+    .landlineNo{
+        width:42%;
+    }
+    .upadButtons{
+       /* right: 5rem; */
+       display: flex;
+       justify-content: end;
+       gap: 15px;
+        /* border: 1px solid black; */
+    }
+    .upadCancel{
+        text-align: center;
+        cursor: pointer;
+        
+        line-height: 34px;
+        text-align: center;
+        cursor: pointer;
+       
+        line-height: 34px;
+        letter-spacing: inherit;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 100%;
+        background-color: rgb(255, 255, 255);
+        color: rgb(228, 37, 41);
+        width: 20%;
+        border-radius: 5px;
+        border: 0.6px solid rgb(228, 37, 41);
+    }
+
+    .upadSubmit{
+        text-align: center;
+        cursor: pointer;
+        font-family: inherit;
+        line-height: 34px;
+        letter-spacing: inherit;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 100%;
+        color: rgb(255, 255, 255);
+        background-color:rgb(228, 37, 41);
+        border: none;
+        /* position: absolute; */
+        width: 20%;
+        border-radius: 5px;
+    }
+
+    /* open/close cross */
+    .open-cross {
+        visibility: hidden;
+        /* z-index: -10; */
+    }
