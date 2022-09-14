@@ -4342,12 +4342,12 @@ productContainer.forEach((v) => {
 });
 
 
-
+// create empty array and store it in localStorage for cart
 let cart = []
-if(!localStorage.getItem('cartArray')){
+if(!localStorage.getItem('data')){
   cart = JSON.stringify(cart) 
-  localStorage.setItem('cartArray', cart)
-  console.log(localStorage.getItem('cartArray'));
+  localStorage.setItem('data', cart)
+  console.log(localStorage.getItem('data'));
 }
 
 

@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cart</title>
-  <!-- styling file -->
-  <link rel="stylesheet" href="../CSS/cart.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/products.css">
   <link rel="stylesheet" href="../CSS/header_footer.css">
-  <!-- font-awesome icons cdn link -->
   <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
 </head>
 <body>
   <header id="header">
@@ -73,40 +71,10 @@
         </div>
         <ul class="header-maininfo-list flex">
           <li class="header-maininfo-item">
-            <div class="user-pin-code">
-              <i class="fa-solid fa-map-location delivery-location"></i>
-              <span class="found-msg">Select your PIN Code</span>
-            </div>
-            <div class="pop-up inactive">
-              <div class="top-arrow"></div>
-              <div class="pop-up-info">
-                <div class="title">Choose your Delivery Location</div>
-                <div class="bg-color close-btn">
-                  <i class="fa-solid fa-xmark close"></i>
-                </div>
-                <div class="pinCode-input">
-                  <form class="flex">
-                    <div class="txt-input">
-                      <input
-                        type="tel"
-                        class="input"
-                        id="pinCode"
-                        maxlength="6"
-                        autocomplete="off"
-                        placeholder=" "
-                      />
-                      <label for="pinCode">Enter PIN Code</label>
-                    </div>
-                    <button type="button" class="apply">Apply</button>
-                  </form>
-                  <p class="error-msg"></p>
-                </div>
-                <div class="live-location">
-                  <i class="fa-solid fa-location-crosshairs"></i>
-                  Detect Live Location
-                </div>
-              </div>
-            </div>
+            <a href="">
+              <i class="fa-solid fa-cart-flatbed"></i>
+              Cart
+            </a>
           </li>
           <li class="header-maininfo-item login">
             <a onclick="logincheck()" id="log">
@@ -736,118 +704,356 @@
     </div>
   </header>
 
-  <!-- main section start -->
+
   <main id="main">
     <div class="mg"></div>
-    <section id="empty_screen" class="empty-screen inactive">
-      <div class="cart-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>0</span>
-        <span class="txt">items</span>
+    <section class="slider-container">
+      <div class="slide">
+        <div>
+          <a href="#">
+            <img
+              src="../Assets/slider/slider8/Ganesh-Chaturthi-Carousel-Banner-30-08-2022.webp"
+              alt=""
+            />
+          </a>
+        </div>
       </div>
-      <div class="msg">Your Shopping Cart is Empty</div>
-      <a href="../HTML/index.html">
-        <button type="button" class="shopping">Continue Shopping</button>
-      </a>
+      <div class="slide">
+        <div>
+          <a href="#">
+            <img
+              src="../Assets/slider/slider8/Kitchen-fest-CLP-D.webp"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div>
+          <a href="#">
+            <img src="../Assets/slider/slider8/Televisions.webp" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div>
+        <a href="#">
+            <img src="../Assets/slider/slider8/Samsung-M53-D.webp" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div>
+        <a href="#">
+            <img
+              src="../Assets/slider/slider8/Personal-care-CLP.webp"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div>
+        <a href="#">
+            <img
+              src="../Assets/slider/slider8/realme_tv_banner.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div>
+        <a href="#">
+            <img
+              src="../Assets/slider/slider8/Sound-bar-Party-Speaker-Carousel-Banner-D.webp"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="slide">
+        <div>
+        <a href="#">
+            <img
+              src="../Assets/slider/slider8/High-capacity-storage-devices-Desktop-31.05.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="slider__navigation">
+        <div class="slider__navigation__btn" onclick="btm__slide(1)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(2)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(3)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(4)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(5)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(6)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(7)"></div>
+        <div class="slider__navigation__btn" onclick="btm__slide(8)"></div>
+      </div>
+
+      <span class="arrow prev-sm" onclick="controller(-1)"
+        ><i class="fa-sharp fa-solid fa-chevron-left"></i
+      ></span>
+      <span class="arrow next-sm" onclick="controller(1)"
+        ><i class="fa-sharp fa-solid fa-chevron-right"></i
+      ></span>
     </section>
 
-    
+    <div class="box"></div>
 
-    <!-- cart-items -->
-    <section class="cart-items-section">
-      <section class="cart-items">
-        <div class="top-line">
-          <div class="total-count">
-            My Cart (<span class="cart-count">1</span> items)
+    <section class="logo-ads">
+      <div class="left-side-section">
+        <div class="top-section">
+          <div class="title-txt">latest mobile
+            <span class="line">|</span>
+            <a href="">View all</a>
           </div>
-          <div class="location">
-            Ship to: <span class="pincode">413719</span>&nbsp;<i class="fa-solid fa-location-dot"></i>
-          </div>
-        </div>
-        <!-- add dynamic items -->
-        <div id="cart-products"></div>
-        <!-- static-data -->
-        <!-- <div class="cart-box">
-          <div class="item-details">
-            <div class="img-section">
-              <img src="https://www.reliancedigital.in/medias/boAt-Airdopes-131-Bluetooth-Earphones-492912674-i-1?context=bWFzdGVyfGltYWdlc3wxMTg5Mzh8aW1hZ2UvanBlZ3xpbWFnZXMvaGJjL2g3Zi85ODMyMDg2OTYyMjA2LmpwZ3wxYmMwN2YzY2I3NDNmZTkwY2VjNDk5OWM3NDBmOTQxMjEwMzEzZWIwZmViMWRlNDI3M2YxYzg5Y2RjYzRiNGVm" alt="">
-              <div class="item-counter">
-                <i class="fa-solid fa-minus minus" onclick="decrement()"></i>
-                <span class="digits">16</span>
-                <i class="fa-solid fa-plus plus" onclick="increment()"></i>
-              </div>
-            </div>
-            <div class="product-details-section">
-              <div class="product-details">
-                <div class="product-title">
-                  boAt Airdopes 131 RTL Twin Wireless Earbuds with IWP Technology, Bluetooth V5.0, Immersive Audio, Up to...
+          <div class="tb-pd">
+            <div class="img-slider">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/t-shirts.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/dress.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/girls-t-shirt.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/girls-jacket.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/gir.webp" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/men-s-jackets.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/girls-pants.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/Vivo-Y75-4G.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/Tecno-Pova3.jpg" alt="">
+                  </div>
+                  <div class="p-img item">
+                    <img src="../Assets/products/top-slider/Vivo-Y01-Our-Latest-Smartphones.jpg" alt="">
+                  </div>
                 </div>
-                <div class="product-id">4125</div>
-              </div>
-              <div class="shipping-details">
-                <div class="offer-price">₹1,099</div>
-                <div class="mrp-price">M.R.P.: <span class="mrp strike">₹2,990</span>
-                  <span class="sm-txt">Inclusive of all taxes</span>
+                <div class="btn-area">
+                  <button class="prev-btn prev" onclick="prev(this)">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="next-btn next" onclick="next(this)">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
                 </div>
-                <div class="savings">
-                  You save: <span class="discount">58%</span>
-                  <span class="saving-price">(₹1,891)</span>
-                </div>
-                <div class="free-ship">Free Shipping</div>
-                <div class="delivery-status">
-                  <i class="fa-solid fa-van-shuttle"></i> Standard Delivery: 
-                  <span class="date">15 Sep (Thu)-16 Sep (Fri)</span>
-                </div>
-                <div class="guideline">
-                  *Delivery assurance is subject to our delivery locations staying open as per govt. regulations
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btns">
-            <div class="remove-btn">Remove</div>
-            <div class="wishlist-btn">Move to Wishlist</div>
-          </div>
-        </div> -->
-      </section>
-      <section class="checkout-section">
-        <button type="button" class="checkout-btn">Checkout</button>
-        <div class="checkout-details-section">
-          <div class="checkout-details">
-            <form>
-              <div class="txt-input">
-                <input type="tel" class="input" id="coupon" maxlength="6" autocomplete="off" placeholder=" "/>
-                <label for="coupon">Coupon Code</label>
-              </div>
-              <button type="button" class="apply">Apply</button>
-            </form>
-            <div class="divider"></div>
-            <div class="price-details">
-              <div class="title pd">Price-details</div>
-              <div class="cart-item-price">
-                <p class="lw">Price <span class="total-items">(1 items)</span></p>
-                <p class="total right">₹1,099</p>
-              </div>
-              <div class="delivery-charges">
-                <p class="lw">Delivery Charges</p>
-                <p class="charge right">Free</p>
-              </div>
-              <div class="divider"></div>
-              <div class="count-total-amount">
-                <p class="total-amount title lw">Amount Payable</p>
-                <p class="total-count right">₹1,099</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="trust-txt">
-          Safe and Secure Payments. Easy returns. 100% Authentic products.
+        <div class="bottom-section">
+          <div class="title">Shop by brands
+            <span class="line">|</span>
+            <a href="">View all</a>
+          </div>
+          <div class="tb-pd">
+            <div class="img-slider">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="p-img-group item">
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/adidas.png" alt="">
+                    </div>
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/zara.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="p-img-group item">
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/nike.png" alt="">
+                    </div>
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/gucci.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="p-img-group item">
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/puma.jpg" alt="">
+                    </div>
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/Shop-By-Brands-Oppo.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="p-img-group item">
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/Vivo-Logo-final.jpg" alt="">
+                    </div>
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/Motorola-Logo-final.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="p-img-group item">
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/Nokia-Logo-final.jpg" alt="">
+                    </div>
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/itel-Logo-01.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="p-img-group item">
+                    <div class="p-img">
+                      <img src="../Assets/products/brands_logo/TECNO.jpg" alt="">
+                    </div>
+                    <div class="p-img"></div>
+                  </div>
+                </div>
+                <div class="btn-area">
+                  <button class="prev-btn prev" onclick="prev(this)">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="next-btn next nxt1" onclick="next(this)">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <aside class="right-side-section">
+        <div class="title-txt">
+          <span>From our resourse center</span>
+        </div>
+        <section class="news">
+          <div class="news-container">
+            <div class="news-title">
+              <a href="">Unfolding the new Samsung Galaxy Z Fold4 and Z Flip4</a>
+            </div>
+            <div class="news-img">
+              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/08/cover_galaxy_zfold4_zflip4.jpg" alt="">
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="news-container">
+            <div class="news-title">
+              <a href="">Motorola e32s – No more quality and performance compromises</a>
+            </div>
+            <div class="news-img">
+              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/06/motorola_E32s_cover.jpg" alt="">
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="news-container">
+            <div class="news-title">
+              <a href="">Samsung Galaxy S22, S22+ and S22 Ultra – A big bang return</a>
+            </div>
+            <div class="news-img">
+              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/02/Samsung_S22_Cover.jpg" alt="">
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="news-container">
+            <div class="news-title">
+              <a href="">OnePlus Nord CE 2 – Plus a ton of features!</a>
+            </div>
+            <div class="news-img">
+              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/02/cover_oneplus_nord_ce2.jpg" alt="">
+            </div>
+          </div>
+          <div class="divider"></div>
+        </section>
+      </aside>
+    </section>
 
-        <button type="button" class="clearCart" onclick="clearCart()">Clear Cart</button>
-      </section>
+    <section class="main_product_section">
+      <div class="main_product_items">
+        <span class="products_title"> Best Selling </span>
+        <span class="view_all"><a href="#">View All</a></span>
+        <div class="main_slider_group">
+          <div class="main_slider_group_right">
+            <div id="slider_container">
+              <div class="products_container">
+                <!-- Single Item in Slider -->
+                <div class="slider laptops product-slider"></div>
+                
+                <div class="btn-area">
+                  <button class="pre-btn prev" onclick="prev(this)">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="nxt-btn next" onclick="next(this)">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main_product_section">
+      <div class="main_product_items">
+        <span class="products_title"> Fashion unite </span>
+        <span class="view_all"><a href="#">View All</a></span>
+        <div class="main_slider_group">
+          <div class="main_slider_group_right">
+            <div id="slider_container">
+              <div class="products_container">
+                <!-- Single Item in Slider -->
+                <div class="slider laptops2 product-slider"></div>
+                
+                <div class="btn-area">
+                  <button class="pre-btn prev" onclick="prev(this)">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="nxt-btn next" onclick="next(this)">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main_product_section">
+      <div class="main_product_items">
+        <span class="products_title"> Always Best </span>
+        <span class="view_all"><a href="#">View All</a></span>
+        <div class="main_slider_group">
+          <div class="main_slider_group_right">
+            <div id="slider_container">
+              <div class="products_container">
+                <!-- Single Item in Slider -->
+                <div class="slider laptops3 product-slider"></div>
+                
+                <div class="btn-area">
+                  <button class="pre-btn prev" onclick="prev(this)">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </button>
+                  <button class="nxt-btn next" onclick="next(this)">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
 
   <!-- footer section start -->
   <footer class="footer">
@@ -982,11 +1188,10 @@
     </div>
   </footer>
 
-
   <!-- JavaScript file -->
-  <script src="../JS/cart.js"></script>
+  <script src="../JS/products.js"></script>
   <script src="../JS/common.js"></script>
-  <!-- sticky-header JavaScript file -->
+  <!-- sticky-header JS file -->
   <script src="../JS/sticky_header.js"></script>
 </body>
 </html>

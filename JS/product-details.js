@@ -383,21 +383,22 @@ pinCode.addEventListener('keyup', () => {
 
 
 
-let addToCartBtn = document.querySelector('#add-to-cart')
+// let addToCartBtn = document.querySelector('#add-to-cart')
 
-function addToCart(e){
-  let basket = JSON.parse((localStorage.getItem('cartArray')))
+// function addToCart(id){
+//     let basket = JSON.parse((localStorage.getItem('data')))
 
-  basket.push({
-    id: e,
-    quantity: 1
-  })
-  localStorage.setItem('cartArray', JSON.stringify(basket))
-
-  // setTimeout(() => {
-  //   addToCartBtn.innerHTML = `<img src='../Assets/loading.gif'> Add to Cart`
-  // }, 1000)
-}
+//     if(basket.some((item) => item.id === id)){
+      
+//     }
+//     else{
+//       basket.push({
+//         id: id,
+//         quantity: 1
+//       })
+//       localStorage.setItem('data', JSON.stringify(basket))
+//     }
+// }
 
 
 

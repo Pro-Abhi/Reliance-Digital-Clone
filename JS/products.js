@@ -71,6 +71,7 @@ laptops.forEach(v => {
 })
 
 
+
 // showDetails
 let productContainer = [...document.querySelectorAll(".product-slider")];
 function showDetails(e) {

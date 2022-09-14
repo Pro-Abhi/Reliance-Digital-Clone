@@ -35,6 +35,7 @@ function login(){
 
       let currentUser = userRecords.filter((v) => {return v.mobileNumber == mobileNumber})[0]
       localStorage.setItem('userName', currentUser.firstName)
+      localStorage.setItem('userEmail', currentUser.emailID)
       window.location.href = 'index.html'
     }
     else{
@@ -43,3 +44,39 @@ function login(){
     }
   }
 }
+
+
+  // Function to generate OTP
+  // function generateOTP() {
+  //   var digits = '0123456789';
+  //   let OTP = '';
+  //   for (let i = 0; i < 4; i++ ) {
+  //       OTP += digits[Math.floor(Math.random() * 10)];
+  //   }
+  //   localStorage.setItem('OTP', OTP)
+  //   return OTP;
+  //   }
+  //   alert( `Your OTP is ` + generateOTP() );
+
+  
+
+
+
+
+
+
+
+
+// // Function to generate OTP
+// function generateOTP() {
+          
+//   // Declare a digits variable 
+//   // which stores all digits
+//   var digits = '0123456789';
+//   let OTP = '';
+//   for (let i = 0; i < 4; i++ ) {
+//       OTP += digits[Math.floor(Math.random() * 10)];
+//   }
+//   return OTP;
+// }
+// alert( `Your OTP is` + generateOTP() );

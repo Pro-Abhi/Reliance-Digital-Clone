@@ -181,6 +181,11 @@ form .txt-input .input {
 #main{
   width: 100%;
 }
+
+/**
+* ! empty-screen
+**/
+/* empty-screen */
 .empty-screen{
   width: 100%;
   display: grid;
@@ -228,6 +233,9 @@ form .txt-input .input {
   font-size: 14px;
 }
 
+/**
+* ! Cart-items section
+**/
 
 /* cart-items */
 .cart-items-section{
@@ -293,7 +301,7 @@ form .txt-input .input {
 }
 .item-counter .minus{
   opacity: 0.5;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 .item-counter .minus.enabled{
   opacity: 1;
@@ -376,6 +384,7 @@ form .txt-input .input {
   color: #2d73ed;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
 }
 .cart-box .btns div:first-child{
   border-left: none;
@@ -400,6 +409,7 @@ form .txt-input .input {
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .checkout-details-section{
@@ -519,4 +529,16 @@ form .txt-input .input {
   font-size: 14px;
   font-weight: 600;
   color: #333333;
+}
+
+
+
+.clearCart{
+  width: 150px;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: #d32f2f;
+  border: none;
+  color: #fff;
+  font-size: 14px;
 }

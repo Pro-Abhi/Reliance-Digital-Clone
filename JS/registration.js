@@ -189,7 +189,8 @@ function signUp(){
         'mobileNumber' : MobileNumber
       })
       
-    
+      localStorage.setItem('userName', FirstName)
+      localStorage.setItem('userEmail', EmailID)
       localStorage.setItem('userData', JSON.stringify(userRecords))
       window.location.href = 'index.html'
     }

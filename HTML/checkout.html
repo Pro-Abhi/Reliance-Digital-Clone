@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../CSS/products.css">
+  <title>checkout</title>
+  <!-- styling file -->
   <link rel="stylesheet" href="../CSS/header_footer.css">
+  <link rel="stylesheet" href="../CSS/checkout.css">
+  <!-- font-awesome icons cdn link -->
   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
 </head>
 <body>
   <header id="header">
@@ -70,17 +72,21 @@
           </form>
         </div>
         <ul class="header-maininfo-list flex">
-          <li class="header-maininfo-item">
-            <a href="">
-              <i class="fa-solid fa-cart-flatbed"></i>
-              Cart
-            </a>
-          </li>
-          <li class="header-maininfo-item">
+          <li class="header-maininfo-item login">
             <a onclick="logincheck()" id="log">
               <i class="fa-solid fa-circle-user"></i>
               <span id="user_Name">Login</span>
             </a>
+            <div class="account-options">
+              <div class="top-arrow"></div>
+              <ul>
+                <li>My Profile</li>
+                <li>My Orders</li>
+                <li>My Address</li>
+                <li>My Whishlist</li>
+                <li onclick="logout()">Logout</li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -694,494 +700,312 @@
     </div>
   </header>
 
-
   <main id="main">
     <div class="mg"></div>
-    <section class="slider-container">
-      <div class="slide">
-        <div>
-          <a href="#">
-            <img
-              src="../Assets/slider/slider8/Ganesh-Chaturthi-Carousel-Banner-30-08-2022.webp"
-              alt=""
-            />
-          </a>
+    <section class="container shipping-address">
+      <div class="title address">Shipping Address</div>
+      <i class="fa-solid fa-chevron-down down-arrow active" onclick="toggle()"></i>
+      <div class="upadcontainer inactive">
+        <div class="upadnavbar">
+            <div class="update address">Add a New Address</div>
+            <div class="update cross"><i class="fa-sharp fa-solid fa-xmark"></i></div>
         </div>
-      </div>
-      <div class="slide">
-        <div>
-          <a href="#">
-            <img
-              src="../Assets/slider/slider8/Kitchen-fest-CLP-D.webp"
-              alt=""
-            />
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div>
-          <a href="#">
-            <img src="../Assets/slider/slider8/Televisions.webp" alt="" />
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div>
-        <a href="#">
-            <img src="../Assets/slider/slider8/Samsung-M53-D.webp" alt="" />
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div>
-        <a href="#">
-            <img
-              src="../Assets/slider/slider8/Personal-care-CLP.webp"
-              alt=""
-            />
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div>
-        <a href="#">
-            <img
-              src="../Assets/slider/slider8/realme_tv_banner.jpg"
-              alt=""
-            />
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div>
-        <a href="#">
-            <img
-              src="../Assets/slider/slider8/Sound-bar-Party-Speaker-Carousel-Banner-D.webp"
-              alt=""
-            />
-          </a>
-        </div>
-      </div>
-      <div class="slide">
-        <div>
-        <a href="#">
-            <img
-              src="../Assets/slider/slider8/High-capacity-storage-devices-Desktop-31.05.jpg"
-              alt=""
-            />
-          </a>
-        </div>
-      </div>
-
-      <div class="slider__navigation">
-        <div class="slider__navigation__btn" onclick="btm__slide(1)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(2)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(3)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(4)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(5)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(6)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(7)"></div>
-        <div class="slider__navigation__btn" onclick="btm__slide(8)"></div>
-      </div>
-
-      <span class="arrow prev-sm" onclick="controller(-1)"
-        ><i class="fa-sharp fa-solid fa-chevron-left"></i
-      ></span>
-      <span class="arrow next-sm" onclick="controller(1)"
-        ><i class="fa-sharp fa-solid fa-chevron-right"></i
-      ></span>
-    </section>
-
-    <div class="box"></div>
-
-    <section class="logo-ads">
-      <div class="left-side-section">
-        <div class="top-section">
-          <div class="title-txt">latest mobile
-            <span class="line">|</span>
-            <a href="">View all</a>
-          </div>
-          <div class="tb-pd">
-            <div class="img-slider">
-              <div class="slider-container">
-                <div class="slider">
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/t-shirts.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/dress.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/girls-t-shirt.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/girls-jacket.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/gir.webp" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/men-s-jackets.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/girls-pants.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/Vivo-Y75-4G.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/Tecno-Pova3.jpg" alt="">
-                  </div>
-                  <div class="p-img item">
-                    <img src="../Assets/products/top-slider/Vivo-Y01-Our-Latest-Smartphones.jpg" alt="">
-                  </div>
+        <div class="upadcontent">
+            <div class="upadPincode">
+                <fieldset class="fieldset1" type ="text">
+                    <legend class="legend1" type ="">Pincode</legend>
+                    <input class="inputbox1" type="text" >
+                </fieldset>
+            </div>
+            <div class="enterName">
+                <div class="firstName">
+                    <fieldset class="fieldset2" type ="text">
+                        <legend class="legend2" type ="">Enter First Name</legend>
+                        <input class="inputbox2" type="text" >
+                    </fieldset>
                 </div>
-                <div class="btn-area">
-                  <button class="prev-btn prev" onclick="prev(this)">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="next-btn next" onclick="next(this)">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
+                <div class="lastName">
+                    <fieldset class="fieldset3" type ="text">
+                        <legend class="legend3" type ="">Enter Last Name</legend>
+                        <input class="inputbox3" type="text" >
+                    </fieldset>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="houseNo">
+                <fieldset class="fieldset4" type ="text">
+                    <legend class="legend4" type ="">Enter Flat / House No / Floor / Building Name*</legend>
+                    <input class="inputbox4" type="text" >
+                </fieldset>
+            </div>
+           <div class="colony">
+            <fieldset class="fieldset5" type ="text">
+                <legend class="legend5" type ="">Enter Colony/Street</legend>
+                <input class="inputbox5" type="text" >
+            </fieldset>
+           </div>
+           <div class="landmark">
+            <fieldset class="fieldset6" type ="text">
+                <legend class="legend6" type ="">Enter Landmark</legend>
+                <input class="inputbox6" type="text" >
+            </fieldset>
+           </div>
+           <div class="cityState">
+            <div class="city">
+                <fieldset class="fieldset7" type ="text">
+                    <legend class="legend7" type ="">Enter City*</legend>
+                    <input class="inputbox7" type="text" >
+                </fieldset>
+            </div>
+            <div class="state">
+                <fieldset class="fieldset8" type ="text">
+                    <legend class="legend8" type ="">Enter State*</legend>
+                    <input class="inputbox8" type="text" >
+                </fieldset>
+            </div>
+           </div>
+           <div class="contactNo">
+            <div class="mobileNo">
+                <fieldset class="fieldset9" type ="text">
+                    <legend class="legend9" type ="">Enter Mobile Number*</legend>
+                    <input class="inputbox9" type="text" >
+                </fieldset>
+            </div>
+            <div class="landlineNo">
+                <fieldset class="fieldset10" type ="text">
+                    <legend class="legend10" type ="">Enter Landline Number</legend>
+                    <input class="inputbox10" type="text" >
+                </fieldset>
+            </div>
+           </div>
         </div>
-        <div class="bottom-section">
-          <div class="title">Shop by brands
-            <span class="line">|</span>
-            <a href="">View all</a>
-          </div>
-          <div class="tb-pd">
-            <div class="img-slider">
-              <div class="slider-container">
-                <div class="slider">
-                  <div class="p-img-group item">
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/adidas.png" alt="">
-                    </div>
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/zara.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="p-img-group item">
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/nike.png" alt="">
-                    </div>
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/gucci.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="p-img-group item">
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/puma.jpg" alt="">
-                    </div>
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/Shop-By-Brands-Oppo.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="p-img-group item">
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/Vivo-Logo-final.jpg" alt="">
-                    </div>
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/Motorola-Logo-final.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="p-img-group item">
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/Nokia-Logo-final.jpg" alt="">
-                    </div>
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/itel-Logo-01.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="p-img-group item">
-                    <div class="p-img">
-                      <img src="../Assets/products/brands_logo/TECNO.jpg" alt="">
-                    </div>
-                    <div class="p-img"></div>
-                  </div>
-                </div>
-                <div class="btn-area">
-                  <button class="prev-btn prev" onclick="prev(this)">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="next-btn next nxt1" onclick="next(this)">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <aside class="right-side-section">
-        <div class="title-txt">
-          <span>From our resourse center</span>
-        </div>
-        <section class="news">
-          <div class="news-container">
-            <div class="news-title">
-              <a href="">Unfolding the new Samsung Galaxy Z Fold4 and Z Flip4</a>
-            </div>
-            <div class="news-img">
-              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/08/cover_galaxy_zfold4_zflip4.jpg" alt="">
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="news-container">
-            <div class="news-title">
-              <a href="">Motorola e32s – No more quality and performance compromises</a>
-            </div>
-            <div class="news-img">
-              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/06/motorola_E32s_cover.jpg" alt="">
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="news-container">
-            <div class="news-title">
-              <a href="">Samsung Galaxy S22, S22+ and S22 Ultra – A big bang return</a>
-            </div>
-            <div class="news-img">
-              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/02/Samsung_S22_Cover.jpg" alt="">
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="news-container">
-            <div class="news-title">
-              <a href="">OnePlus Nord CE 2 – Plus a ton of features!</a>
-            </div>
-            <div class="news-img">
-              <img src="https://www.reliancedigital.in/wp-content/uploads/2022/02/cover_oneplus_nord_ce2.jpg" alt="">
-            </div>
-          </div>
-          <div class="divider"></div>
-        </section>
-      </aside>
-    </section>
-
-    <section class="main_product_section">
-      <div class="main_product_items">
-        <span class="products_title"> Best Selling </span>
-        <span class="view_all"><a href="#">View All</a></span>
-        <div class="main_slider_group">
-          <div class="main_slider_group_right">
-            <div id="slider_container">
-              <div class="products_container">
-                <!-- Single Item in Slider -->
-                <div class="slider laptops product-slider"></div>
-                
-                <div class="btn-area">
-                  <button class="pre-btn prev" onclick="prev(this)">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="nxt-btn next" onclick="next(this)">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-          </div>
+        <div class="upadButtons">
+          <button class="upadCancel">Cancel</button>
+          <button class="upadSubmit" onclick="submit()">Submit</button>
         </div>
       </div>
     </section>
-
-    <section class="main_product_section">
-      <div class="main_product_items">
-        <span class="products_title"> Fashion unite </span>
-        <span class="view_all"><a href="#">View All</a></span>
-        <div class="main_slider_group">
-          <div class="main_slider_group_right">
-            <div id="slider_container">
-              <div class="products_container">
-                <!-- Single Item in Slider -->
-                <div class="slider laptops2 product-slider"></div>
-                
-                <div class="btn-area">
-                  <button class="pre-btn prev" onclick="prev(this)">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="nxt-btn next" onclick="next(this)">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-
-              </div>
+    <section class="container payment">
+      <div class="title">Payment Details</div>
+      <i class="fa-solid fa-chevron-down down-arrow2" onclick="showHide()"></i>
+      <div id="paySecurely" class="subContainer inactive">
+        <h3>PAY SECURELY</h3>
+        <div class="specialOffers">
+            <h4>Available Offers</h4>
+            <div class="s_images">
+                <img src="https://www.reliancedigital.in/medias/Payment-SCB-.jpg?context=bWFzdGVyfGltYWdlc3wzOTUwfGltYWdlL2pwZWd8aW1hZ2VzL2g3NC9oOTMvOTY1NzQ1MDE2ODM1MC5qcGd8ZmFkNWNmMWRmNTIwNGE2NmJlMzFlYWMwOGJlNTRiYzkxNWU4ZTI3ZmMxOGM2MjViOGM4NmQ3MzBiZTBiM2VjZA" alt="Standred Charterd">
+                <p>10% Cashback with Standard Chartered Credit Cards, Debit Cards & EMI transactions T&C</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="main_product_section">
-      <div class="main_product_items">
-        <span class="products_title"> Always Best </span>
-        <span class="view_all"><a href="#">View All</a></span>
-        <div class="main_slider_group">
-          <div class="main_slider_group_right">
-            <div id="slider_container">
-              <div class="products_container">
-                <!-- Single Item in Slider -->
-                <div class="slider laptops3 product-slider"></div>
-                
-                <div class="btn-area">
-                  <button class="pre-btn prev" onclick="prev(this)">
-                    <i class="fa-solid fa-angle-left"></i>
-                  </button>
-                  <button class="nxt-btn next" onclick="next(this)">
-                    <i class="fa-solid fa-angle-right"></i>
-                  </button>
-                </div>
-
-              </div>
+            <div class="s_images">
+                <img src="https://www.reliancedigital.in/medias/Payment-MobiKwik-Logo.jpg?context=bWFzdGVyfHJvb3R8NDk2OXxpbWFnZS9qcGVnfGgyZi9oMTgvOTg3Mjg4NjM5OTAwNi5qcGd8OWEwODY2Y2M3Y2U1NTY2MjZiNTRjYjUwMWNkZGYyYjhiODkxZGQ2NTkyZTE2NjcwODg4MzQwMjMyM2MzM2E3Yw" alt="MobikWik">
+                <p> Get Cashback upto Rs. 1,000 on Mobikwik Wallet T&C</p>
             </div>
-          </div>
         </div>
-      </div>
+        <div id="paymentOption">
+         <div id="selectPaymentOption">
+           <div id=""><input type="radio" name="pay" id = "cc"><label for = "cc">Credit Card</label></div>
+           <div id=""><input type="radio" name="pay" id="dc" ><label for = "dc">Debit Card</label></div>
+           <div id=""><input type="radio" name="pay" id="ccemi" ><label for = "ccemi">Credit Card EMI</label></div>
+           <div id=""><input type="radio" name="pay" id="nb"><label for = "nb">Net Banking</label></div>
+           <div id=""><input type="radio" name="pay" id="upi"><label for = "upi">UPI</label></div>
+           <div id=""><input type="radio" name="pay" id="wlt"><label for = "wlt">Wallet</label></div>
+           <div id=""><input type="radio" name="pay" id="bnpl"><label for = "bnpl">Buy Now Pay Later</label></div>
+         </div>
+         
+         <div id="paymentField">
+           <div id="paymentOptionHeading">
+            <span>Payment Option</span>
+            <span class="emi">Looking for an EMI? <a href="#">Click here</a></span>
+         </div>
+         <div class="chooseBank">
+            <label for="bank">Select Bank</label>
+            <select name="bank" id="bank">
+                <option value="selected" selected disabled>Select a bank</option>
+                <option value="">American Express</option>
+                <option value="">AU Bank</option>
+                <option value="">Axis Bank</option>
+                <option value="">Citi Bank</option>
+                <option value="">Federal Bank</option>
+                <option value="">HDFC Bank</option>
+                <option value="">ICICI Bank</option>
+                <option value="">KotakM Bank</option>
+                <option value="">State Bank Of India</option>
+                <option value="">Others Bank</option>              
+            </select>
+         </div>
+           <div id="paymentMsg">
+              <p>*Clicking on “Pay” will take you to a secure payment gateway where you can enter the UPI Id 
+              and make your payment.</p><p> Your order will not be completed without this action</p>
+              <div id="checkbox_terms">
+                 <input type="checkbox" id="checkbox">
+                 <label for="checkbox" id="terms"><span style="color:#666">I agree to the </span><a href="#">Terms & Conditions</a></label>
+              </div>
+              <div id="payAmountBtn">Pay Amount- Rs. 15,000</div>
+              <div id="alert_msg"></div>
+            </div>
+         </div>
+        </div>
+     </div>
     </section>
   </main>
-
 
   <!-- footer section start -->
   <footer class="footer">
     <div class="footer_container">
-     <div class=" info_follow">
-         <div class="information ">
-             <div class="product_categories">
-                 <div class="footer__linksTitle">
-                     <h3>Product Categories</h3>
-                 </div>
-                <div class="footer__listLinks">
-                 <ul>
-                     <li><a href="#">Smartphones</a></li>
-                     <li><a href="#">Laptops</a></li>
-                     <li><a href="#">DSLR Cameras</a></li>
-                     <li><a href="#">Televisions</a></li>
-                     <li><a href="#">Air conditioners</a></li>
-                     <li><a href="#">Refrigerators</a></li>
-                     <li><a href="#">Kitchen Appliances</a></li>
-                     <li><a href="#">Accessories</a></li>
-                     <li><a href="#">Personal Care & Grooming</a></li>
-                 </ul>
-                </div>
-             </div>
-             <div class="site_info">
-                 <div class="footer__linksTitle">
-                     <h3>SITE INFO</h3>
-                 </div>
-                <div class="footer__listLinks">
-                 <ul>
-                     <li><a href="#">About Reliance Digital</a></li>
-                     <li><a href="#">resQ Services</a></li>
-                     <li><a href="#">Site Map</a></li>
-                     <li><a href="#">Gift Cards</a></li>
-                     <li><a href="#">Corporate Enquires</a></li>
-                     <li><a href="#">Contact Us</a></li>
-                 </ul>
-                </div>
-             </div>
-             <div class="resource_centre">
-                <div class="footer__linksTitle">
-                 <h3>RESOURCE CENTRE</h3>
-                </div>
-                 <div class="footer__listLinks">
-                     <ul>
-                         <li><a href="#">Product Reviews</a></li>
-                         <li><a href="#">Buying Guides</a></li>
-                         <li><a href="#">How Tos</a></li>
-                         <li><a href="#">Featured Stories</a></li>
-                         <li><a href="#">Event & Happenings</a></li>
-                     </ul>
-                 </div>
-             </div>
-             <div class="policies">
-                <div class="footer__linksTitle">
-                 <h3>POLICIES</h3>
-                </div>
-               <div class="footer__listLinks">
-                 <ul>
-                     <li><a href="#">Terms of Use</a></li>
-                     <li><a href="#">FAQs</a></li>
-                     <li><a href="#">Cancellation and Return Policy</a></li>
-                     <li><a href="#">Pricing and Payments Policy</a></li>
-                     <li><a href="#">Shipping and Delivery Policy</a></li>
-                     <li><a href="#">Privacy Policy</a></li>
-                     <li><a href="#">E-waste Recycling Policy</a></li>
-                     <li><a href="#">EMI and Additional Cashback T&C</a></li>
-                     <li><a href="#">RelianceOne Loyalty Program T&C</a></li>
-                     <li><a href="#">Caution Notice</a></li>
-                 </ul>
-               </div>
-             </div>
-         </div>
-         <div class="followUs">
-             <div>
-                 <div class="footer__linksTitle"><h3>FOLLOW US</h3></div>
-                 <div class="footer__listLinks  ">
-                     <ul class="footer__mediaLinks footer__socialMedia">
-                         <li>
-                             <a href="http://www.facebook.com/pages/Reliance-Digital/123437217685421">
-                              <i class="fa-brands fa-facebook"></i>
-                             </a>
-                         </li>
-                         <li>
-                             <a href="http://www.twitter.com/reliancedigital">
-                              <i class="fa-brands fa-twitter"></i>
-                             </a>
-                         </li>
-                         <li>
-                             <a href="https://www.youtube.com/reliancedigital">
-                              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                             </a>
-                         </li>
-                     </ul>
-                 </div>
-             </div>
-             <div>
-                 <div class="footer__linksTitle">
-                     <h3>
-                     EXPERIENCE RELIANCE DIGITAL APP ON MOBILE
-                     </h3>
-                 </div>
-                 <div class="stores">
-                    <div class="google__play">
-                     <a href="https://play.google.com/store/apps/details?id=in.digital.reliance">
-                         <div>
-                             <img class="stores__img__size" src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
-                         </div>
-                     </a>
-                    </div>
-                    <div>
-                     <a href="https://apps.apple.com/in/app/reliance-digital-shopping-app/id1513379107">
-                         <div>
-                             <img  class="stores__img__size" src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
-                         </div>
-                     </a>
-                    </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     
-     <div class="footer__disclaimer">
-         <h4 class="title">Disclaimer</h4>
-         <p class="description">
-             <span>Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</span>
-         </p>
-         <p>
-             <span>© 2022 Reliance Digital. All Rights Reserved.</span>
-         </p>
-     </div>
+      <div class="info_follow">
+        <div class="information">
+          <div class="product_categories">
+            <div class="footer__linksTitle">
+              <h3>Product Categories</h3>
+            </div>
+            <div class="footer__listLinks">
+              <ul>
+                <li><a href="#">Smartphones</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">DSLR Cameras</a></li>
+                <li><a href="#">Televisions</a></li>
+                <li><a href="#">Air conditioners</a></li>
+                <li><a href="#">Refrigerators</a></li>
+                <li><a href="#">Kitchen Appliances</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Personal Care & Grooming</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="site_info">
+            <div class="footer__linksTitle">
+              <h3>SITE INFO</h3>
+            </div>
+            <div class="footer__listLinks">
+              <ul>
+                <li><a href="#">About Reliance Digital</a></li>
+                <li><a href="#">resQ Services</a></li>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Corporate Enquires</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="resource_centre">
+            <div class="footer__linksTitle">
+              <h3>RESOURCE CENTRE</h3>
+            </div>
+            <div class="footer__listLinks">
+              <ul>
+                <li><a href="#">Product Reviews</a></li>
+                <li><a href="#">Buying Guides</a></li>
+                <li><a href="#">How Tos</a></li>
+                <li><a href="#">Featured Stories</a></li>
+                <li><a href="#">Event & Happenings</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="policies">
+            <div class="footer__linksTitle">
+              <h3>POLICIES</h3>
+            </div>
+            <div class="footer__listLinks">
+              <ul>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Cancellation and Return Policy</a></li>
+                <li><a href="#">Pricing and Payments Policy</a></li>
+                <li><a href="#">Shipping and Delivery Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">E-waste Recycling Policy</a></li>
+                <li><a href="#">EMI and Additional Cashback T&C</a></li>
+                <li><a href="#">RelianceOne Loyalty Program T&C</a></li>
+                <li><a href="#">Caution Notice</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="followUs">
+          <div>
+            <div class="footer__linksTitle"><h3>FOLLOW US</h3></div>
+            <div class="footer__listLinks">
+              <ul class="footer__mediaLinks footer__socialMedia">
+                <li>
+                  <a
+                    href="http://www.facebook.com/pages/Reliance-Digital/123437217685421"
+                  >
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.twitter.com/reliancedigital">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/reliancedigital">
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="footer__linksTitle">
+              <h3>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h3>
+            </div>
+            <div class="stores">
+              <div class="google__play">
+                <a
+                  href="https://play.google.com/store/apps/details?id=in.digital.reliance"
+                >
+                  <div>
+                    <img
+                      class="stores__img__size"
+                      src="https://www.reliancedigital.in/build/client/images/google_play_store.png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://apps.apple.com/in/app/reliance-digital-shopping-app/id1513379107"
+                >
+                  <div>
+                    <img
+                      class="stores__img__size"
+                      src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__disclaimer">
+        <h4 class="title">Disclaimer</h4>
+        <p class="description">
+          <span
+            >Product prices, offers and availability are subject to change
+            from time to time. All prices are inclusive of taxes. Product
+            colours & images are only for illustration and they may not
+            exactly match with the actual product. Product specs are subject
+            to change & may vary from actual product. While every care is
+            taken to avoid inaccuracies in content, these are provided as is,
+            without warranty of any kind.</span
+          >
+        </p>
+        <p>
+          <span>© 2022 Reliance Digital. All Rights Reserved.</span>
+        </p>
+      </div>
     </div>
   </footer>
 
+
   <!-- JavaScript file -->
-  <script src="../JS/products.js"></script>
+  <script src="../JS/checkout.js"></script>
   <script src="../JS/common.js"></script>
-  <!-- sticky-header JS file -->
+  <!-- sticky-header JavaScript file -->
   <script src="../JS/sticky_header.js"></script>
 </body>
 </html>

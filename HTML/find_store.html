@@ -78,11 +78,21 @@
                 Cart
               </a>
             </li>
-            <li class="header-maininfo-item">
+            <li class="header-maininfo-item login">
               <a onclick="logincheck()" id="log">
                 <i class="fa-solid fa-circle-user"></i>
                 <span id="user_Name">Login</span>
               </a>
+              <div class="account-options">
+                <div class="top-arrow"></div>
+                <ul>
+                  <li>My Profile</li>
+                  <li>My Orders</li>
+                  <li>My Address</li>
+                  <li>My Whishlist</li>
+                  <li onclick="logout()">Logout</li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
