@@ -830,7 +830,8 @@ form .txt-input .input {
 /************** main CSS end **************/
 
 /************** footer CSS start **************/
-h3 {
+
+.footer h3 {
   display: block;
   font-size: 1.17em;
   margin-block-start: 1em;
@@ -851,13 +852,7 @@ h3 {
 .footer__listLinks ul li a:hover{
   text-decoration: underline;
 }
-.footer {
-  width: 100%;
-  color: #333;
-  font-family: Roboto, "system-ui", sans-serif;
-  font-weight: 400;
-  margin: 0;
-}
+
 .information {
   display: flex;
   justify-content: space-around;

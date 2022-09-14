@@ -40,7 +40,7 @@
          <div class="chooseBank">
             <label for="bank">Select Bank</label>
             <select name="bank" id="bank">
-                <option value="" selected disabled>Select a bank</option>
+                <option value="selected" selected disabled>Select a bank</option>
                 <option value="">American Express</option>
                 <option value="">AU Bank</option>
                 <option value="">Axis Bank</option>
@@ -61,9 +61,42 @@
                  <label for="checkbox" id="terms"><span style="color:#666">I agree to the </span><a href="#">Terms & Conditions</a></label>
               </div>
               <div id="payAmountBtn">Pay Amount- Rs.</div>
+              <div id="alert_msg"></div>
             </div>
          </div>
         </div>
      </div>
 </body>
+<script>
+
+    let paymentBtn = document.getElementById('payAmountBtn');
+    let terms = document.getElementById("checkbox");
+    let alertMsg = document.getElementById("alert_msg");
+
+        function validate()
+        {
+        let bank = document.getElementById("bank");
+        var selectedValue = bank.options[bank.selectedIndex].value;
+            if (selectedValue == "selected")
+            {
+            alert("Please select your Bank");
+            }
+        }
+
+    paymentBtn.addEventListener("click",()=>{
+        validate();
+        if(terms.checked == false){
+            alertMsg.innerHTML = "Please Accept Terms and Conditions";
+            alertMsg.style.color = "red";
+            setTimeout(()=>{
+                alertMsg.innerHTML = "";
+            },2000)
+        }
+        else{
+            alert("Order Placed Successfully..!!")
+            location.href = "index.html"
+        }
+    })
+
+</script>
 </html>

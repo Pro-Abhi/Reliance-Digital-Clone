@@ -1,12 +1,16 @@
 // Query Selectors
 let main = document.getElementById('main');
 let SearchBtn =document.getElementById("searchBtn");
-filterInput = document.getElementById("search-input");
-let footer = document.querySelector("footer");
+let filterInput = document.getElementById("search-input");
+let footer = document.querySelector(".footer");
+
+var btnAsc;
+var btnDec;
 
     SearchBtn.addEventListener('click',()=>{
         main.innerHTML="";
-        footer.style.display="none";
+        footer.innerHTML="";
+        main.style.height="auto";
         addPage();
         fetch(`https://prakash-dey.github.io/api/relianceDigital.json`)
         .then(response => response.json())
@@ -14,10 +18,12 @@ let footer = document.querySelector("footer");
         
             data.forEach(element => {
                 if(element.name.includes(filterInput.value)){
-                  addElement(element);            
+                  addElement(element); 
                 }
             });
+
         }) 
+        
     })
 
   function addPage(){
@@ -142,8 +148,13 @@ let footer = document.querySelector("footer");
         <div class="search_products" id="main_container"></div>
       </div>
     </section>`;
-            main.innerHTML = result;      
+            main.innerHTML = result;
+
+            btnAsc = document.getElementById('btnAsc');
+           
 }
+
+
 
 // Adding Elements
 
@@ -181,3 +192,4 @@ function addElement(data){
      mainContainer.innerHTML += fetchData;
 
 }
+
