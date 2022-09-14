@@ -10,9 +10,9 @@ if (localStorage.getItem("userName") != null) {
 
 function logincheck() {
   if ((localStorage.getItem("userName") != null)) {
-    window.location.href = "profile.html";
+    window.location.href = "/HTML/profile.html";
   } else {
-    window.location.href = "login.html";
+    window.location.href = "/HTML/login.html";
   }
 }
 
