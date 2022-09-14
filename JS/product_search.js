@@ -1,9 +1,12 @@
 // Query Selectors
-let main = document.querySelector("#main");
+let main = document.getElementById('main');
 let SearchBtn =document.getElementById("searchBtn");
+filterInput = document.getElementById("search-input");
+let footer = document.querySelector("footer");
 
     SearchBtn.addEventListener('click',()=>{
         main.innerHTML="";
+        footer.style.display="none";
         addPage();
         fetch(`https://prakash-dey.github.io/api/relianceDigital.json`)
         .then(response => response.json())
@@ -14,9 +17,8 @@ let SearchBtn =document.getElementById("searchBtn");
                   addElement(element);            
                 }
             });
-        })
+        }) 
     })
-   
 
   function addPage(){
     let result = `

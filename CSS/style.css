@@ -7,10 +7,6 @@
 body {
   font-family: Roboto, system-ui, -apple-system;
 }
-#main{
-  height: 1200px;
-  margin-bottom: 20px;
-}
 .flex {
   display: flex;
 }
@@ -834,7 +830,6 @@ form .txt-input .input {
 /************** main CSS end **************/
 
 /************** footer CSS start **************/
-
 h3 {
   display: block;
   font-size: 1.17em;
@@ -861,7 +856,7 @@ h3 {
   color: #333;
   font-family: Roboto, "system-ui", sans-serif;
   font-weight: 400;
-  margin-top: 20px;
+  margin: 0;
 }
 .information {
   display: flex;
