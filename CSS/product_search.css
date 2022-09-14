@@ -98,14 +98,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .search_products .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    vertical-align: baseline;
     padding: 10px;
     margin:10px;
-    display: flex;
-    flex-wrap: wrap;
     border:1px solid #9b9b9b;
 }
 
