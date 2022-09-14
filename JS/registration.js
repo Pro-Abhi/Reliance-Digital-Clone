@@ -27,6 +27,12 @@ emailVerifyBtn.disabled = true
 proceedBtn.disabled = true
 
 
+let firstNameVal = firstName.value.trim()
+let lastNameVal = lastName.value.trim()
+let emailIDVal = emailID.value.trim()
+let mobileNumberVal = mobileNumber.value.trim()
+
+
 // first-name validation
 function firstNameValidate(){
   let regExp = /^[A-Za-z. ]{3,20}$/
@@ -79,7 +85,7 @@ function lastNameValidate(){
     proceedBtn.disabled = true
   }
   else if(firstName.value == lastName.value){
-    lastNameError.innerHTML = `first_name and last_name cannot be same`
+    lastNameError.innerHTML = `First name and Last name cannot be same`
     lastName.classList.add('alert')
     lastNameLabel.classList.add('alert')
     lastNameError.classList.add('alert')
@@ -134,6 +140,10 @@ emailVerifyBtn.addEventListener('click', function(){
 
 
 // mobile-verify
+mobileNumber.disabled = true
+if(localStorage.getItem('userMobile') != null){
+  mobileNumber.value = localStorage.getItem('userMobile')
+}
 
 
 
@@ -142,6 +152,10 @@ checkBox.addEventListener('click', () => {
   if((checkBox.checked)){
     proceedBtn.disabled = false
     proceedBtn.classList.add('unabled')
+  }
+  else{
+    proceedBtn.disabled = true
+    proceedBtn.classList.remove('unabled')
   }
 })
 
@@ -175,7 +189,8 @@ function signUp(){
         'mobileNumber' : MobileNumber
       })
       
-    
+      localStorage.setItem('userName', FirstName)
+      localStorage.setItem('userEmail', EmailID)
       localStorage.setItem('userData', JSON.stringify(userRecords))
       window.location.href = 'index.html'
     }

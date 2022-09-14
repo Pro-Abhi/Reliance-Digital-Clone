@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: Roboto, system-ui, -apple-system;
@@ -155,6 +156,7 @@ input {
   font-weight: 600;
   color: #fff;
   cursor: pointer;
+  position: relative;
 }
 .header-maininfo .header-maininfo-list .header-maininfo-item:not(:first-child) {
   border-left: 1px solid #dadada;
@@ -164,6 +166,46 @@ input {
 }
 .header-maininfo .header-maininfo-list .header-maininfo-item a i {
   font-size: 18px;
+}
+.counter{
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
+  position:absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.header-maininfo-item .account-options{
+  position: absolute;
+  right: 0px;
+  z-index: 1000;
+  margin-top: 24px;
+  color: #333;
+  background-color: #fff;
+  width: 180px;
+  box-shadow: 2px 2px 10px #666, -2px -2px 10px #666;
+  display: none;
+}
+.account-options li{
+  padding: 16px 15px;
+  border-bottom: 1px dashed #333;
+}
+.account-options .top-arrow{
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 15px solid transparent;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  border-bottom-color: #fff;
+  left: 60%;
+}
+.header-maininfo-item.login.in:hover .account-options{
+  display: block;
 }
 
 /* Navbar Starts Here*/
@@ -384,6 +426,7 @@ h3 {
   display: inline-block;
   border-bottom: 1px solid;
   letter-spacing: 1px;
+  color: #fff;
 }
 .footer__disclaimer .description{
   padding: 10px;

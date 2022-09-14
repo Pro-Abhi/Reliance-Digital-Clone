@@ -73,15 +73,15 @@
         </div>
         <ul class="header-maininfo-list flex">
           <li class="header-maininfo-item">
-            <a href="">
+            <a href="../HTML/cart.html">
               <i class="fa-solid fa-cart-flatbed"></i>
               Cart
             </a>
           </li>
-          <li class="header-maininfo-item">
-            <a href="../HTML/login.html">
+          <li class="header-maininfo-item login">
+            <a onclick="logincheck()" id="log">
               <i class="fa-solid fa-circle-user"></i>
-              Login
+              <span id="user_Name">Login</span>
             </a>
           </li>
         </ul>
@@ -861,6 +861,7 @@
 
   <!-- JavaScript file -->
   <script src="../JS/login.js"></script>
+  <script src="../JS/common.js"></script>
   <!-- sticky-header JS file -->
   <script src="../JS/sticky_header.js"></script>
 </body>

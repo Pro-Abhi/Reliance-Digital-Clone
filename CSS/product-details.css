@@ -4,10 +4,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-a{
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
+#main{
+  width: 100%;
 }
 
 
@@ -21,18 +19,20 @@ a{
 /* left-side */
 .left-side{
   width: 100%;
+  padding: 0 15px;
 }
 .left-side .main-img{
-  height: 40%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 20px auto;
   text-align: center;
 }
-img{
-  height: 100%;
+.main-img img{
+  width: 100%;
+  border: 1px solid #ccc;
 }
 
 .img-slider {
-  width: 90%;
+  width: 100%;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
@@ -43,47 +43,51 @@ img{
   overflow: hidden;
 }
 .slider {
-  margin: 0 40px;
+  margin: 0 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-.p-img {
+.slider .p-img {
   flex: 0 0 auto;
-  width: 100px;
+  width: 90px;
+  height: auto;
   cursor: pointer;
-  margin: 0 15px;
+  margin: 0 5px;
+  /* padding: 0 15px; */
+  border: 1px solid #eee;
 }
 .p-img img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .prev,
 .next {
   margin: auto;
   border: none;
-  padding: 24px 8px;
+  padding: 8px 8px;
   position: absolute;
-  top: 15%;
+  top: 20%;
   background: none;
   background-color: #fff;
   border: 1px solid #ddd;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 800;
   box-shadow: 0 1px 5px 0 #d4d4d4;
   cursor: pointer;
   z-index: 2;
 }
-
 .prev {
   left: 0px;
 }
-
 .next {
   right: 0px;
 }
+
 
 
 /* right-side */
@@ -122,12 +126,16 @@ img{
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
 }
+.bottom a{
+  font-size: 12px;
+  font-weight: 400;
+}
 .bottom .additional-info{
   width: 100%;
   border-right: 1px solid #ccc;
 }
 
-.bt-r-ul{
+.mg-l{
   margin-left: 18px;
   list-style: disc;
 }
@@ -147,9 +155,9 @@ ul li{
   text-decoration: underline;
 }
 
-.show-hide{
-  display: none;
-}
+/* .sm{
+  list-style: none;
+} */
 
 .title{
   font-size: 17px;
@@ -208,21 +216,25 @@ ul li{
   text-align: center;
 }
 .user-related .buttons .add-to-cart, .buy_now{
-  padding: 15px 12px;
+  padding: 11px 12px;
   font-size: 16px;
   background-color: #e42529;
   border: none;
   text-transform: uppercase;
   font-weight: 600;
-  line-height: 1.5;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
   width: 45%;
+  /* height: 40px; */
 }
 .user-related .buttons .add-to-cart:hover{
   background-color: #003380;
 }
+.user-related .buttons .add-to-cart img{
+  width: 15px;
+}
+
 
 .user-related .buttons .buy_now{
   background-color: #fc6027;
@@ -232,14 +244,14 @@ ul li{
 .shipping-section{
   margin-top: 30px;
 }
-form .txt-input{
+.shipping-section .txt-input{
   width: 100%;
   padding-bottom: 6px;
   background-color: #fff;
   position: relative;
   margin-left: 4px;
 }
-form .txt-input .input{
+.shipping-section form .txt-input .input{
   width: 70%;
   height: 35px;
   padding: 8px 16px;
@@ -288,6 +300,27 @@ form .txt-input .input{
   left: 65%;
   top: 20%;
   color: #333;
+}
+
+.loader{
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #666;
+  animation: an1 1s ease infinite;
+  position: absolute;
+  left: 65%;
+  top: 20%;
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
 }
 
 
@@ -353,20 +386,7 @@ form .txt-input .input{
 
 .second-part #product-description{
   width: 100%;
-  margin-top: 30px;
   padding-left: 30px;
-}
-#product-description .col-2{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-#product-description .col-2 .img{
-  width: 400px;
-  margin: 0 auto;
-}
-#product-description .img img{
-  width: 100%;
 }
 #product-description .dsc, #product-description .img-txt{
   padding: 10px 0;
@@ -490,6 +510,7 @@ form .txt-input .input{
   color: #d9534f;
   font-weight: 600;
 }
+
 
 
 

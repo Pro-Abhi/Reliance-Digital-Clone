@@ -68,16 +68,17 @@
           </form>
         </div>
         <ul class="header-maininfo-list flex">
-          <li class="header-maininfo-item">
-            <a href="">
+          <li class="header-maininfo-item cart">
+            <a href="../HTML/cart.html">
               <i class="fa-solid fa-cart-flatbed"></i>
               Cart
             </a>
+            <span class="counter"></span>
           </li>
           <li class="header-maininfo-item">
-            <a href="../HTML/login.html">
+            <a onclick="logincheck()" id="log">
               <i class="fa-solid fa-circle-user"></i>
-              Login
+              <span id="user_Name">Login</span>
             </a>
           </li>
         </ul>
@@ -695,38 +696,12 @@
   <main id="main">
     <div class="mg"></div>
     <section id="productDetails"></section>
-    <div class="first-part">
+    <!-- <div class="first-part">
       <div class="left-side">
         <div class="main-img">
           <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch.jpeg" alt="">
         </div>
-        <div class="img-slider">
-          <div class="slider-container">
-            <button class="prev-btn prev">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button class="next-btn next">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-            <div class="slider">
-              <div class="p-img">
-                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide.jpeg" alt="">
-              </div>
-              <div class="p-img">
-                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide-2.jpeg" alt="">
-              </div>
-              <div class="p-img">
-                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide-3.jpeg" alt="">
-              </div>
-              <div class="p-img">
-                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide.jpeg" alt="">
-              </div>
-              <div class="p-img">
-                <img src="../Assets/product_details/Noise-Colorfit-Icon-Plus-Smart-Watch-slide3.jpeg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
       <div class="right-side">
         <div class="top">
@@ -859,12 +834,12 @@
                     COD not available
                   </div>
                   <div class="delivery-instruction">
-                    *Delivery assurance is subject to our delivery locations staying open as per govt. regulations
+                    Delivery assurance is subject to our delivery locations staying open as per govt. regulations
                   </div>
                 </div>
                 <div class="buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="buy_now">Buy Now</button>
+                  <button class="add-to-cart" id='add-to-cart'>Add to Cart</button>
+                  <button class="buy_now" id='buy-now'>Buy Now</button>
                 </div>
               </div>
             </div>
@@ -887,16 +862,12 @@
           The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive
         </p>
         <div class="col-2">
-          <div class="img">
-            <img src="../Assets/product_details/david-svihovec-HM-Y497t5CU-unsplash.jpg" alt="">
-          </div>
+          <div class='sub-dsc'>Specifications : </div>
           <p class="img-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum minus soluta a, consequuntur quisquam et vero impedit facere est magnam alias commodi sit iure! Exercitationem pariatur labore quae eos quisquam, ipsam, corrupti asperiores minima qui perspiciatis similique quos maiores deleniti aspernatur officia reiciendis eius? Debitis quas vitae optio ipsum distinctio! Expedita, magnam enim non necessitatibus a esse repellat ut nam facere rem rerum! Est atque recusandae, enim minima nihil earum obcaecati eos, doloremque incidunt quaerat ea inventore nulla harum, itaque quod? Cupiditate dolorum dolorem optio illo autem libero, est eum eius consequuntur illum! Quod nulla est porro ex quo pariatur.
           </p>
         </div>
         <div class="col-2">
-          <div class="img">
-            <img src="../Assets/product_details/taylor-beach-B-epmN7V-IQ-unsplash.jpg" alt="">
-          </div>
+          <div class='sub-dsc'>More Info : </div>
           <p class="img-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, excepturi! Quisquam sed explicabo non, nisi, dolorem id eum eos, aperiam atque expedita quaerat repellendus eligendi at saepe quia totam odio quos nulla. Quo provident officia sint id voluptatum fugit animi. Labore accusamus quod delectus tenetur perferendis reprehenderit deleniti quasi aut tempore, optio iure, quisquam quibusdam suscipit doloremque est officiis unde?
           </p>
         </div>
@@ -982,7 +953,8 @@
 
         <button>See all review</button>
       </div>
-    </div>
+    </div> -->
+
   </main>
 
   <!-- footer section start -->
@@ -1121,6 +1093,7 @@
 
   <!-- javaScript file -->
   <script src="../JS/product-details.js"></script>
+  <script src="../JS/common.js"></script>
   <!-- sticky-header js -->
   <script src="../JS/sticky_header.js"></script>
 </body>
