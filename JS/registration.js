@@ -6,6 +6,8 @@ let emailID = document.querySelector('#email')
 let mobileNumber = document.querySelector('#number')
 let TnC = document.querySelector('.TnC')
 let checkBox = document.querySelector('#tncbox')
+let otpBox = document.querySelector('.otp-section')
+let otpInput = document.querySelector('#otp')
 
 // queryselector for label
 let firstNameLabel = document.querySelector('.firstName-label')
@@ -17,14 +19,17 @@ let mobileNumberLabel = document.querySelector('.number-label')
 let firstNameError = document.querySelector('.f-error')
 let lastNameError = document.querySelector('.l-error')
 let emailError = document.querySelector('.e-error')
+let otpErrorMsg = document.querySelector('.otp-msg')
 let mobileNumberError = document.querySelector('.m-error')
 
 // querryselector for buttons
 let emailVerifyBtn = document.querySelector('.emailVerify')
 let proceedBtn = document.querySelector('.proceed')
+let otpVerify = document.querySelector('.otpVerify')
 
 emailVerifyBtn.disabled = true
 proceedBtn.disabled = true
+otpVerify.disabled = false
 
 
 let firstNameVal = firstName.value.trim()
@@ -128,15 +133,39 @@ function emailValidate(){
 emailVerifyBtn.addEventListener('click', function(){
 
   if(emailVerifyBtn.disabled == false){
-    this.innerHTML = `<div class='loader'></div>`
-    this.style.border = 'none'
+    emailVerifyBtn.style.display = 'none'
+    otpBox.classList.remove('inactive')
+
+    // Function to generate OTP
+    function generateOTP() {
+      let OTP = Math.floor(Math.random() * 10000)
+      localStorage.setItem("OTP", OTP);
+      return OTP;
+    }
     setTimeout(() => {
-      this.innerHTML = `Email verified successfully`
-      this.classList.add('verified')
-      TnC.classList.remove('inactive')
-    }, 1500)
+      alert("Your OTP is " + generateOTP());
+    }, 1000)
   }
 })
+
+
+function otpVerifyBtn(){
+  let otp = localStorage.getItem('OTP')
+
+  if(otpInput.value == otp){
+    TnC.classList.remove('inactive')
+    otpVerify.innerHTML = `<div class='loader'></div>`
+    otpVerify.style.backgroundColor = 'transparent'
+    setTimeout(() => {
+      otpBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> OTP verified successfully`
+      otpBox.classList.add('verified')
+    }, 1500)
+  }
+  else{
+    otpErrorMsg.innerHTML = `Please enter correct OTP`
+    otpErrorMsg.classList.add('alert')
+  }
+}
 
 
 // mobile-verify
@@ -162,7 +191,7 @@ checkBox.addEventListener('click', () => {
 
 function signUp(){
   if((firstName.value == '')||(lastName.value == '')){
-    // 
+    alert(`*Mandetory fields cannot be empty`)
   }
   else{
 
@@ -192,7 +221,11 @@ function signUp(){
       localStorage.setItem('userName', FirstName)
       localStorage.setItem('userEmail', EmailID)
       localStorage.setItem('userData', JSON.stringify(userRecords))
-      window.location.href = 'index.html'
+
+      document.querySelector('.register-msg').style.display = 'block'
+      setTimeout(() => {
+        window.location.href = 'index.html'
+      }, 1500)
     }
   }
 }

@@ -723,9 +723,18 @@
               </p>
             </div>
             <button type="button" class="emailVerify">
-              <i class="fa-solid fa-circle-check icon-1"></i>
               <span class="verify-msg">Verify Email</span>
             </button>
+            <div class="otp-section inactive">
+              <p class='otp-txt'>Please enter the OTP</p>
+              <form>
+                <div class="txt-input">
+                  <input type="tel" class="input" id="otp" maxlength="10" autocomplete="off" placeholder="Enter OTP" required"/>
+                  <p class="error-msg otp-msg"></p>
+                </div>
+                <button type="button" class="otpVerify" onclick="otpVerifyBtn()">Submit</button>
+              </form>
+            </div>
             <div class="txt-input mobileNumber">
               <input type="tel" class="input filled" name="number" id="number" placeholder=" " autocomplete="off" maxlength="10">
               <label for="number" class="number-label filled">Mobile Number*</label>
@@ -744,6 +753,9 @@
             </div>
           </form>
         </div>
+      </div>
+      <div class="register-msg">
+        <span>Registered Successfully</span>
       </div>
     </section>
   </main>

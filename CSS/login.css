@@ -16,7 +16,7 @@
 }
 
 /* login-section */
-.section-1 .login-section{
+.section-1 .login-section, .section-1 .otp-section{
   width: 30%;
   width: 500px;
   padding: 10px;
@@ -38,6 +38,9 @@
 }
 .log-in-info .login-input{
   padding: 30px 20px 10px;
+}
+.log-in-info .login-input .otp-txt{
+  margin-bottom: 15px;
 }
 .log-in-info .login-input form .txt-input{
   width: 100%;
@@ -99,6 +102,11 @@ form .txt-input .input{
   padding: 0 6px;
   font-size: 14px;
 }
+
+.login-input .otp-msg.verified{
+  color: rgb(0, 255, 21);
+}
+
 
 .txt-input .input.alert{
   border: 1px solid #d32f2f;

@@ -54,7 +54,7 @@
     <div class="header">
       <div class="header-maininfo flex">
         <div class="logo">
-          <a href="../HTML/index.html">
+          <a href="../index.html">
             <img src="../Assets/rd_logo.svg" alt="rd_logo" />
           </a>
         </div>
@@ -717,6 +717,22 @@
                   <p class="error-msg"></p>
                 </div>
                 <button type="button" class="proceed" onclick="login()">Proceed</button>
+              </form>
+            </div>
+          </div>
+      </div>
+      <div class="login-section otp-section inactive">
+          <div class="log-in-info">
+            <div class="title">Login / Register</div>
+            <div class="login-input">
+              <p class='otp-txt'>Please enter the OTP</p>
+              <form>
+                <div class="txt-input">
+                  <input type="tel" class="input" id="otp" maxlength="10" autocomplete="off" placeholder=" " required"/>
+                  <label for="otp" class="form-label">Enter OTP</label>
+                  <p class="error-msg otp-msg"></p>
+                </div>
+                <button type="button" class="proceed" onclick="otpVerifyBtn()">Submit</button>
               </form>
             </div>
           </div>

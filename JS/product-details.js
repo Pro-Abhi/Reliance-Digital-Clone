@@ -184,11 +184,11 @@ products.forEach((v) => {
                   *Delivery assurance is subject to our delivery locations staying open as per govt. regulations
                 </div>
               </div>
+              </div>
               <div class="buttons">
                 <button class="add-to-cart" id='add-to-cart' onclick='addToCart(${v.id})'>Add to Cart</button>
                 <button class="buy_now" id='buy-now'>Buy Now</button>
               </div>
-            </div>
           </div>
         </div>
       </div>

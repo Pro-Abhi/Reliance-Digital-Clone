@@ -91,8 +91,6 @@
   cursor: not-allowed;
   text-align: start;
   line-height: 1.5;
-  display: grid;
-  place-content: center;
 }
 
 .form .proceed{
@@ -134,8 +132,8 @@
 
 .loader{
   pointer-events: none;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #29ca8e;
@@ -163,6 +161,45 @@
   color: #43a047;
   font-size: 1.2em;
   display: none;
+}
+
+.otp-section{
+  width: 100%;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+.otp-section.verified{
+  color: #43a047;
+}
+.otp-section .otp-txt{
+  margin-bottom: 15px;
+}
+
+.otp-section .txt-input{
+  width: 49%;
+  display: inline-block;
+}
+.otp-section .txt-input .input{
+  padding: 8px 15px;
+}
+.otp-section .txt-input .input::placeholder{
+  font-size: 16px;
+}
+
+.otp-section .otpVerify{
+  width: 25%;
+  margin-left: 25px;
+  opacity: 1;
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #e42529;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
 }
 
 .form .TnC{
@@ -197,5 +234,19 @@
 .alert{
   color: #d32f2f !important;
   font-size: 13px;
+}
+
+.register-msg{
+  width: 20%;
+  margin: 0 auto;
+  padding: 8px 10px;
+  text-align: center;
+  position: fixed;
+  left: 40%;
+  bottom: 0;
+  background-color: #43a047;
+  color: #fff;
+  font-size: 18px;
+  display: none;
 }
 /************** main CSS end **************/
