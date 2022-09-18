@@ -35,6 +35,8 @@ document.querySelector('.cart-items-count').innerText = basket.length
 
 document.querySelector('.pincode').innerText = localStorage.getItem('pinCode')
 
+let totalPrice = document.querySelector('.total-cart-amount')
+
 
 
 function generateCartItems() {
@@ -61,7 +63,7 @@ function generateCartItems() {
               <div class="product-details">
                 <div class="product-title">${name}</div>
                 <div class="product-id">Product ID: ${id}</div>
-                <div>₹${quantity * x.dealprice}</div>
+                <div class='item-total'>₹${quantity * search.dealprice}</div>
               </div>
               <div class="shipping-details">
                 <div class="offer-price">${dealpricex}</div>
@@ -99,6 +101,8 @@ function generateCartItems() {
 }
 generateCartItems();
 
+
+
 let increment = (id) => {
   let selectedItem = id;
 
@@ -115,6 +119,7 @@ let increment = (id) => {
   update(selectedItem);
   // generateCartItems();
   localStorage.setItem("data", JSON.stringify(basket));
+
 };
 
 let decrement = (id) => {
@@ -142,7 +147,6 @@ let decrement = (id) => {
 let update = (id) => {
   let search = basket.find((x) => x.id === id);
   document.getElementById(id).innerHTML = search.quantity;
-  // calculation()
   totalAmount()
 };
 
@@ -164,12 +168,14 @@ let totalAmount = () => {
       return quantity * search.dealprice
     }).reduce((x,y) => x+y, 0)
     document.querySelector('.total').innerHTML = '₹' + amount
+    totalPrice.innerHTML = '₹' + amount
+    localStorage.setItem('totalPrice', totalPrice.innerHTML = '₹' + amount)
   }
   else return
 }
 totalAmount()
 
-// document.querySelector('.total-count').innerHTML = totalAmount()
+
 
 
 let clearCart = () => {
@@ -265,3 +271,6 @@ checkOutBtn.addEventListener('click', () => {
     window.location.href = 'login.html'
   }
 })
+
+
+

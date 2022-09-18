@@ -393,8 +393,7 @@ function addToCart(id){
     let basket = JSON.parse((localStorage.getItem('data')))
 
     if(basket.some((item) => item.id === id)){
-      // window.location.href = 'cart.html'
-      increment()
+      window.location.href = 'cart.html'
     }
     else{
       basket.push({
