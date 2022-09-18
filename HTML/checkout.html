@@ -706,28 +706,31 @@
         <div class="title address">Shipping Address</div>
         <i class="fa-solid fa-chevron-down down-arrow"></i>
 
-        <div class="saved-address">
-          <div class="form-input">
-            <input type="radio" name="" id="" />
-            <span class="userName bold">Abhishek Kolapkar</span>
-            <div class="user-address">
-              <span>House No</span>, <span>Street</span>,
-              <span>Landmark</span>
+        <div class="address-box inactive">
+          <div class="saved-address">
+            <div class="form-input">
+              <input type="radio" name="" id="" checked/>
+              <span class="userName bold">Abhishek Kolapkar</span>
+              <div class="user-address">
+                <span class="house">House No</span>, 
+                <span class="street">Street</span>,
+                <span class="landmark">Landmark</span>
+              </div>
+              <div class="user-pinCode">
+                <span class="city">District</span>
+                <span class="pinCode">PinCode</span>,
+                <span class="state">State</span>
+              </div>
+              <div class="bold">Mobile: <span class="userMobile normal">mobileNumber</span></div>
             </div>
-            <div class="user-pinCode">
-              <span>District</span>
-              <span>PinCode</span>,
-              <span>State</span>
+            <div class="btns flex">
+              <div class="edit-btn">Edit</div>
+              <div class="delete-btn">Delete</div>
             </div>
-            <div class="userMobile bold">Mobile: <span class="normal">mobileNumber</span></div>
-          </div>
-          <div class="btns flex">
-            <div class="edit-btn">Edit</div>
-            <div class="delete-btn">Delete</div>
           </div>
         </div>
 
-        <button type="button" class="add-address-btn">
+        <button type="button" class="add-address-btn inactive">
           Add new shipping address
         </button>
         <div class="pop-up-form inactive">
@@ -754,22 +757,22 @@
                     type="text"
                     class="input"
                     id="fName"
-                    maxlength="6"
+                    maxlength="20"
                     autocomplete="off"
                     placeholder=" "
                   />
-                  <label for="fName">Enter PIN Code</label>
+                  <label for="fName">Enter First Name</label>
                 </div>
                 <div class="txt-input right">
                   <input
                     type="text"
                     class="input"
                     id="lName"
-                    maxlength="6"
+                    maxlength="20"
                     autocomplete="off"
                     placeholder=" "
                   />
-                  <label for="lName">Enter PIN Code</label>
+                  <label for="lName">Enter Last Name</label>
                 </div>
               </div>
               <div class="mg10">
@@ -778,7 +781,6 @@
                     type="text"
                     class="input"
                     id="flat"
-                    maxlength="6"
                     autocomplete="off"
                     placeholder=" "
                   />
@@ -793,7 +795,6 @@
                     type="text"
                     class="input"
                     id="colony"
-                    maxlength="6"
                     autocomplete="off"
                     placeholder=" "
                   />
@@ -806,7 +807,6 @@
                     type="text"
                     class="input"
                     id="landmark"
-                    maxlength="6"
                     autocomplete="off"
                     placeholder=" "
                   />
@@ -819,7 +819,6 @@
                     type="text"
                     class="input"
                     id="city"
-                    maxlength="6"
                     autocomplete="off"
                     placeholder=" "
                   />
@@ -830,7 +829,6 @@
                     type="text"
                     class="input"
                     id="state"
-                    maxlength="6"
                     autocomplete="off"
                     placeholder=" "
                   />
@@ -843,7 +841,7 @@
                     type="text"
                     class="input"
                     id="moNumber"
-                    maxlength="6"
+                    maxlength="10"
                     autocomplete="off"
                     placeholder=" "
                   />
@@ -853,15 +851,16 @@
                   <input
                     type="text"
                     class="input"
-                    id="lNumber"
-                    maxlength="6"
+                    id="landline"
+                    maxlength="12"
                     autocomplete="off"
                     placeholder=" "
                   />
-                  <label for="lNumber">Enter Landline Number</label>
+                  <label for="landline">Enter Landline Number</label>
                 </div>
               </div>
             </div>
+            <p class="error-msg"></p>
             <div class="buttons flex">
               <div class="cancel-btn">Cancel</div>
               <div class="submit-btn">Submit</div>
@@ -870,10 +869,10 @@
         </div>
       </section>
 
-      <!-- <section class="container payment">
-      <div class="title">Payment Details</div>
-      <i class="fa-solid fa-chevron-down down-arrow2" onclick="showHide()"></i>
-      <div id="paySecurely" class="subContainer inactive">
+      <section class="container payment">
+      <div class="title">PAY SECURELY</div>
+      <i class="fa-solid fa-chevron-down down-arrow2"></i>
+      <div id="paySecurely" class="subContainer">
         <h3>PAY SECURELY</h3>
         <div class="specialOffers">
             <h4>Available Offers</h4>
@@ -899,13 +898,12 @@
          
          <div id="paymentField">
            <div id="paymentOptionHeading">
-            <span>Payment Option</span>
-            <span class="emi">Looking for an EMI? <a href="#">Click here</a></span>
+            <span>Select Payment Option</span>
          </div>
          <div class="chooseBank">
-            <label for="bank">Select Bank</label>
+            <label for="bank">Select Provider</label>
             <select name="bank" id="bank">
-                <option value="selected" selected disabled>Select a bank</option>
+                <option value="selected" selected disabled>Select a Provider</option>
                 <option value="">American Express</option>
                 <option value="">AU Bank</option>
                 <option value="">Axis Bank</option>
@@ -919,19 +917,22 @@
             </select>
          </div>
            <div id="paymentMsg">
+              <p>*Note: You need to be pre-registered on these providers to facilitate transaction</p>
               <p>*Clicking on “Pay” will take you to a secure payment gateway where you can enter the UPI Id 
               and make your payment.</p><p> Your order will not be completed without this action</p>
               <div id="checkbox_terms">
                  <input type="checkbox" id="checkbox">
-                 <label for="checkbox" id="terms"><span style="color:#666">I agree to the </span><a href="#">Terms & Conditions</a></label>
+                 <label for="checkbox" id="terms"><span>I agree to the </span><a href="#">Terms & Conditions</a></label>
               </div>
-              <div id="payAmountBtn">Pay Amount- Rs. 15,000</div>
+              <div id="payAmountBtn">Pay - 
+                <span class="amount">Rs. 15,000</span>
+              </div>
               <div id="alert_msg"></div>
             </div>
          </div>
         </div>
      </div>
-    </section> -->
+    </section>
     </main>
 
     <!-- footer section start -->

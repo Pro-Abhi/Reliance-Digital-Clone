@@ -63,7 +63,6 @@ function generateCartItems() {
               <div class="product-details">
                 <div class="product-title">${name}</div>
                 <div class="product-id">Product ID: ${id}</div>
-                <div class='item-total'>₹${quantity * search.dealprice}</div>
               </div>
               <div class="shipping-details">
                 <div class="offer-price">${dealpricex}</div>
