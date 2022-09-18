@@ -36,16 +36,6 @@ var btnDec;
 
     <section class="product_search_container">
       <div class="left_container">
-        <div class="filter_title">Filters</div>
-        <div class="filter_price">
-          <h4>Price</h4>
-          <div class="sliderRange">
-            <div class="slidecontainer">
-              <input type="range" min="1" max="100000" value="500" class="slider" id="myRange" />
-              <p>Range: <span id="price"></span></p>
-            </div>
-          </div>
-        </div>
         <div class="filter_availability">
           <h4>Availability</h4>
           <input type="checkbox" name="check" id="check" />
@@ -153,8 +143,6 @@ var btnDec;
             btnAsc = document.getElementById('btnAsc');
            
 }
-
-
 
 // Adding Elements
 
