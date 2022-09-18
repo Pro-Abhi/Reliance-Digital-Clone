@@ -9,6 +9,12 @@ let errorMsg = document.querySelector('.error-msg')
 let editBtn = document.querySelector(".edit-btn");
 let deleteBtn = document.querySelector(".delete-btn");
 
+let arrow = document.querySelector('.down-arrow')
+let screen = document.querySelector('.address-box')
+let arrow2 = document.querySelector('.down-arrow2')
+let screen2 = document.querySelector('#paySecurely')
+arrow2.disabled = true
+
 addAddressBtn.addEventListener("click", () => {
   addressForm.classList.remove("inactive");
   addAddressBtn.classList.add("inactive");
@@ -59,6 +65,7 @@ submitBtn.addEventListener("click", () => {
     
       savesAddressBox.classList.remove('inactive')
       addressForm.classList.add('inactive')
+      arrow2.disabled = false
     }
   })
 });
@@ -103,6 +110,31 @@ deleteBtn.addEventListener('click', () => {
   localStorage.setItem('userAddress', JSON.stringify(userAddress))
   addAddressBtn.classList.remove('inactive')
 })
+
+
+function onOff(){
+  if(screen.classList.contains('inactive')){
+    screen.classList.remove('inactive')
+    arrow.classList.add('upward')
+  }
+  else{
+    screen.classList.add('inactive')
+    arrow.classList.remove('upward')
+  }
+}
+
+
+function showHide(){
+  if(screen2.classList.contains('inactive')){
+    screen2.classList.remove('inactive')
+    arrow2.classList.add('upward')
+  }
+  else{
+    screen2.classList.add('inactive')
+    arrow2.classList.remove('upward')
+  }
+}
+
 
 
 // payment process

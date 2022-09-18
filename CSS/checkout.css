@@ -20,6 +20,9 @@
   font-size: 24px;
   transition: 0.3s;
 }
+.down-arrow2{
+  display: none;
+}
 .down-arrow.upward,
 .down-arrow2.upward {
   transform: rotate(180deg);
