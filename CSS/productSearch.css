@@ -1,0 +1,134 @@
+/* product Page */
+.search_breadcrumb{
+  padding:6px 30px;
+  background-color: #f9f9fa;
+  border-bottom: 1px solid #e0e0e1;
+}
+
+.product_search_container{
+  display: flex;
+  height: 100vh;
+}
+
+.left_container{
+  border-right:1px solid #ccc;
+  width: 25vw;
+}
+
+.filter_title{
+  border-bottom: 1px solid #ccc;
+  font-weight: 400;
+  margin: 10px 0;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+.filter_price{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+}
+
+.filter_price,
+.filter_availability,
+.filter_category,
+.filter_brand{
+padding: 10px;
+  color: #5a5a59;
+  line-height: 2;
+ 
+}
+
+.filter_brand,
+.filter_category{
+  height: 200px;
+  overflow: hidden;
+}
+.f_active{
+  height:auto;
+}
+
+.filter_availability{
+  border-bottom: 1px solid #ccc; 
+}
+.cta-btn{
+  padding: 5px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+.right_container{
+  width: 75vw;
+}
+
+.search_result_title{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_heading{
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.result_sort>span{
+  color: #9b9b9b;
+  font-size: 16px;
+}
+
+.right_container .result_sort{
+padding: 10px;
+}
+
+.result_sort .dec,.asc{
+  padding: 10px;
+  border:1px solid #ccc;
+  outline:none;
+  border-radius: 2px;
+  background-color: transparent;
+  font-weight: 800;
+  cursor:pointer;
+}
+
+.search_products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search_products .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  vertical-align: baseline;
+  padding: 10px;
+  margin:10px;
+  border:1px solid #9b9b9b;
+}
+
+.search_products .item:hover{
+  box-shadow: 0 0 2px black;
+}
+
+.product_image img{
+  width: 180px;
+  height: 180px;
+}
+
+.search_products .save_amount{
+  color:rgb(224, 34, 28);
+}
+
+.search_products .offer-btn{
+  padding: 2px 5px;
+  width: fit-content;
+  border:1px solid green;
+  color:green;
+  border-radius: 5px;
+  font-size: 12px;
+}
