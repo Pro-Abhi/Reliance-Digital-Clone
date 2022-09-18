@@ -361,6 +361,7 @@ pinCode.addEventListener('keyup', () => {
         data.forEach((ele) => {
           let status = ele.Status;
           if (status == "Success"){
+            localStorage.setItem('pinCode', ele.PostOffice[0].Pincode)
             document.querySelector('.location-icon').innerHTML = `<div class='loader'></div>`
             errorMsg.classList.add('inactive')
               setTimeout(() => {
@@ -382,23 +383,33 @@ pinCode.addEventListener('keyup', () => {
 
 
 
+let addToCartBtn = document.querySelector('#add-to-cart')
 
-// let addToCartBtn = document.querySelector('#add-to-cart')
+function addToCart(id){
+  if(pinCode.value == ''){
+    alert(`Please select PinCode`)
+  }
+  else{
+    let basket = JSON.parse((localStorage.getItem('data')))
 
-// function addToCart(id){
-//     let basket = JSON.parse((localStorage.getItem('data')))
+    if(basket.some((item) => item.id === id)){
+      // window.location.href = 'cart.html'
+      increment()
+    }
+    else{
+      basket.push({
+        id: id,
+        quantity: 1
+      })
+      localStorage.setItem('data', JSON.stringify(basket))
+    }
 
-//     if(basket.some((item) => item.id === id)){
-      
-//     }
-//     else{
-//       basket.push({
-//         id: id,
-//         quantity: 1
-//       })
-//       localStorage.setItem('data', JSON.stringify(basket))
-//     }
-// }
+    document.getElementById('add-to-cart').innerHTML = `<img src='../Assets/processing-circle.gif'>`
+    setTimeout(() => {
+      document.getElementById('add-to-cart').innerHTML = `Add to Cart`
+    }, 1000)
+  }
+}
 
 
 

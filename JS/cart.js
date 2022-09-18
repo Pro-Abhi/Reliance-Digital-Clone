@@ -31,7 +31,7 @@ let finalDeliveryMonth = nextDate[1];
 let finalDeliveryDate = nextDate[2];
 
 
-document.querySelector('.cart-count').innerText = basket.length
+document.querySelector('.cart-items-count').innerText = basket.length
 
 document.querySelector('.pincode').innerText = localStorage.getItem('pinCode')
 
@@ -40,6 +40,7 @@ document.querySelector('.pincode').innerText = localStorage.getItem('pinCode')
 function generateCartItems() {
   if (basket.length != 0) {
     basket.forEach((v) => {
+      let {id, quantity} = v
       // console.log(v);
       product.forEach((x) => {
         let { id, imglink, name, dealpricex, MRPx, discountx, savepricex } = x;
@@ -60,6 +61,7 @@ function generateCartItems() {
               <div class="product-details">
                 <div class="product-title">${name}</div>
                 <div class="product-id">Product ID: ${id}</div>
+                <div>₹${quantity * x.dealprice}</div>
               </div>
               <div class="shipping-details">
                 <div class="offer-price">${dealpricex}</div>
@@ -161,13 +163,13 @@ let totalAmount = () => {
       let search = product.find((y) => y.id === id) || []
       return quantity * search.dealprice
     }).reduce((x,y) => x+y, 0)
-    // console.log(amount);
     document.querySelector('.total').innerHTML = '₹' + amount
   }
   else return
 }
 totalAmount()
 
+// document.querySelector('.total-count').innerHTML = totalAmount()
 
 
 let clearCart = () => {

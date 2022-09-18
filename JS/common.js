@@ -31,29 +31,6 @@ function logout(){
 
 
 
-// add-to-cart functionalities
-let addToCartBtn = document.querySelector('#add-to-cart')
-
-function addToCart(id){
-    let basket = JSON.parse((localStorage.getItem('data')))
-
-    if(basket.some((item) => item.id === id)){
-      // window.location.href = 'cart.html'
-      increment()
-    }
-    else{
-      basket.push({
-        id: id,
-        quantity: 1
-      })
-      localStorage.setItem('data', JSON.stringify(basket))
-    }
-
-    document.getElementById('add-to-cart').innerHTML = `<img src='../Assets/processing-circle.gif'>`
-    setTimeout(() => {
-      document.getElementById('add-to-cart').innerHTML = `Add to Cart`
-    }, 1000)
-}
 
 
 
