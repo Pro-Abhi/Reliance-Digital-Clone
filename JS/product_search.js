@@ -167,11 +167,12 @@ function addElement(data){
     <div class="price-section">
     <div class="offer">
         <span class="name">Offer Price: </span>
-        <span class="price big">₹${data.dealpricex}</span>
+        <span class="price big">${data.dealpricex}</span>
     </div>
     <div class="mrp">
         <span class="name">M.R.P: </span>
-        <span class="price strike">₹${data.MRPx}</span>
+        <span class="price strike">${data.MRPx}</span>
+        <div class="save_amount">You Save:${data.discountx} (${data.savepricex})</div>
     </div>
     
     </div>

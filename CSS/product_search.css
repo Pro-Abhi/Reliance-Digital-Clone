@@ -1,4 +1,4 @@
-/*product Page */
+product Page
 .search_breadcrumb{
     padding:6px 30px;
     background-color: #f9f9fa;
@@ -118,6 +118,10 @@
 .product_image img{
     width: 180px;
     height: 180px;
+}
+
+.search_products .save_amount{
+    color:rgb(224, 34, 28);
 }
 
 .search_products .offer-btn{
